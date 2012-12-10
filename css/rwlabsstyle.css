@@ -61,7 +61,7 @@ a {color: #1188bb;}
 .navbar a#rw-nav-rwlabs {background-image: url("../img/rw-nav-labs.png"); background-repeat:no-repeat;background-position:left center; padding-left: 27px;}
 .navbar a#rw-nav-rwblog {background-image: url("../img/rw-nav-blog.png"); background-repeat:no-repeat;background-position:left center; padding-left: 29px;}
 
-#rw-nav-global-parent {background-color: #f4f4f0;}
+#rw-nav-global-parent {min-width: 100%; background-color: #f4f4f0;}
 
 
 /* Top half below the global nav band */
@@ -75,7 +75,7 @@ a {color: #1188bb;}
           border-radius: 0px;
 }
 
-#rw-hero-parent {background-color: #f4f4f0;}
+#rw-hero-parent {min-width: 100%; background-color: #f4f4f0;}
 
 #rw-hero-logo {width: 375px; margin-bottom: 20px;}
 
