@@ -188,6 +188,15 @@ padding: 16px 40px;}
 
 .rw-project-list-item {padding: 40px 0 40px 0; border-bottom: 1px solid #555555;}
 
+.rw-project-list-item.released {
+  background-color: #f4f4f0; color: #7b7b7b;
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  border-radius: 24px;
+  margin-top: 20px;
+  padding: 20px 0 0;
+}
+
 .rw-project-list-item a {color: #cda7ff;}
 
 .rw-status {padding: 3px 10px; background-color: #7b7b7b; color: #f4f4f0; width: 33%;}
