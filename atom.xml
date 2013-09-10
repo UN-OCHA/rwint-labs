@@ -11,7 +11,7 @@ layout: nil
  <id>http://labs.reliefweb.int/</id>
  <author>
    <name>Reliefweb</name>
-   <email>info@reliefweb.int</email>
+   <email>labs@reliefweb.int</email>
  </author>
 
  {% for post in site.posts %}
