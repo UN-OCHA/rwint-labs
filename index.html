@@ -4,16 +4,37 @@ title: ReliefWeb Labs - Building the next generation of information tools for hu
 ---
 
 {% for post in site.posts %}
+{% capture phase %}{{ post.phase | downcase }}{% endcapture %}
+{% if phase != 'released' %}
 <div id="{{ post.id }}" class="row-fluid rw-project-list-item {{ post.phase | downcase }}">
-    <div class="span3 rw-img-cell"><img src="{{ post.image }}" alt="" class="img-polaroid"></div>
-    <div class="span9 rw-description-cell">
-        {% if post.link %}
-          <h2><a href="{{ post.link }}">{{ post.title }}</a></h2>
-        {% else %}
-          <h2>{{ post.title }}</h2>
-        {% endif %}
-        <p class="rw-status"><strong>Phase:</strong> {{ post.phase | upcase }}</p>
-        <p>{{ post.content }}</p>
-    </div>
+  <div class="span3 rw-img-cell"><img src="{{ post.image }}" alt="" class="img-polaroid"></div>
+  <div class="span9 rw-description-cell">
+    {% if post.link %}
+    <h2><a href="{{ post.link }}">{{ post.title }}</a></h2>
+    {% else %}
+    <h2>{{ post.title }}</h2>
+    {% endif %}
+    <p class="rw-status"><strong>Phase:</strong> {{ post.phase | upcase }}</p>
+    <p>{{ post.content }}</p>
+  </div>
 </div><!-- /re-project-hid -->
+{% endif %}
+{% endfor %}
+
+{% for post in site.posts %}
+{% capture phase %}{{ post.phase | downcase }}{% endcapture %}
+{% if phase == 'released' %}
+<div id="{{ post.id }}" class="row-fluid rw-project-list-item {{ post.phase | downcase }}">
+  <div class="span3 rw-img-cell"><img src="{{ post.image }}" alt="" class="img-polaroid"></div>
+  <div class="span9 rw-description-cell">
+    {% if post.link %}
+    <h2><a href="{{ post.link }}">{{ post.title }}</a></h2>
+    {% else %}
+    <h2>{{ post.title }}</h2>
+    {% endif %}
+    <p class="rw-status"><strong>Phase:</strong> {{ post.phase | upcase }}</p>
+    <p>{{ post.content }}</p>
+  </div>
+</div><!-- /re-project-hid -->
+{% endif %}
 {% endfor %}
