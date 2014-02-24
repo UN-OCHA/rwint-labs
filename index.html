@@ -7,7 +7,11 @@ title: ReliefWeb Labs - Building the next generation of information tools for hu
 {% capture phase %}{{ post.phase | downcase }}{% endcapture %}
 {% if phase != 'released' %}
 <div id="{{ post.id }}" class="row-fluid rw-project-list-item {{ post.phase | downcase }}">
+  {% if post.link %}
+  <div class="span3 rw-img-cell"><a href="{{ post.link }}"><img src="{{ post.image }}" alt="" class="img-polaroid"></a></div>
+  {% else %}
   <div class="span3 rw-img-cell"><img src="{{ post.image }}" alt="" class="img-polaroid"></div>
+  {% endif %}
   <div class="span9 rw-description-cell">
     {% if post.link %}
     <h2><a href="{{ post.link }}">{{ post.title }}</a></h2>
@@ -25,7 +29,11 @@ title: ReliefWeb Labs - Building the next generation of information tools for hu
 {% capture phase %}{{ post.phase | downcase }}{% endcapture %}
 {% if phase == 'released' %}
 <div id="{{ post.id }}" class="row-fluid rw-project-list-item {{ post.phase | downcase }}">
+  {% if post.link %}
+  <div class="span3 rw-img-cell"><a href="{{ post.link }}"><img src="{{ post.image }}" alt="" class="img-polaroid"></a></div>
+  {% else %}
   <div class="span3 rw-img-cell"><img src="{{ post.image }}" alt="" class="img-polaroid"></div>
+  {% endif %}
   <div class="span9 rw-description-cell">
     {% if post.link %}
     <h2><a href="{{ post.link }}">{{ post.title }}</a></h2>
