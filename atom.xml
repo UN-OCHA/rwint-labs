@@ -1,0 +1,27 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>Reliefweb Labs RSS</title>
+ <link href="http://labs.reliefweb.int/atom.xml" rel="self"/>
+ <link href="http://labs.reliefweb.int/"/>
+ <updated>{{ site.time | date_to_xmlschema }}</updated>
+ <id>http://labs.reliefweb.int/</id>
+ <author>
+   <name>Reliefweb</name>
+   <email>labs@reliefweb.int</email>
+ </author>
+
+ {% for post in site.posts %}
+ <entry>
+   <title>{{ post.title }}</title>
+   <link href="http://labs.reliefweb.int{{ post.url }}"/>
+   <updated>{{ post.date | date_to_xmlschema }}</updated>
+   <id>http://labs.reliefweb.int{{ post.id }}</id>
+   <content type="html">{{ post.content | xml_escape }}</content>
+ </entry>
+ {% endfor %}
+ 
+</feed>
