@@ -5,6 +5,7 @@ body.rwlabs {
 
 a {
   color: #1188bb;
+  text-decoration: none;
 }
 
 /* Font */
@@ -146,10 +147,11 @@ p.intro-text {
 }
 
 .boxes legend {
-  margin-bottom: 5px;
+  margin-bottom: 20px;
   font-family: 'Volkhov', serif;
   font-weight: 700;
-  color: #666666; font-size: 2em;
+  color: #666666;
+  font-size: 1.6em;
   border-color: none;
   border-image: none;
   border-style: none;
@@ -162,6 +164,18 @@ p.intro-text {
 
 #rw-signup .help-block {
   padding-bottom: 10px;
+}
+
+.social-icons ul {
+  padding: 20px 0;
+}
+
+.social-icons li {
+  display: inline;
+}
+
+.message ul {
+  padding-left: 16px;
 }
 
 /* Bottom half */
@@ -187,21 +201,21 @@ p.intro-text {
   margin-bottom: 40px;
 }
 
-.rw-projects h3:before {
+.rw-projects h2:before {
   content: url("../img/icon-rw-white-small.png");
   position: relative;
   padding-right: 10px;
   top: 14px;
 }
 
-.community-projects h3:before {
+.community-projects h2:before {
   content: url("../img/icon-leadership-white.png");
   position: relative;
   padding-right: 10px;
   top: 14px;
 }
 
-.innovation-news h3:before {
+.innovation-news h2:before {
   content: url("../img/icon-meeting-white.png");
   position: relative;
   padding-right: 10px;
@@ -212,17 +226,24 @@ p.intro-text {
   /* border-bottom: 1px solid #ccc; */
 }
 
-.rw-project-list-item a {color: #cda7ff;}
-
-.rw-status.thumbnail {
-  /* padding: 3px 10px; */
-  background-color: #7b7b7b;
-  color: #f4f4f0;
+.rw-project-list-item a {
+  color: #cda7ff;
 }
 
-.rw-project-list-item.released .rw-status {
-  background-color: #f4f4f0;
-  color: #7b7b7b;
+.rw-project-list-item a:hover,
+.rw-project-list-item a:focus {
+  color: #cda7ff;
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+.rw-description {
+  font-size: 0.9em;
+}
+
+.rw-status {
+  font-size: 0.9em;
+  margin-bottom: 0;
 }
 
 .rw-img-cell {
