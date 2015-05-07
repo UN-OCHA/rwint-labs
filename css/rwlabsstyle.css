@@ -147,10 +147,11 @@ p.intro-text {
 }
 
 .boxes legend {
-  margin-bottom: 5px;
+  margin-bottom: 20px;
   font-family: 'Volkhov', serif;
   font-weight: 700;
-  color: #666666; font-size: 2em;
+  color: #666666;
+  font-size: 1.6em;
   border-color: none;
   border-image: none;
   border-style: none;
@@ -163,6 +164,18 @@ p.intro-text {
 
 #rw-signup .help-block {
   padding-bottom: 10px;
+}
+
+.social-icons ul {
+  padding: 20px 0;
+}
+
+.social-icons li {
+  display: inline;
+}
+
+.message ul {
+  padding-left: 16px;
 }
 
 /* Bottom half */
