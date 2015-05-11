@@ -117,6 +117,8 @@ smaller subset above will be used. */
 
 #rw-child .jumbotron {
   background-color: transparent;
+  padding-top: 20px;
+  padding-bottom: 10px;
 }
 
 #rw-homepage-top {min-width: 100%; background-color: #f4f4f0;}
@@ -125,7 +127,7 @@ smaller subset above will be used. */
 #rw-hero-logo {width: 375px; margin-bottom: 20px;}
 
 .logo-title {
-  margin: 0 15px 40px;
+  margin: 0 15px 20px;
   font-size: 1.4em;
 }
 
@@ -140,10 +142,6 @@ p.intro-text {
   -webkit-border-radius: 0;
      -moz-border-radius: 0;
           border-radius: 0;
-}
-
-.boxes {
-  margin-bottom: 40px;
 }
 
 .boxes legend {
