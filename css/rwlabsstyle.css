@@ -418,3 +418,8 @@ p.intro-text {
   width: 32px;
 }
 
+/* Projects, Challenges */
+#rw-challenge,
+#rw-project {
+  color: #848480;
+}
