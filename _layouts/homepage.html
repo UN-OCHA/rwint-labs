@@ -16,39 +16,22 @@
                 <p class="intro-text">{{ content }}</p>
               </div>
             </div> <!-- /rw-intro-copy -->
-            <div class="boxes row">
-              <div class="col-md-4">
-                <div class="well thumbnail">
-                  {% include message.html %}
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="well ">
-                  {% include subscribe.html %}
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="well thumbnail">
-                  {% include blog-box.html %}
-                </div>
-              </div>
-            </div> <!-- /boxes -->
           </div> <!-- /.jumbotron -->
         </div> <!-- /#rw-child -->
       </div> <!-- /.row -->
     </div> <!-- /.container -->
     <div class="rw-divider"></div>
-    <div id="rw-bottom-half" class="container">
-      <div class="row">
-          <!-- TODO: three columns, logos and headers for each, vertical, with responsive capabilities - three separate divs, with info in them here, do the styling elsewhere. -->
-        <div class="rw-projects col-md-4">
+      <div id="rw-projects" class="rw-projects container page-section">
+        <div class="row">
           <h2>ReliefWeb Ideas</h2>
+        </div>
+        <div class="row">
           <div class="rw-project-list">
             {% assign sortedPosts = site.posts | sort: 'phase' %}
             {% for post in sortedPosts %}
             {% capture origin %}{{ post.origin | downcase }}{% endcapture %}
             {% if origin == 'rwlabs' %}
-            <div id="{{ post.id }}" class="rw-project-list-item">
+            <div id="{{ post.id }}" class="rw-project-list-item col-md-4">
               {% if post.link %}
               <h3><a href="{{ post.link }}">{{ post.title }}</a></h3>
               {% else %}
@@ -61,19 +44,43 @@
               <div class="rw-img-cell"><img src="{{ post.image }}" alt="" class="img-rounded img-responsive"></div>
               {% endif %}
               <p class="rw-description">{{ post.content }}</p>
-              <div class="rw-divider"></div>
-            </div><!-- /rw-project-hid -->
+            </div><!-- /rw-project-list-item -->
             {% endif %}
             {% endfor %}
           </div><!-- /.rw-project-list -->
-        </div><!-- /.rw-projects -->
-        <div class="community-projects col-md-4">
+          <div class="rw-divider"></div>
+          <div class="boxes row">
+            <div class="col-md-4">
+              <div class="well thumbnail">
+                {% include message.html %}
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="well ">
+                {% include subscribe.html %}
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="well thumbnail">
+                {% include blog-box.html %}
+              </div>
+            </div>
+          </div> <!-- /boxes -->
+        </div> <!-- row -->
+      </div><!-- /.rw-projects -->
+      <div class="rw-divider"></div>
+      <div id="community-projects" class="community-projects-parent container page-section">
+      <div class="community-projects-child container">
+      <a href="#" class="pull-right scroll-link back-to-top" data-id="rw-nav-global-parent">Back to top.</a>
+        <div class="row">
           <h2>Community projects</h2>
+        </div>
+        <div class="row">
           <div class="community-project-list">
             {% for post in site.posts %}
             {% capture origin %}{{ post.origin | downcase }}{% endcapture %}
             {% if origin == 'community' %}
-            <div id="{{ post.id }}" class="rw-project-list-item {{ post.phase | downcase }}">
+            <div id="{{ post.id }}" class="rw-project-list-item col-md-4">
               {% if post.link %}
               <h3><a href="{{ post.link }}">{{ post.title }}</a></h3>
               {% else %}
@@ -85,31 +92,43 @@
               <div class="rw-img-cell"><img src="{{ post.image }}" alt="" class="img-rounded img-responsive"></div>
               {% endif %}
               <p class="rw-description">{{ post.content }}</p>
-              <div class="rw-divider"></div>
             </div><!-- /rw-project-hid -->
             {% endif %}
             {% endfor %}
           </div><!-- /.community-project-list -->
-        </div><!-- /.community-projects -->
-        <div class="innovation-news col-md-4">
+        </div><!-- row -->
+      </div><!-- /.community-projects-child -->
+      </div><!-- /.community-projects-parent -->
+      <div class="rw-divider"></div>
+      <div id="resources" class="resources container page-section">
+      <a href="#" class="pull-right scroll-link back-to-top" data-id="rw-nav-global-parent">Back to top.</a>
+        <div class="row">
           <h2>Resources</h2>
-          <div class="innovation-news-widgets">
+        </div>
+        <div class="row">
+          <div class="resources-widgets">
+            <div class="col-md-4">
             {% include twitter-timeline.html %}
-            <div class="rw-divider"></div>
+            </div>
+            <div class="col-md-4">
             <h3>Innovation News</h3>
             {% include innovation-news.html %}
-            <div class="rw-divider"></div>
+            </div>
+            <div class="col-md-4">
             <h3>Innovation Jobs</h3>
             {% include innovation-jobs.html %}
-            <div class="rw-divider"></div>
+            </div>
+            <div class="col-md-4">
             <h3>Innovation Training</h3>
             {% include innovation-training.html %}
-            <div class="rw-divider"></div>
+            </div>
+            <div class="col-md-8">
             {% include youtube-playlist.html %}
-          </div><!-- /.innovation-news-widgets -->
-        </div><!-- /.innovation-news -->
-      </div> <!-- /.row -->
-    </div><!-- /#rw-bottom-half -->
+            </div>
+          </div><!-- /.resources-widgets -->
+        </div> <!-- /.row -->
+      </div><!-- /.resources -->
+    <div class="rw-divider"></div>
     {% include footer.html %}
   </body>
 </html>

@@ -14,14 +14,19 @@
 var INNOVATION_TRAINING = {
   handlerData : function(results) {
     var html = '<div class="innovation-training-list thumbnail">';
-    var source = $("#training-list-item").html();
-    var compiled = _.template(source);
-    _.each(results.data, function(item) {
-      var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
-      var timestamp = new Date(item.fields.date.created);
-      item.formatted_date = timestamp.getDate() + ' ' + monthNames[timestamp.getMonth()] + ' ' + timestamp.getFullYear();
-      html += compiled(item);
-    });
+    if (results.data.length > 0) {
+      var source = $("#training-list-item").html();
+      var compiled = _.template(source);
+      _.each(results.data, function(item) {
+        var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
+        var timestamp = new Date(item.fields.date.created);
+        item.formatted_date = timestamp.getDate() + ' ' + monthNames[timestamp.getMonth()] + ' ' + timestamp.getFullYear();
+        html += compiled(item);
+      });
+    }
+    else {
+      html += '<div class="innovation-report">There are no current training opportunities referencing "innovation", "technology" and "information"</div>';
+    }
     html += '<a class="more-link" href="http://reliefweb.int/training?search=innovation+AND+technology+AND+information">More on ReliefWeb &raquo;</a>';
     html += '</div>';
     $("#innovation-training").html(html);

@@ -107,6 +107,7 @@ smaller subset above will be used. */
 .navbar a#rw-nav-rwblog {background-image: url("../img/rw-nav-blog.png"); background-repeat:no-repeat;background-position:left center; padding-left: 29px;}
 
 #rw-nav-global-parent,
+.community-projects-parent,
 .footer {
   min-width: 100%;
   background-color: #f4f4f0;
@@ -142,6 +143,11 @@ p.intro-text {
   -webkit-border-radius: 0;
      -moz-border-radius: 0;
           border-radius: 0;
+}
+
+.boxes {
+  padding-top: 20px;
+  color: #737373;
 }
 
 .boxes legend {
@@ -195,13 +201,21 @@ p.intro-text {
   color: #f4f4f0;
 }
 
+.rw-projects,
+.resources {
+  color: #f4f4f0;
+}
+
+.community-projects-child {
+  color: #737373;
+  background-color: transparent;
+}
+
 .rw-project-list,
 .community-project-list,
-.innovation-news-widgets {
-  margin-top: 20px;
-  max-height: 2000px;
+.resources-widgets {
   overflow: auto;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .rw-projects h2:before {
@@ -211,14 +225,14 @@ p.intro-text {
   top: 14px;
 }
 
-.community-projects h2:before {
-  content: url("../img/icon-leadership-white.png");
+.community-projects-child h2:before {
+  content: url("../img/icon-leadership-grey.png");
   position: relative;
   padding-right: 10px;
   top: 14px;
 }
 
-.innovation-news h2:before {
+.resources h2:before {
   content: url("../img/icon-meeting-white.png");
   position: relative;
   padding-right: 10px;
@@ -253,7 +267,9 @@ p.intro-text {
   padding: 17px 0;
 }
 
-.innovation-report-list {
+.innovation-report-list,
+.innovation-job-list,
+.innovation-training-list {
   background-color: #fff;
   color: #999;
 }
@@ -295,7 +311,6 @@ p.intro-text {
 }
 
 .innovation-report .source {
-  color: #999;
   font-size: 0.7em;
 }
 
