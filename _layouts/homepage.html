@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   {% include head.html %}
-  <body class="rwlabs">
+  <body class="rwlabs" data-spy="scroll">
     {% include header.html %}
     <div id="rw-homepage-top" class="container">
       <div class="row">
@@ -21,113 +21,114 @@
       </div> <!-- /.row -->
     </div> <!-- /.container -->
     <div class="rw-divider"></div>
-      <div id="rw-projects" class="rw-projects container page-section">
-        <div class="row">
-          <h2>ReliefWeb Ideas</h2>
-        </div>
-        <div class="row">
-          <div class="rw-project-list">
-            {% assign sortedPosts = site.posts | sort: 'phase' %}
-            {% for post in sortedPosts %}
-            {% capture origin %}{{ post.origin | downcase }}{% endcapture %}
-            {% if origin == 'rwlabs' %}
-            <div id="{{ post.id }}" class="rw-project-list-item col-md-4">
-              {% if post.link %}
-              <h3><a href="{{ post.link }}">{{ post.title }}</a></h3>
-              {% else %}
-              <h3>{{ post.title }}</h3>
-              {% endif %}
-              <p class="rw-status"><strong>Phase: {{ post.phase | upcase }}</strong></p>
-              {% if post.link %}
-              <div class="rw-img-cell"><a href="{{ post.link }}"><img src="{{ post.image }}" alt="" class="img-rounded img-responsive"></a></div>
-              {% else %}
-              <div class="rw-img-cell"><img src="{{ post.image }}" alt="" class="img-rounded img-responsive"></div>
-              {% endif %}
-              <p class="rw-description">{{ post.content }}</p>
-            </div><!-- /rw-project-list-item -->
-            {% endif %}
-            {% endfor %}
-          </div><!-- /.rw-project-list -->
-          <div class="rw-divider"></div>
-          <div class="boxes row">
-            <div class="col-md-4">
-              <div class="well thumbnail">
-                {% include message.html %}
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="well ">
-                {% include subscribe.html %}
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="well thumbnail">
-                {% include blog-box.html %}
-              </div>
-            </div>
-          </div> <!-- /boxes -->
-        </div> <!-- row -->
-      </div><!-- /.rw-projects -->
-      <div class="rw-divider"></div>
-      <div id="community-projects" class="community-projects-parent container page-section">
-      <div class="community-projects-child container">
+    <div id="rw-projects" class="rw-projects container page-section">
       <a href="#" class="pull-right scroll-link back-to-top" data-id="rw-nav-global-parent">Back to top.</a>
-        <div class="row">
-          <h2>Community projects</h2>
-        </div>
-        <div class="row">
-          <div class="community-project-list">
-            {% for post in site.posts %}
-            {% capture origin %}{{ post.origin | downcase }}{% endcapture %}
-            {% if origin == 'community' %}
-            <div id="{{ post.id }}" class="rw-project-list-item col-md-4">
-              {% if post.link %}
-              <h3><a href="{{ post.link }}">{{ post.title }}</a></h3>
-              {% else %}
-              <h4>{{ post.title }}</h4>
-              {% endif %}
-              {% if post.link %}
-              <div class="rw-img-cell"><a href="{{ post.link }}"><img src="{{ post.image }}" alt="" class="img-rounded img-responsive"></a></div>
-              {% else %}
-              <div class="rw-img-cell"><img src="{{ post.image }}" alt="" class="img-rounded img-responsive"></div>
-              {% endif %}
-              <p class="rw-description">{{ post.content }}</p>
-            </div><!-- /rw-project-hid -->
+      <div class="row">
+        <h2>ReliefWeb Ideas</h2>
+      </div>
+      <div class="row">
+        <div class="rw-project-list">
+          {% assign sortedPosts = site.posts | sort: 'phase' %}
+          {% for post in sortedPosts %}
+          {% capture origin %}{{ post.origin | downcase }}{% endcapture %}
+          {% if origin == 'rwlabs' %}
+          <div id="{{ post.id }}" class="rw-project-list-item col-md-4">
+            {% if post.link %}
+            <h3><a href="{{ post.link }}">{{ post.title }}</a></h3>
+            {% else %}
+            <h3>{{ post.title }}</h3>
             {% endif %}
-            {% endfor %}
-          </div><!-- /.community-project-list -->
-        </div><!-- row -->
-      </div><!-- /.community-projects-child -->
-      </div><!-- /.community-projects-parent -->
-      <div class="rw-divider"></div>
-      <div id="resources" class="resources container page-section">
-      <a href="#" class="pull-right scroll-link back-to-top" data-id="rw-nav-global-parent">Back to top.</a>
-        <div class="row">
-          <h2>Resources</h2>
-        </div>
-        <div class="row">
-          <div class="resources-widgets">
-            <div class="col-md-4">
-            {% include twitter-timeline.html %}
+            <p class="rw-status"><strong>Phase: {{ post.phase | upcase }}</strong></p>
+            {% if post.link %}
+            <div class="rw-img-cell"><a href="{{ post.link }}"><img src="{{ post.image }}" alt="" class="img-rounded img-responsive"></a></div>
+            {% else %}
+            <div class="rw-img-cell"><img src="{{ post.image }}" alt="" class="img-rounded img-responsive"></div>
+            {% endif %}
+            <p class="rw-description">{{ post.content }}</p>
+          </div><!-- /rw-project-list-item -->
+          {% endif %}
+          {% endfor %}
+        </div><!-- /.rw-project-list -->
+        <div class="rw-divider"></div>
+        <div class="boxes row">
+          <div class="col-md-4">
+            <div class="well thumbnail">
+              {% include message.html %}
             </div>
-            <div class="col-md-4">
-            <h3>Innovation News</h3>
-            {% include innovation-news.html %}
+          </div>
+          <div class="col-md-4">
+            <div class="well ">
+              {% include subscribe.html %}
             </div>
-            <div class="col-md-4">
-            <h3>Innovation Jobs</h3>
-            {% include innovation-jobs.html %}
+          </div>
+          <div class="col-md-4">
+            <div class="well thumbnail">
+              {% include blog-box.html %}
             </div>
-            <div class="col-md-4">
-            <h3>Innovation Training</h3>
-            {% include innovation-training.html %}
-            </div>
-            <div class="col-md-8">
-            {% include youtube-playlist.html %}
-            </div>
-          </div><!-- /.resources-widgets -->
-        </div> <!-- /.row -->
-      </div><!-- /.resources -->
+          </div>
+        </div> <!-- /boxes -->
+      </div> <!-- row -->
+    </div><!-- /.rw-projects -->
+    <div class="rw-divider"></div>
+    <div id="community-projects" class="community-projects-parent container page-section">
+    <div class="community-projects-child container">
+    <a href="#" class="pull-right scroll-link back-to-top" data-id="rw-nav-global-parent">Back to top.</a>
+      <div class="row">
+        <h2>Community projects</h2>
+      </div>
+      <div class="row">
+        <div class="community-project-list">
+          {% for post in site.posts %}
+          {% capture origin %}{{ post.origin | downcase }}{% endcapture %}
+          {% if origin == 'community' %}
+          <div id="{{ post.id }}" class="rw-project-list-item col-md-4">
+            {% if post.link %}
+            <h3><a href="{{ post.link }}">{{ post.title }}</a></h3>
+            {% else %}
+            <h4>{{ post.title }}</h4>
+            {% endif %}
+            {% if post.link %}
+            <div class="rw-img-cell"><a href="{{ post.link }}"><img src="{{ post.image }}" alt="" class="img-rounded img-responsive"></a></div>
+            {% else %}
+            <div class="rw-img-cell"><img src="{{ post.image }}" alt="" class="img-rounded img-responsive"></div>
+            {% endif %}
+            <p class="rw-description">{{ post.content }}</p>
+          </div><!-- /rw-project-hid -->
+          {% endif %}
+          {% endfor %}
+        </div><!-- /.community-project-list -->
+      </div><!-- row -->
+    </div><!-- /.community-projects-child -->
+    </div><!-- /.community-projects-parent -->
+    <div class="rw-divider"></div>
+    <div id="resources" class="resources container page-section">
+    <a href="#" class="pull-right scroll-link back-to-top" data-id="rw-nav-global-parent">Back to top.</a>
+      <div class="row">
+        <h2>Resources</h2>
+      </div>
+      <div class="row">
+        <div class="resources-widgets">
+          <div class="col-md-4">
+          {% include twitter-timeline.html %}
+          </div>
+          <div class="col-md-4">
+          <h3>Innovation News</h3>
+          {% include innovation-news.html %}
+          </div>
+          <div class="col-md-4">
+          <h3>Innovation Jobs</h3>
+          {% include innovation-jobs.html %}
+          </div>
+          <div class="col-md-4">
+          <h3>Innovation Training</h3>
+          {% include innovation-training.html %}
+          </div>
+          <div class="col-md-8">
+          {% include youtube-playlist.html %}
+          </div>
+        </div><!-- /.resources-widgets -->
+      </div> <!-- /.row -->
+    </div><!-- /.resources -->
     <div class="rw-divider"></div>
     {% include footer.html %}
   </body>
