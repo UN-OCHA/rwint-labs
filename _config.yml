@@ -3,7 +3,7 @@ lsi: false
 highlighter: pygments
 markdown: kramdown
 
-baseurl: file:///var/www/reliefweb.local/lazylabs/_site
+baseurl: http://andystaging.rwlabs.org
 
 collections:
   rwlabs:
