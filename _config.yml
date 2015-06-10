@@ -2,3 +2,13 @@ safe: true
 lsi: false
 highlighter: pygments
 markdown: kramdown
+
+baseurl: file:///var/www/reliefweb.local/lazylabs/_site
+
+collections:
+  rwlabs:
+    output: true
+  challenge:
+    output: true
+  community:
+    output: true
