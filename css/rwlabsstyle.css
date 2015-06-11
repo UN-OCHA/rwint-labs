@@ -90,11 +90,11 @@ smaller subset above will be used. */
 }
 
 .nav-tabs > li > a {
-    border-radius: 6px 6px 0 0;
+  border-radius: 6px 6px 0 0;
 }
 
 .nav-pills > li > a {
-    border-radius: 4px 4px 4px 4px;
+  border-radius: 4px 4px 4px 4px;
 }
 
 .navbar ul#rw-nav-global-utilities {
@@ -160,7 +160,22 @@ ul.social-icons {
   margin-bottom: 20px;
 }
 
+.button-link {
+  background-color: #f4f4f0;
+  border-radius: 6px 6px 6px 6px;
+  margin: 6px;
+  padding: 12px;
+}
+
+.button-link:hover {
+  background-color: #c4c4c0;
+}
+
 /* RW-Projects */
+
+.project-layout.container {
+  margin-bottom: 40px;
+}
 
 .rw-projects h2:before {
   content: url("../img/icon-rw-white-small.png");
@@ -196,6 +211,11 @@ ul.social-icons {
 
 .rw-description {
   font-size: 0.9em;
+}
+
+.project-page .rw-description,
+.project-page .project-origin {
+  margin-top: 80px;
 }
 
 .rw-status {
