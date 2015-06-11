@@ -25,8 +25,10 @@ title: Labs Projects
       <p class="rw-description">{{ post.content }}</p>
     </div><!-- /rw-project-list-item -->
     <div class="clearfix"></div>
+    {% if forloop.last %}
+    {% else %}
     <div class="rw-divider-flip"></div>
-    <div class="rw-divider"></div>
+    {% endif %}
     {% endfor %}
   </div><!-- /.rw-project-list -->
 </div><!-- /row -->
