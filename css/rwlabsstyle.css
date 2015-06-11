@@ -169,6 +169,20 @@ ul.social-icons {
   top: 14px;
 }
 
+.project-origin {
+  border-radius: 4px 4px 4px 4px;
+  line-height: 2em;
+  padding-left: 10px;
+}
+
+.project-origin.rwlabs {
+  background-color: #F05152;
+}
+
+.project-origin.community {
+  background-color: #5796D0;
+}
+
 .rw-project-list-item a {
   color: #cda7ff;
 }

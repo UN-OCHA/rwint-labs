@@ -6,28 +6,31 @@
     <div class="container-fluid">
       <div class="row">
         <div id="carousel" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner" role="listbox">
-            {% for post in site.rwlabs %}
-            
-            <div class="item{% if forloop.first == true %} active{% endif %}">
-              <div class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-1">
-                {% if post.link %}
-                <div class="rw-img-cell"><a href="{{ post.link }}"><img src="{{ post.image }}" alt="" class="img-rounded img-responsive"></a></div>
-                {% else %}
-                <div class="rw-img-cell"><img src="{{ post.image }}" alt="" class="img-rounded img-responsive"></div>
-                {% endif %}
+          <div class="container">
+            <div class="row">
+              <div class="carousel-inner" role="listbox">
+                {% for post in site.projects %}
+                <div class="item{% if forloop.first == true %} active{% endif %}">
+                  <div class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-1">
+                    {% if post.link %}
+                    <div class="rw-img-cell"><a href="{{ post.link }}"><img src="{{ post.image }}" alt="" class="img-rounded img-responsive"></a></div>
+                    {% else %}
+                    <div class="rw-img-cell"><img src="{{ post.image }}" alt="" class="img-rounded img-responsive"></div>
+                    {% endif %}
+                  </div>
+                  <div class="col-xs-9 col-xs-offset-2 col-sm-offset-0 col-sm-6">
+                    {% if post.link %}
+                    <h3><a href="{{ post.link }}">{{ post.title }}</a></h3>
+                    {% else %}
+                    <h3>{{ post.title }}</h3>
+                    {% endif %}
+                    <p class="rw-status"><strong>Phase: {{ post.phase | upcase }}</strong></p>
+                    <p class="rw-description">{{ post.content }}</p>
+                  </div>
+                </div>
+                {% endfor %}
               </div>
-              <div class="col-xs-9 col-xs-offset-2 col-sm-offset-0 col-sm-6">
-                {% if post.link %}
-                <h3><a href="{{ post.link }}">{{ post.title }}</a></h3>
-                {% else %}
-                <h3>{{ post.title }}</h3>
-                {% endif %}
-                <p class="rw-status"><strong>Phase: {{ post.phase | upcase }}</strong></p>
-                <p class="rw-description">{{ post.content }}</p>
-              </div>
-              </div>
-            {% endfor %}
+            </div>
           </div>
           <!-- Controls -->
           <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
@@ -43,38 +46,43 @@
     </div>
     <div id="rw-projects" class="rw-projects container-fluid page-section">
       <div class="row">
-        <div class="col-sm-12">
-          <a href="#" class="pull-right scroll-link back-to-top" data-id="rw-nav-global-sites">Back to top.</a>
-          <h2>ReliefWeb Ideas</h2>
-        </div>
-      </div>
-      <div class="row">
-        <div class="rw-project-list">
-          {% assign sortedPosts = site.rwlabs | sort: 'phase' %}
-          {% for post in sortedPosts limit:6 %}
-          {% if forloop.index == 4 %}
-          <div class="clearfix visible-sm-block visible-md-block visible-lg-block"></div>
-          {% endif %}
-          <div id="{{ post.id }}" class="rw-project-list-item col-sm-4 ">
-            {% if post.link %}
-            <h3><a href="{{ post.link }}">{{ post.title }}</a></h3>
-            {% else %}
-            <h3>{{ post.title }}</h3>
-            {% endif %}
-            <p class="rw-status"><strong>Phase: {{ post.phase | upcase }}</strong></p>
-            {% if post.link %}
-            <div class="rw-img-cell"><a href="{{ post.link }}"><img src="{{ post.image }}" alt="" class="img-rounded img-responsive"></a></div>
-            {% else %}
-            <div class="rw-img-cell"><img src="{{ post.image }}" alt="" class="img-rounded img-responsive"></div>
-            {% endif %}
-            <p class="rw-description">{{ post.content }}</p>
-          </div><!-- /rw-project-list-item -->
-          {% endfor %}
-        </div><!-- /.rw-project-list -->
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <a href="#" class="pull-right scroll-link back-to-top" data-id="rw-nav-global-sites">Back to top.</a>
+              <h2>Labs Projects</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="rw-project-list">
+              {% assign sortedPosts = site.projects | sort: 'phase' %}
+              {% for post in sortedPosts limit:6 %}
+              {% if forloop.index == 4 %}
+              <div class="clearfix visible-sm-block visible-md-block visible-lg-block"></div>
+              {% endif %}
+              <div id="{{ post.id }}" class="rw-project-list-item col-sm-4">
+                {% if post.link %}
+                <h3><a href="{{ post.link }}">{{ post.title }}</a></h3>
+                {% else %}
+                <h3>{{ post.title }}</h3>
+                {% endif %}
+                <p class="rw-status"><strong>Phase: {{ post.phase | upcase }}</strong></p>
+                {% if post.link %}
+                <div class="rw-img-cell"><a href="{{ post.link }}"><img src="{{ post.image }}" alt="" class="img-rounded img-responsive"></a></div>
+                {% else %}
+                <div class="rw-img-cell"><img src="{{ post.image }}" alt="" class="img-rounded img-responsive"></div>
+                {% endif %}
+                <p class="project-origin {{ post.origin }}"><strong>Origin: {{ post.origin | upcase }}</strong></p>
+                <p class="rw-description">{{ post.content }}</p>
+              </div><!-- /rw-project-list-item -->
+              {% endfor %}
+            </div><!-- /.rw-project-list -->
+          </div><!-- /row -->
+        </div><!-- /container -->
       </div><!-- /row -->
     </div><!-- /.rw-projects -->
     <div class="rw-divider-flip"></div>
-    <div id="challenges" class="challenges container-fluid page-section">
+    <div id="challenges" class="challenges container page-section">
       <div class="row">
         <div class="col-md-12">
           <a href="#" class="pull-right scroll-link back-to-top" data-id="rw-nav-global-sites">Back to top.</a>
@@ -83,7 +91,7 @@
       </div>
       <div class="row">
         <div class="challenge-items col-sm-8">
-          {% for post in site.challenge %}
+          {% for post in site.challenges %}
           <div class="media">
             <div class="media-left">
             ­ <a href="{{ post.link }}"><img src="{{ post.image }}" class="media-object"/></a>
@@ -110,33 +118,37 @@
     <div class="rw-divider"></div>
     <div id="resources" class="resources container-fluid page-section">
       <div class="row">
-        <div class="col-sm-12">
-          <a href="#" class="pull-right scroll-link back-to-top" data-id="rw-nav-global-sites">Back to top.</a>
-          <h2>Resources</h2>
-        </div>
-      </div>
-      <div class="row">
-        <div class="resources-widgets">
-          <div class="col-sm-4">
-          <h3>Innovation News</h3>
-          {% include innovation-news.html %}
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <a href="#" class="pull-right scroll-link back-to-top" data-id="rw-nav-global-sites">Back to top.</a>
+              <h2>Resources</h2>
+            </div>
           </div>
-          <div class="col-sm-4">
-          <h3>Innovation Jobs</h3>
-          {% include innovation-jobs.html %}
-          </div>
-          <div class="col-sm-4">
-          <h3>Innovation Training</h3>
-          {% include innovation-training.html %}
-          </div>
-          <div class="clearfix visible-sm-block visible-md-block visible-lg-block"></div>
-          <div class="col-xs-12 col-sm-4">
-          {% include twitter-timeline.html %}
-          </div>
-          <div class="col-xs-12 col-sm-8">
-          {% include youtube-playlist.html %}
-          </div>
-        </div><!-- /.resources-widgets -->
+          <div class="row">
+            <div class="resources-widgets">
+              <div class="col-sm-4">
+              <h3>Innovation News</h3>
+              {% include innovation-news.html %}
+              </div>
+              <div class="col-sm-4">
+              <h3>Innovation Jobs</h3>
+              {% include innovation-jobs.html %}
+              </div>
+              <div class="col-sm-4">
+              <h3>Innovation Training</h3>
+              {% include innovation-training.html %}
+              </div>
+              <div class="clearfix visible-sm-block visible-md-block visible-lg-block"></div>
+              <div class="col-xs-12 col-sm-4">
+              {% include twitter-timeline.html %}
+              </div>
+              <div class="col-xs-12 col-sm-8">
+              {% include youtube-playlist.html %}
+              </div>
+            </div><!-- /.resources-widgets -->
+          </div> <!-- /.row -->
+        </div> <!-- /container -->
       </div> <!-- /.row -->
     </div><!-- /.resources -->
     <div class="rw-divider-flip"></div>
