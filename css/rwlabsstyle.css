@@ -323,6 +323,10 @@ ul.social-icons {
   width: 32px;
 }
 
+.playlist-row {
+  margin-bottom: 20px;
+}
+
 .logo-twitter {
   background: url(../img/icon-twitter.png) no-repeat top left;
   display: block;
