@@ -146,6 +146,16 @@ ul.social-icons {
   font-size: 0.8em;
 }
 
+/* Carousel */
+
+.carousel-control.left {
+  background-image: linear-gradient(to right, rgba(247, 122, 108, 0.5) 0px, transparent 100%);
+}
+
+.carousel-control.right {
+  background-image: linear-gradient(to right, transparent 0px, rgba(247, 122, 108, 0.5) 100%);
+}
+
 /* Common */
 
 .rw-projects,
@@ -160,15 +170,21 @@ ul.social-icons {
   margin-bottom: 20px;
 }
 
+.view-all.button-link {
+  font-size: 1.2em;
+  margin: 9px;
+  padding: 6px 18px;
+}
+
 .button-link {
-  background-color: #f4f4f0;
+  background-color: rgba(244, 240, 240, 1);
   border-radius: 6px 6px 6px 6px;
   margin: 6px;
   padding: 12px;
 }
 
 .button-link:hover {
-  background-color: #c4c4c0;
+  background-color: rgba(244, 240, 240, 0.9)
 }
 
 /* RW-Projects */
@@ -191,11 +207,11 @@ ul.social-icons {
 }
 
 .project-origin.rwlabs {
-  background-color: #F05152;
+  background-color: #F15050;
 }
 
 .project-origin.community {
-  background-color: #5796D0;
+  background-color: #0988BB;
 }
 
 .rw-project-list-item a {
