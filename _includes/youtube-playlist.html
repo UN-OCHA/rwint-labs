@@ -26,7 +26,7 @@
   </div>
   <div class="col-xs-6">
     <div class="embed-responsive embed-responsive-16by9">
-      <iframe id="youtube-playlist" class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed?listType=playlist&list=PLA82EFAD988C16D1D&modestbranding=1&enablejsapi=1&showinfo=1&origin={{ site.baseurl }}" allowfullscreen></iframe>
+      <div id="youtube-playlist"></div>
     </div>
     <a href="http://reliefweb.int/videos/playlist/Innovative+Humanitarian+Projects">
       <div class="view-all button-link pull-right">
@@ -52,10 +52,11 @@
   }
 
   function onPlayerReady(event) {
-    // This is necessary to get full playlist. Still looking for another way.
+    event.target.cuePlaylist({
+      listType: 'playlist',
+      list: 'PLA82EFAD988C16D1D'
+    });
     event.target.setShuffle(true);
-    event.target.playVideoAt(0);
-    player.pauseVideo();
   }
 
   var firstLoad = true;
