@@ -66,9 +66,9 @@ smaller subset above will be used. */
   color: #999999;
   font-weight: bold;
   text-decoration: none;
-  -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2);
-     -moz-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2);
-          box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 0 1 1px rgba(0, 0, 0, 0.2);
+     -moz-box-shadow: inset 0 1 1px rgba(0, 0, 0, 0.2);
+          box-shadow: inset 0 1 1px rgba(0, 0, 0, 0.2);
 }
 
 .rwlabs .navbar .nav > li > a {
@@ -84,9 +84,9 @@ smaller subset above will be used. */
 .rwlabs .navbar-default .navbar-nav > li > a:hover {
   background-color: #e9e9e5;
   border-bottom: 1px solid #e9e9e5;
-  -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2);
-     -moz-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2);
-          box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 0 1 1px rgba(0, 0, 0, 0.2);
+     -moz-box-shadow: inset 0 1 1px rgba(0, 0, 0, 0.2);
+          box-shadow: inset 0 1 1px rgba(0, 0, 0, 0.2);
 }
 
 .nav-tabs > li > a {
