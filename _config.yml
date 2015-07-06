@@ -3,10 +3,8 @@ lsi: false
 highlighter: pygments
 markdown: kramdown
 
-baseurl: http://andystaging.rwlabs.org
+baseurl: http://labs.reliefweb.int
 
 collections:
   projects:
-    output: true
-  challenges:
     output: true

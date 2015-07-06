@@ -243,24 +243,6 @@ ul.social-icons {
   padding: 17px 0;
 }
 
-/* Challenges */
-
-.challenges h2:before {
-  content: url("../img/activity_analysis_40px-grey.png");
-  position: relative;
-  padding-right: 10px;
-  top: 14px;
-}
-
-.challenges img {
-  padding: 20px;
-  display: inline;
-}
-
-.challenges .body {
-  padding: 80px 0 20px;
-}
-
 /* Resources */
 
 .resources h2:before {
