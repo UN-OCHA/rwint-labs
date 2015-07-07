@@ -1,0 +1,34 @@
+<div id="resources" class="resources container-fluid page-section">
+  <div class="row">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <h2>Resources</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="resources-widgets">
+          <div class="col-sm-4">
+          <h3>Innovation News</h3>
+          {% include innovation-news.html %}
+          </div>
+          <div class="col-sm-4">
+          <h3>Innovation Jobs</h3>
+          {% include innovation-jobs.html %}
+          </div>
+          <div class="col-sm-4">
+          <h3>Innovation Training</h3>
+          {% include innovation-training.html %}
+          </div>
+          <div class="clearfix visible-sm-block visible-md-block visible-lg-block"></div>
+          <div class="col-xs-12 col-sm-4">
+          {% include twitter-timeline.html %}
+          </div>
+          <div class="col-xs-12 col-sm-8">
+          {% include youtube-playlist.html %}
+          </div>
+        </div><!-- /.resources-widgets -->
+      </div> <!-- /.row -->
+    </div> <!-- /container -->
+  </div> <!-- /.row -->
+</div><!-- /.resources -->

@@ -1,0 +1,34 @@
+---
+layout: project
+title: Labs Projects
+---
+
+<div class="row">
+  <div class="project-page rw-project-list">
+    {% assign sortedPosts = site.projects | sort: 'phase' %}
+    {% for post in sortedPosts %}
+    <div id="{{ post.id }}" class="rw-project-list-item col-sm-4">
+      {% if post.link %}
+      <h3><a href="{{ post.link }}">{{ post.title }}</a></h3>
+      {% else %}
+      <h3>{{ post.title }}</h3>
+      {% endif %}
+      <p class="rw-status"><strong>Phase: {{ post.phase | upcase }}</strong></p>
+      {% if post.link %}
+      <div class="rw-img-cell"><a href="{{ post.link }}"><img src="{{ post.image }}" alt="" class="img-rounded img-responsive"></a></div>
+      {% else %}
+      <div class="rw-img-cell"><img src="{{ post.image }}" alt="" class="img-rounded img-responsive"></div>
+      {% endif %}
+    </div><!-- /rw-project-list-item -->
+    <div id="{{ post.id }}" class="rw-project-list-item col-sm-8">
+      <p class="project-origin {{ post.origin }}"><strong>Origin: {{ post.origin | upcase }}</strong></p>
+      <p class="rw-description">{{ post.content }}</p>
+    </div><!-- /rw-project-list-item -->
+    <div class="clearfix"></div>
+    {% if forloop.last %}
+    {% else %}
+    <div class="rw-divider-flip"></div>
+    {% endif %}
+    {% endfor %}
+  </div><!-- /.rw-project-list -->
+</div><!-- /row -->
