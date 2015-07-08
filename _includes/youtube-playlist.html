@@ -68,16 +68,17 @@
 
   function loadVideos(playlistItems) {
     // player.setShuffle() isn't working, do it manually, removing first item
-    // as it shows in the playlist display.
+    // as it shows in the playlist display, and starting from the middle.
     playlistItems.shift();
     _.shuffle(playlistItems);
+    var videos = playlistItems.slice(Math.floor(Math.random() * (playlistItems.length - 3)));
 
     for (var i=1; i < 4; i++) {
       player = new YT.Player('youtube-video' + i, {
         playerVars: {
           modestbranding: '1',
         },
-        videoId: playlistItems[i],
+        videoId: videos[i],
       });
     }
   }
