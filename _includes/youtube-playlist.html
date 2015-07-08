@@ -56,7 +56,6 @@
       listType: 'playlist',
       list: 'PLA82EFAD988C16D1D'
     });
-    event.target.setShuffle(true);
   }
 
   var firstLoad = true;
@@ -68,12 +67,17 @@
   }
 
   function loadVideos(playlistItems) {
+    // player.setShuffle() isn't working, do it manually, removing first item
+    // as it shows in the playlist display.
+    playlistItems.shift();
+    _.shuffle(playlistItems);
+
     for (var i=1; i < 4; i++) {
       player = new YT.Player('youtube-video' + i, {
         playerVars: {
           modestbranding: '1',
         },
-        videoId: playlistItems[i - 1],
+        videoId: playlistItems[i],
       });
     }
   }
