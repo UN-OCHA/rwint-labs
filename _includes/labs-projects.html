@@ -25,7 +25,7 @@
             {% else %}
             <div class="rw-img-cell"><img src="{{ post.image }}" alt="" class="img-rounded img-responsive"></div>
             {% endif %}
-            <p class="project-origin {{ post.origin }}"><strong>Origin: {{ post.origin | upcase }}</strong></p>
+            <p class="project-origin {{ post.origin | replace: ' ','' | downcase }}"><strong>Origin: {{ post.origin | upcase }}</strong></p>
             <p class="rw-description">{{ post.content }}</p>
           </div><!-- /rw-project-list-item -->
           {% endfor %}
