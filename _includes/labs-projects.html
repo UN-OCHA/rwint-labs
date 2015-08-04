@@ -8,7 +8,7 @@
       </div>
       <div class="row">
         <div class="rw-project-list">
-          {% assign sortedPosts = site.projects | sort: 'phase' %}
+          {% assign sortedPosts = site.projects | sort: 'weight' | reverse %}
           {% for post in sortedPosts limit:6 %}
           {% if forloop.index == 4 %}
           <div class="clearfix visible-sm-block visible-md-block visible-lg-block"></div>
