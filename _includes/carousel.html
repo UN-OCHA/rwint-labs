@@ -4,7 +4,7 @@
       <div class="container">
         <div class="row">
           <div class="carousel-inner" role="listbox">
-            {% for post in site.projects %}
+            {% for post in site.features %}
             <div class="item{% if forloop.first == true %} active{% endif %}">
               <div class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-1">
                 {% if post.link %}
@@ -19,7 +19,6 @@
                 {% else %}
                 <h3>{{ post.title }}</h3>
                 {% endif %}
-                <p class="rw-status"><strong>Phase: {{ post.phase | upcase }}</strong></p>
                 <p class="rw-description">{{ post.content }}</p>
               </div>
             </div>
