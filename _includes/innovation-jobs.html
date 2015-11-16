@@ -1,10 +1,10 @@
 <script type="text/javascript" src="./js/underscore-min.js"></script>
 <script id="job-list-item" type="text/x-underscore-template">
   <div class="innovation-report">
-    <img class="pull-left" src="http://img.static.reliefweb.int/sites/reliefweb.int/files/styles/s/public/country-icons/<%= fields.country[0].iso3 %>.png"/>
+    <img class="pull-left" src="http://img.static.reliefweb.int/sites/reliefweb.int/files/styles/s/public/country-icons/<%= countryiso3 %>.png"/>
     <div class="text">
       <div class="date"><%= formatted_date %></div>
-      <div class="country"><%= fields.country[0].name %></div>
+      <div class="country"><%= countryname %></div>
       <a href="<%= fields.url %>"><%= fields.title %></a>
       <div class="source">Job -- <%= fields.source[0].shortname %></div>
     </div>
@@ -20,6 +20,14 @@ var INNOVATION_JOBS = {
       var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
       var timestamp = new Date(item.fields.date.created);
       item.formatted_date = timestamp.getDate() + ' ' + monthNames[timestamp.getMonth()] + ' ' + timestamp.getFullYear();
+      if (item.fields.country != undefined) {
+        item.countryname = item.fields.country[0].name;
+        item.countryiso3 = item.fields.country[0].iso3;
+      }
+      else {
+        item.countryname = 'Remote';
+        item.countryiso3 = 'wld';
+      }
       html += compiled(item);
     });
     html += '<a class="more-link" href="http://reliefweb.int/jobs?search=innovation+AND+technology+AND+information">More on ReliefWeb &raquo;</a>';
