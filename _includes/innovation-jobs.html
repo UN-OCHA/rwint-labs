@@ -30,13 +30,13 @@ var INNOVATION_JOBS = {
       }
       html += compiled(item);
     });
-    html += '<a class="more-link" href="http://reliefweb.int/jobs?search=innovation+AND+technology+AND+information">More on ReliefWeb &raquo;</a>';
+    html += '<a class="more-link" href="http://reliefweb.int/jobs?search=technology+AND+information">More on ReliefWeb &raquo;</a>';
     html += '</div>';
     $("#innovation-jobs").html(html);
   },
   loadReports : function() {
     $.ajax({
-      url:'http://api.rwlabs.org/v1/jobs?query[value]=innovation%20AND%20technology%20AND%20information&query[fields][]=title&query[fields][]=body&fields[include][]=title&fields[include][]=date.created&fields[include][]=url&fields[include][]=country.name&fields[include][]=source.shortname&fields[include][]=country.iso3&sort[]=date:desc&limit=5',
+      url:'http://api.rwlabs.org/v1/jobs?query[value]=technology%20AND%20information&query[fields][]=title&query[fields][]=body&fields[include][]=title&fields[include][]=date.created&fields[include][]=url&fields[include][]=country.name&fields[include][]=source.shortname&fields[include][]=country.iso3&sort[]=date:desc&limit=5',
       method:'get',
     }).done(this.handlerData);
   }
