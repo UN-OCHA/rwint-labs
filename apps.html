@@ -1,0 +1,75 @@
+---
+layout: app
+title: RW Apps
+---
+
+<div class="row">
+  <div class="col-sm-9">
+    <p>In 2015, mobile visitors to ReliefWeb increased by 71%.</p>
+
+    <p>To meet this growing demand, ReliefWeb is developing four mobile apps: RW Country Briefs, RW Jobs, RW Videos and RW Highlights.</p>
+
+    <p>The apps will soon be open for beta testing.</p>
+
+    <form action="http://reliefweb.us5.list-manage.com/subscribe/post?u=bbba5e49a58c86ed484b5a084&id=acdc2d59ab" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+      <label for="mce-EMAIL">Sign up to help with beta-testing these apps.</label>
+      <!--[if gte IE 7]><span class="placeholder"><em>Email Address:</em></span><![endif]-->
+      <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required="">
+      <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+    </form>
+
+    <p><strong>Note:</strong> Due to significant demand, we may not be able to respond to all submissions and requests. Thank you for understanding.</p>
+
+  </div>
+  <div class="col-sm-3">
+    <div id="carousel-example-generic" class="phone-carousel carousel slide" data-ride="carousel">
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img src="img/rw-slider-1.png" alt="image one">
+        </div>
+        <div class="item">
+          <img src="img/rw-slider-2.png" alt="image two">
+        </div>
+        <div class="item">
+          <img src="img/rw-slider-3.png" alt="image three">
+        </div>
+        <div class="item">
+          <img src="img/rw-slider-4.png" alt="image four">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="project-page rw-project-list">
+    {% for app in site.apps %}
+    <div id="{{ app.id }}" class="rw-project-list-item col-sm-6">
+      {% if app.link %}
+      <h3><a href="{{ app.link }}">{{ app.title }}</a></h3>
+      {% else %}
+      <h3>{{ app.title }}</h3>
+      {% endif %}
+      <p class="rw-status"><strong>Phase: {{ app.phase | upcase }}</strong></p>
+      {% if app.link %}
+      <div class="rw-img-cell"><a href="{{ app.link }}"><img src="{{ app.image }}" alt="" class="img-rounded img-responsive"></a></div>
+      {% else %}
+      <div class="rw-img-cell"><img src="{{ app.image }}" alt="" class="img-rounded img-responsive"></div>
+      {% endif %}
+      <div id="{{ app.id }}" class="rw-project-list-item col-sm-8">
+        <p class="rw-description">{{ app.content }}</p>
+      </div><!-- /rw-project-list-item -->
+      <div id="{{ app.id }}" class="row rw-app-stores">
+        <div class="rw-stores col-sm-6">
+          <a href="{{ app.play-url }}"><img src="img/store-play.png" /></a>
+        </div>
+        <div class="rw-stores col-sm-6">
+          <a href="{{ app.itunes-url }}"><img src="img/store-app.png" /></a></p>
+        </div>
+      </div><!-- /rw-app-stores -->
+    </div><!-- /rw-project-list-item -->
+    {% endfor %}
+  </div><!-- /.rw-project-list -->
+</div><!-- /row -->

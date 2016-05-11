@@ -8,5 +8,5 @@ baseurl: https://lazysoundsystem.github.io/labs
 collections:
   projects:
     output: true
-  features:
+  apps:
     output: true
