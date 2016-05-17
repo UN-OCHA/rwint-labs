@@ -5,15 +5,58 @@
     {% include header.html %}
     <div class="project-layout container">
       <div class="content">
-        <h1>{{ page.title }}</h1>
-        {% if page.image %}
-          {% if page.link %}
-          <div class="rw-img-cell"><a href="{{ page.link }}"><img src="{{ site.baseurl }}/{{ page.image }}" alt="" class="img-rounded img-responsive"></a></div>
-          {% else %}
-          <div class="rw-img-cell"><img src="{{ site.baseurl }}/{{ page.image }}" alt="" class="img-rounded img-responsive"></div>
-          {% endif %}
-        {% endif %}
-        {{ content }}
+        <div class="row">
+          <div class="col-sm-4 col-sm-offset-1">
+            <div class="carousel slide phone-slides" data-ride="carousel">
+
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner phone-frame" role="listbox">
+                {% assign state = 'active' %}
+                {% for image in page.images %}
+                <div class="item {% if state == 'active' %}active{% endif %}">
+                  {% assign state = 'inactive' %}
+                  <img src="{{ site.baseurl }}/{{ image }}" />
+                </div>
+                {% endfor %}
+              </div>
+
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="row">
+              <div class="col-sm-6 col-sm-offset-3">
+                {% if page.logo %}
+                {% if page.link %}
+                <div class="rw-img-cell"><a href="{{ page.link }}"><img src="{{ site.baseurl }}/{{ page.logo }}" alt="" class="img-rounded img-responsive"></a></div>
+                {% else %}
+                <div class="rw-img-cell"><img src="{{ site.baseurl }}/{{ page.logo }}" alt="" class="img-rounded img-responsive"></div>
+                {% endif %}
+                {% endif %}
+              </div>
+            </div>
+            <div class="row">
+              <h2>{{ page.tagline }}</h2>
+              {{ content }}
+              <ul class="features">
+              {% for feature in page.features %}
+              <li>{{ feature }}</li>
+              {% endfor %}
+              </ul>
+            </div>
+            <div class="row rw-app-stores">
+              {% if app.play-url %}
+              <div class="rw-stores col-sm-6">
+                <a href="{{ app.play-url }}"><img src="img/store-play.png" width="100px"/></a>
+              </div>
+              {% endif %}
+              {% if app.itunes-url %}
+              <div class="rw-stores col-sm-6">
+                <a href="{{ app.itunes-url }}"><img src="img/store-app.png" width="100px"/></a></p>
+              </div>
+              {% endif %}
+            </div><!-- /rw-app-stores -->
+          </div>
+        </div>
       </div>
     </div><!-- /.container -->
     <div class="container-fluid">

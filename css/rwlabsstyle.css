@@ -243,6 +243,21 @@ ul.social-icons {
   padding: 17px 0;
 }
 
+/* RW-Apps */
+.rw-project-list-item.app {
+  min-height: 360px;
+}
+
+.app-introduction {
+  font-size: 1.6em;
+  padding-top: 40px;
+}
+
+.features li {
+  list-style: square;
+  padding: 8px;
+}
+
 /* Resources */
 
 .resources h2:before {
@@ -337,6 +352,28 @@ ul.social-icons {
 
 .phone-carousel {
   width: 172px;
+}
+
+.phone-frame {
+  background: url(../img/apps/iphone6-black-blank.png) no-repeat top left;
+}
+
+.phone-frame img {
+  padding: 52px 12px 72px;
+}
+
+.phone-frame .item {
+  opacity: 0;
+}
+
+.phone-frame .active {
+  transition: opacity 1s;
+  opacity: 1;
+}
+
+.phone-frame .active.left {
+  transition: opacity 1s;
+  opacity: 0;
 }
 
 /* Divider */
