@@ -244,6 +244,10 @@ ul.social-icons {
 }
 
 /* RW-Apps */
+.page-header.app {
+  margin-bottom: 60px;
+}
+
 .rw-project-list-item.app {
   min-height: 360px;
 }
@@ -254,8 +258,20 @@ ul.social-icons {
 }
 
 .features li {
-  list-style: square;
-  padding: 8px;
+  list-style: none;
+  padding: 0;
+}
+
+.features li:before {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  padding: 0 10px;
+  content: "\e250";
 }
 
 /* Resources */
