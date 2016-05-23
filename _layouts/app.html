@@ -3,7 +3,7 @@
   {% include head.html %}
   <body class="rwlabs">
     {% include nav.html %}
-    {% include appheader.html %}
+    <div class="whitespace"></div>
     <div class="project-layout container">
       <div class="content">
         <div class="row">
@@ -25,7 +25,7 @@
           </div>
           <div class="col-sm-6">
             <div class="row">
-              <div class="col-sm-6 col-sm-offset-3">
+              <div class="col-sm-5 col-sm-offset-1">
                 {% if page.logo %}
                 {% if page.link %}
                 <div class="rw-img-cell"><a href="{{ page.link }}"><img src="{{ site.baseurl }}/{{ page.logo }}" alt="" class="img-rounded img-responsive"></a></div>
@@ -33,6 +33,9 @@
                 <div class="rw-img-cell"><img src="{{ site.baseurl }}/{{ page.logo }}" alt="" class="img-rounded img-responsive"></div>
                 {% endif %}
                 {% endif %}
+              </div>
+              <div class="col-sm-5 col-sm-offset-1">
+                <div class="rw-img-cell apps-logo-small"><img src="{{ site.baseurl }}/img/apps/rw-apps-logo-small.png" alt="" class="img-rounded img-responsive"></div>
               </div>
             </div>
             <div class="row">

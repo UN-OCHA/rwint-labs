@@ -9,6 +9,11 @@ a {
   text-decoration: none;
 }
 
+.whitespace {
+  min-height: 180px;
+  min-width: 180px;
+}
+
 /* Font */
 @font-face {
   font-family: 'Volkhov-Regular';
@@ -248,6 +253,10 @@ ul.social-icons {
   margin-bottom: 60px;
 }
 
+.apps-logo-small {
+  padding-top: 66px;
+}
+
 .rw-project-list-item.app {
   min-height: 360px;
 }
@@ -366,8 +375,8 @@ ul.social-icons {
 
 /* Carousel */
 
-.phone-carousel {
-  width: 172px;
+.phone-slides {
+  width: 272px;
 }
 
 .phone-frame {
@@ -379,7 +388,7 @@ ul.social-icons {
 }
 
 .phone-frame .item {
-  opacity: 0;
+  opacity: 0.3;
 }
 
 .phone-frame .active {
@@ -389,7 +398,7 @@ ul.social-icons {
 
 .phone-frame .active.left {
   transition: opacity 1s;
-  opacity: 0;
+  opacity: 0.3;
 }
 
 /* Divider */
