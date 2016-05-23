@@ -25,5 +25,9 @@ itunes-url:
 play-url:
 ---
 
-Instant access to ReliefWeb's comprehensive humanitarian job postings. Save job opporunities to revisit later and get notified on the latest jobs that match your search criteria.
+Instant access to ReliefWeb's comprehensive humanitarian job postings.
+
+Save job opporunities to revisit later.
+
+Get notified on the latest jobs that match your criteria.
 

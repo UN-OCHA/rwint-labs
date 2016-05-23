@@ -11,4 +11,4 @@ itunes-url:
 play-url:
 ---
 
-The important maps, figures, situation reports, funding status and infographics from the world's most pressing humanitarian disasters in a user-friendly package.
+Key maps, figures, situation reports, funding status and infographics from the world's most pressing humanitarian disasters in a user-friendly package.

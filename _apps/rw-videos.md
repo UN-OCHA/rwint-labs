@@ -21,4 +21,8 @@ itunes-url:
 play-url:
 ---
 
-Keep up with ReliefWeb's curated selection of humanitarian videos. Covers everything from training videos to in-depth reports from an on-going crisis, chosen by our editors from over 300 sources.
+Keep up with ReliefWeb's curated selection of humanitarian videos.
+
+Covers everything from training videos to in-depth reports from an on-going crisis.
+
+Chosen by our editors from over 300 sources.

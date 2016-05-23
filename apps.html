@@ -10,6 +10,8 @@ layout: appspage
 
         <p>To meet this growing demand, ReliefWeb is developing four mobile apps: RW Crises, RW Jobs, RW Videos and RW Headlines.</p>
 
+        <div class="whitespace"></div>
+
         <p>The apps will soon be open for beta testing.</p>
       </div>
 
@@ -38,6 +40,7 @@ layout: appspage
   </div>
 </div>
 
+<div class="whitespace"></div>
 <div class="rw-divider"></div>
 <div id="rw-projects" class="rw-projects container-fluid page-section">
   <div class="row">
@@ -55,13 +58,13 @@ layout: appspage
             <div class="row">
               <div class="col-sm-6">
                 {% if app.link %}
-                <div class="rw-img-cell"><a href="{{ app.link }}"><img src="{{ app.logo }}" alt="" class="img-rounded img-responsive"></a></div>
+                <div class="rw-img-cell"><a href="{{ app.link }}"><img src="{{ app.logo }}" alt="" class="img-responsive"></a></div>
                 {% else %}
-                <div class="rw-img-cell"><img src="{{ app.logo }}" alt="" class="img-rounded img-responsive"></div>
+                <div class="rw-img-cell"><img src="{{ app.logo }}" alt="" class="img-responsive"></div>
                 {% endif %}
               </div>
-              <div class="col-sm-6">
-                <p class="rw-description">{{ app.content }}</p>
+              <div class="rw-app-description col-sm-6">
+                {{ app.content }}
               </div>
             </div>
             <div class="row rw-app-stores">

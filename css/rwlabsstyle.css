@@ -268,9 +268,16 @@ ul.social-icons {
 
 .features li {
   list-style: none;
-  padding: 0;
+  padding: 4px 0;
+  line-height: 2;
 }
 
+.rw-app-description {
+  padding: 17px 17px 17px 0;
+  font-size: 16px;
+}
+
+.rw-app-description p:before,
 .features li:before {
   position: relative;
   top: 1px;
