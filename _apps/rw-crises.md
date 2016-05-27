@@ -1,8 +1,8 @@
 ---
 layout: app
-id: rw-country-briefs-app
+id: rw-crises-app
 title: RW Crises
-link: apps/crises/index.html
+link: apps/rw-crises.html
 phase: Alpha
 logo: img/apps/crises/rw-apps-crises.png
 images:

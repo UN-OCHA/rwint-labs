@@ -277,6 +277,14 @@ ul.social-icons {
   font-size: 16px;
 }
 
+.app-contact {
+  padding: 80px 20px;
+}
+
+.back-link {
+  padding: 20px 0;
+}
+
 .rw-app-description p:before,
 .features li:before {
   position: relative;
