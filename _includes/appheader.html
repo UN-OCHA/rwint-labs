@@ -1,8 +1,25 @@
 <div class="page-header app">
   <div class="container">
     <div class="row">
-      <div class="col-sm-4 col-sm-offset-4 col-xs-8 col-sm-offset-2">
-        <img width="100%" src="{{ site.baseurl }}/img/apps/rw-apps-logo.png" alt="RW Apps logo" />
+
+      <div class="app-logo col-sm-4 col-sm-offset-1 col-xs-8 col-xs-offset-2">
+        <img width="100%" src="{{ site.baseurl }}/img/apps/rwlabs-apps-logo.png" alt="RW Apps logo" />
+      </div>
+
+      <div class="col-sm-4 col-sm-offset-2 col-xs-8 col-xs-offset-2">
+        <div class="carousel slide phone-slides" data-ride="carousel">
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner phone-frame" role="listbox">
+            {% assign state = 'active' %}
+            {% for image in page.images %}
+            <div class="item {% if state == 'active' %}active{% endif %}">
+              {% assign state = 'inactive' %}
+              <img src="{{ site.baseurl }}/{{ image }}" />
+            </div>
+            {% endfor %}
+          </div>
+        </div>
       </div>
     </div>
   </div>

@@ -1,5 +1,15 @@
 ---
 layout: appspage
+images:
+ - img/apps/jobs/splashscreen.jpg
+ - img/apps/jobs/walk-through01.jpg
+ - img/apps/jobs/walk-through02.jpg
+ - img/apps/jobs/walk-through03.jpg
+ - img/apps/jobs/home.jpg
+ - img/apps/jobs/job.jpg
+ - img/apps/jobs/jobdetail.jpg
+ - img/apps/jobs/search.jpg
+ - img/apps/jobs/searchresult.jpg
 ---
 
 <div id="rw-projects" class="container-fluid page-section">
@@ -20,13 +30,23 @@ layout: appspage
           <div class="mc-field-group">
             <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required="">
             <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_bbba5e49a58c86ed484b5a084_5ffc9bac6d" tabindex="-1" value=""></div>
-            <label for="mce-OS">Phone Type </label>
+            <div class="phone-type">
+            <label for="mce-OS">Phone Type  <span class="asterisk">*</span></label>
             <select name="OS" class="" id="mce-OS">
               <option value=""></option>
               <option value="Android">Android</option>
               <option value="iOS">iOS</option>
               <option value="Other">Other</option>
             </select>
+            <div class="app-type">
+            <strong>App you're most interested in testing  <span class="asterisk">*</span></strong>
+              <ul>
+                <li><input type="radio" value="RW Crises" name="APP" id="mce-APP-0"><label for="mce-APP-0">RW Crises</label></li>
+                <li><input type="radio" value="RW Headlines" name="APP" id="mce-APP-1"><label for="mce-APP-1">RW Headlines</label></li>
+                <li><input type="radio" value="RW Jobs" name="APP" id="mce-APP-2"><label for="mce-APP-2">RW Jobs</label></li>
+                <li><input type="radio" value="RW Videos" name="APP" id="mce-APP-3"><label for="mce-APP-3">RW Videos</label></li>
+              </ul>
+            </div>
             <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
           </div>
         </form>
@@ -38,48 +58,36 @@ layout: appspage
   </div>
 </div>
 
-<div class="rw-divider"></div>
-<div id="rw-projects" class="rw-projects container-fluid page-section">
+{% for app in site.apps %}
+<div class="{% cycle 'rw-divider', 'rw-divider-flip' %}"></div>
+<div id="rw-projects" class="{% cycle 'dark-background', 'light-background' %} rw-apps container-fluid page-section">
   <div class="row">
-    <div class="container col-xs-offset-1">
-      <div class="row">
-        <div class="project-page rw-project-list">
-          {% for app in site.apps %}
-          <div id="{{ app.id }}" class="rw-project-list-item app col-sm-6">
-            {% if app.link %}
-            <h3><a href="{{ app.link }}">{{ app.title }}</a></h3>
-            {% else %}
-            <h3>{{ app.title }}</h3>
-            {% endif %}
-            <p class="rw-status"><strong>Phase: {{ app.phase | upcase }}</strong></p>
-            <div class="row">
-              <div class="col-sm-6">
-                {% if app.link %}
-                <div class="rw-img-cell"><a href="{{ app.link }}"><img src="{{ app.logo }}" alt="" class="img-responsive"></a></div>
-                {% else %}
-                <div class="rw-img-cell"><img src="{{ app.logo }}" alt="" class="img-responsive"></div>
-                {% endif %}
-              </div>
-              <div class="rw-app-description col-sm-6">
-                {{ app.content }}
-              </div>
-            </div>
-            <div class="row rw-app-stores">
-              {% if app.play-url %}
-              <div class="rw-stores col-sm-6">
-                <a href="{{ app.play-url }}"><img src="img/apps/store-play.png" width="100px"/></a>
-              </div>
-              {% endif %}
-              {% if app.itunes-url %}
-              <div class="rw-stores col-sm-6">
-                <a href="{{ app.itunes-url }}"><img src="img/apps/store-app.png" width="100px"/></a></p>
-              </div>
-              {% endif %}
-            </div><!-- /rw-app-stores -->
-          </div><!-- /rw-project-list-item -->
-          {% endfor %}
-        </div><!-- /.rw-project-list -->
-      </div><!-- /row -->
-    </div><!-- /container -->
+    <div id="{{ app.id }}" class="rw-app-list-item">
+      <div class="col-sm-offset-2 col-sm-4">
+        <div class="rw-img-cell"><img src="{{ app.logo }}" alt="" class="img-responsive"></div>
+        <p class="rw-status"><strong>Phase: {{ app.phase | upcase }}</strong></p>
+      </div>
+      <div class="rw-app-description col-sm-4">
+        {{ app.content }}
+        <ul class="features">
+        {% for feature in app.features %}
+        <li>{{ feature }}</li>
+        {% endfor %}
+        </ul>
+      </div>
+      <div class="row rw-app-stores">
+        {% if app.play-url %}
+        <div class="rw-stores col-sm-offset-3 col-sm-3">
+          <a href="{{ app.play-url }}"><img src="img/apps/store-play.png" width="100px"/></a>
+        </div>
+        {% endif %}
+        {% if app.itunes-url %}
+        <div class="rw-stores col-sm-3">
+          <a href="{{ app.itunes-url }}"><img src="img/apps/store-app.png" width="100px"/></a></p>
+        </div>
+        {% endif %}
+      </div><!-- /rw-app-stores -->
+    </div><!-- /rw-app-list-item -->
   </div><!-- /row -->
-</div><!-- /container -->
+</div><!-- /container-fluid -->
+{% endfor %}

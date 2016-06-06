@@ -14,15 +14,12 @@ images:
  - img/apps/videos/video_splash.jpg
  - img/apps/videos/video_theme.jpg
 features:
- - Personalize content based on country, theme, disaster, etc.
+ - Watch the latest humanitarian videos, carefully selected by our editors from over 300 sources.
+ - Browse channels by country, theme and organization.
  - Save your favorite videos to watch later and share via social media.
 weight: 40
 itunes-url:
 play-url:
 ---
 
-Keep up with ReliefWeb's curated selection of humanitarian videos.
-
-Covers everything from training videos to in-depth reports from an on-going crisis.
-
-Chosen by our editors from over 300 sources.
+**Hand-picked selection** of the latest humanitarian videos.

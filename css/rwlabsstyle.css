@@ -163,6 +163,7 @@ ul.social-icons {
 
 /* Common */
 
+.dark-background,
 .rw-projects,
 .resources {
   color: #f4f4f0;
@@ -219,10 +220,13 @@ ul.social-icons {
   background-color: #0988BB;
 }
 
+.rw-app-list-item a,
 .rw-project-list-item a {
   color: #cda7ff;
 }
 
+.rw-app-list-item a:hover,
+.rw-app-list-item a:focus,
 .rw-project-list-item a:hover,
 .rw-project-list-item a:focus {
   color: #cda7ff;
@@ -249,6 +253,24 @@ ul.social-icons {
 }
 
 /* RW-Apps */
+.app-type,
+.phone-type {
+  padding-top: 16px;
+}
+
+.app-type ul {
+  padding-left: 0;
+}
+
+.app-type li {
+  display: inline;
+  list-style: none;
+}
+
+.app-logo {
+  padding-top: 50px;
+}
+
 .page-header.app {
   margin-bottom: 60px;
 }
@@ -257,19 +279,14 @@ ul.social-icons {
   padding-top: 66px;
 }
 
-.rw-project-list-item.app {
+.rw-app-list-item {
+  padding-top: 40px;
   min-height: 360px;
 }
 
 .app-introduction {
   font-size: 1.6em;
   padding-top: 40px;
-}
-
-.features li {
-  list-style: none;
-  padding: 4px 0;
-  line-height: 2;
 }
 
 .rw-app-description {
@@ -285,7 +302,14 @@ ul.social-icons {
   padding: 20px 0;
 }
 
-.rw-app-description p:before,
+.features {
+  padding-left: 10px;
+}
+
+.features li {
+  list-style: none;
+}
+
 .features li:before {
   position: relative;
   top: 1px;

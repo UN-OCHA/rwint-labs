@@ -17,17 +17,11 @@ images:
  - img/apps/jobs/searchresult.jpg
 weight: 40
 features:
- - Get instant access to ReliefWeb's comprehensive humanitarian job postings.
- - Search by location, keywords, job title, & experience level.
- - Save job openings and get notified on the latest jobs based on your search criteria.
- - Share your favorite job openings via email or social media.
+ - Search by location, keywords, job title, and experience level.
+ - Save your search criteria and get notified on the latest jobs based on your preference.
+ - Share job openings with friends and colleagues via email or social media.
 itunes-url:
 play-url:
 ---
 
-Instant access to ReliefWeb's comprehensive humanitarian job postings.
-
-Save job opporunities to revisit later.
-
-Get notified on the latest jobs that match your criteria.
-
+**Instant access** to our comprehensive job listings.
