@@ -253,6 +253,7 @@ ul.social-icons {
 }
 
 /* RW-Apps */
+.email-address,
 .app-type,
 .phone-type {
   padding-top: 16px;
