@@ -253,9 +253,7 @@ ul.social-icons {
 }
 
 /* RW-Apps */
-.email-address,
-.app-type,
-.phone-type {
+.mc-field-group div {
   padding-top: 16px;
 }
 
