@@ -12,27 +12,92 @@ images:
  - img/apps/jobs/searchresult.jpg
 ---
 
+<script src="{{ site.baseurl }}/js/rwlabs.js"></script>
+<div class="page-header app">
+  <div class="container">
+    <div class="row">
+
+      <div class="app-logo col-sm-6 col-xs-12">
+        <img width="100%" src="{{ site.baseurl }}/img/apps/rwlabs-apps-logo.png" alt="RW Apps logo" />
+
+        <div class="app-introduction">
+          <p>In 2015, mobile visitors to ReliefWeb increased by 71%.</p>
+
+          <p>To meet this growing demand, ReliefWeb is developing four mobile apps.</p>
+        </div>
+
+        <!-- Logos -->
+        {% assign state = 'active' %}
+        <div class="app-logos">
+          {% for app in site.apps %}
+          <img width="24%"  type="{{ app.name }}" src="{{ app.logo }}" alt="" class="img-responsive {{ state }}">
+          {% assign state = '' %}
+          {% endfor %}
+        </div>
+        {% assign visibility = '' %}
+        {% for app in site.apps %}
+        <div id="" class="{{ app.name }} rw-app-list-item {{ visibility }}">
+          {{ app.content }}
+          <ul class="features">
+          {% for feature in app.features %}
+          <li>{{ feature }}</li>
+          {% endfor %}
+          </ul>
+          <div class="row rw-app-stores">
+            {% if app.play-url %}
+            <div class="rw-stores col-sm-offset-3 col-sm-3">
+              <a href="{{ app.play-url }}"><img src="img/apps/store-play.png" width="100px"/></a>
+            </div>
+            {% endif %}
+            {% if app.itunes-url %}
+            <div class="rw-stores col-sm-3">
+              <a href="{{ app.itunes-url }}"><img src="img/apps/store-app.png" width="100px"/></a></p>
+            </div>
+            {% endif %}
+          </div><!-- /rw-app-stores -->
+        </div><!-- /rw-app-list-item -->
+        {% assign visibility = 'hidden' %}
+        {% endfor %}
+
+      </div>
+
+      <div class="app-images col-sm-4 col-sm-offset-2 col-xs-8 col-xs-offset-2">
+        {% assign visibility = '' %}
+        {% for app in site.apps %}
+        <img class="{{ app.name }} {{ visibility }}" src="{{ app.slideshow }}">
+        {% assign visibility = 'hidden' %}
+        {% endfor %}
+
+      </div>
+    </div>
+  </div>
+</div>
 <div id="rw-projects" class="container-fluid page-section">
   <div class="row">
-    <div class="col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+    <div class="col-sm-12">
 
       <div class="app-contact">
         <form action="//reliefweb.us5.list-manage.com/subscribe/post?u=bbba5e49a58c86ed484b5a084&amp;id=5ffc9bac6d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
           <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_bbba5e49a58c86ed484b5a084_5ffc9bac6d" tabindex="-1" value=""></div>
-          <label for="mce-EMAIL">Sign up to help with beta-testing these apps.</label>
+          <div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-1">
+            <label for="mce-EMAIL"><h3>Sign up to help with beta-testing these apps.</h3></label>
+            <p><strong>Note:</strong> Due to significant demand, we may not be able to respond to all submissions and requests. Thank you for understanding.</p>
+          </div>
           <!--[if gte IE 7]><span class="placeholder"><em>Email Address:</em></span><![endif]-->
-          <div class="row mc-field-group">
-            <div class="col-xs-6 col-sm-4">
-            </label>
+          <div class="col-xs-12 col-sm-5 col-sm-offset-2 mc-field-group">
+            <div class="col-xs-8 col-sm-6">
               <input type="text" value="" name="NAME" placeholder="name" class="required" id="mce-NAME">
             </div>
-            <div class="col-xs-6 col-sm-4">
+            <div class="col-xs-8 col-sm-6">
               <input type="text" value="" name="ORG" placeholder="organization" id="mce-ORG">
             </div>
-            <div class="email-address col-xs-6 col-sm-4">
+            <div class="email-address col-xs-6 col-sm-6">
               <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required="">
             </div>
-            <div class="col-xs-6 col-sm-3">
+            <div class="col-xs-8 col-sm-6">
+              <input type="text" value="" name="COUNTRY" placeholder="country" class="required" id="mce-COUNTRY">
+            </div>
+            <div class="col-xs-8 col-sm-6">
               <label for="mce-OS">Phone Type  <span class="asterisk">*</span></label>
               <select name="OS" class="" id="mce-OS">
                 <option value=""></option>
@@ -41,60 +106,15 @@ images:
                 <option value="Other">Other</option>
               </select>
             </div>
-            <div class="col-xs-6 col-sm-3">
-            </label>
-              <input type="text" value="" name="COUNTRY" placeholder="country" class="required" id="mce-COUNTRY">
-            </div>
-            <div class="app-type col-xs-12 col-sm-6">
-            <strong>App you're most interested in testing  <span class="asterisk">*</span></strong>
-              <ul>
-                <li><input type="radio" value="RW Crises" name="APP" id="mce-APP-0"><label for="mce-APP-0">RW Crises</label></li>
-                <li><input type="radio" value="RW Headlines" name="APP" id="mce-APP-1"><label for="mce-APP-1">RW Headlines</label></li>
-                <li><input type="radio" value="RW Jobs" name="APP" id="mce-APP-2"><label for="mce-APP-2">RW Jobs</label></li>
-                <li><input type="radio" value="RW Videos" name="APP" id="mce-APP-3"><label for="mce-APP-3">RW Videos</label></li>
-              </ul>
+            <div class="col-xs-8 col-sm-6">
+              <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
             </div>
           </div>
-          <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
         </form>
 
-        <p><strong>Note:</strong> Due to significant demand, we may not be able to respond to all submissions and requests. Thank you for understanding.</p>
       </div>
 
     </div>
   </div>
 </div>
 
-{% for app in site.apps %}
-<div class="{% cycle 'rw-divider', 'rw-divider-flip' %}"></div>
-<div id="rw-projects" class="{% cycle 'dark-background', 'light-background' %} rw-apps container-fluid page-section">
-  <div class="row">
-    <div id="{{ app.id }}" class="rw-app-list-item">
-      <div class="col-sm-offset-2 col-sm-4">
-        <div class="rw-img-cell"><img src="{{ app.logo }}" alt="" class="img-responsive"></div>
-        <p class="rw-status"><strong>Phase: {{ app.phase | upcase }}</strong></p>
-      </div>
-      <div class="rw-app-description col-sm-4">
-        {{ app.content }}
-        <ul class="features">
-        {% for feature in app.features %}
-        <li>{{ feature }}</li>
-        {% endfor %}
-        </ul>
-      </div>
-      <div class="row rw-app-stores">
-        {% if app.play-url %}
-        <div class="rw-stores col-sm-offset-3 col-sm-3">
-          <a href="{{ app.play-url }}"><img src="img/apps/store-play.png" width="100px"/></a>
-        </div>
-        {% endif %}
-        {% if app.itunes-url %}
-        <div class="rw-stores col-sm-3">
-          <a href="{{ app.itunes-url }}"><img src="img/apps/store-app.png" width="100px"/></a></p>
-        </div>
-        {% endif %}
-      </div><!-- /rw-app-stores -->
-    </div><!-- /rw-app-list-item -->
-  </div><!-- /row -->
-</div><!-- /container-fluid -->
-{% endfor %}

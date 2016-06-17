@@ -257,16 +257,16 @@ ul.social-icons {
   padding-top: 16px;
 }
 
-.app-type ul {
-  padding-left: 0;
-}
-
-.app-type li {
+.app-logos img {
   display: inline;
-  list-style: none;
 }
 
-.app-logo {
+.app-logos img.active {
+  border: #999 5px solid;
+}
+
+.app-logo,
+.phone-slides {
   padding-top: 50px;
 }
 
@@ -280,7 +280,6 @@ ul.social-icons {
 
 .rw-app-list-item {
   padding-top: 40px;
-  min-height: 360px;
 }
 
 .app-introduction {
