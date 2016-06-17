@@ -254,7 +254,7 @@ ul.social-icons {
 
 /* RW-Apps */
 .mc-field-group div {
-  padding-top: 16px;
+  padding-top: 20px;
 }
 
 .app-logos img {
@@ -292,8 +292,8 @@ ul.social-icons {
   font-size: 16px;
 }
 
-.app-contact {
-  padding: 80px 20px;
+.mc-field-group div:last-child {
+  padding-bottom: 80px;
 }
 
 .back-link {
