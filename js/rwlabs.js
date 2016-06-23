@@ -2,20 +2,18 @@ $(document).ready(function() {
 	// navigation click actions
 	$('.app-logos img').on('click', function(event){
 		event.preventDefault();
-    console.log('this', this);
+    var type = $( this ).attr('type');
+
+    // Highlight selected logo.
     $( '.app-logos img' ).removeClass('active');
     $( this ).addClass('active')
-    var type = $( this ).attr('type');
-    console.log('type', type);
-    //$( '.rw-app-list-item' ).toggle();
+
+    // Show only selected app description.
     $( '.rw-app-list-item' ).addClass('hidden');
-    $( '.app-images img' ).addClass('hidden');
-    console.log('applistitem', $( '.rw-app-list-item' ));
-    console.log('.type', $( '.' + type ));
     $( '.rw-app-list-item.' + type ).removeClass('hidden');
+
+    // Show only selected screen slideshow.
+    $( '.app-images .carousel' ).addClass('hidden');
     $( '.app-images .' + type ).removeClass('hidden');
-    console.log('applistitem', $( '.rw-app-list-item' ));
-
-
 	});
 });

@@ -8,15 +8,15 @@ phase: Alpha
 logo: img/apps/jobs/rw-apps-jobs.png
 slideshow: img/apps/jobs/jobs-app-screens.gif
 images:
- - img/apps/jobs/splashscreen.jpg
- - img/apps/jobs/walk-through01.jpg
- - img/apps/jobs/walk-through02.jpg
- - img/apps/jobs/walk-through03.jpg
- - img/apps/jobs/home.jpg
- - img/apps/jobs/job.jpg
- - img/apps/jobs/jobdetail.jpg
- - img/apps/jobs/search.jpg
- - img/apps/jobs/searchresult.jpg
+ - img/apps/jobs/splashScreen.png
+ - img/apps/jobs/walk-through01.png
+ - img/apps/jobs/walk-through02.png
+ - img/apps/jobs/walk-through03.png
+ - img/apps/jobs/home.png
+ - img/apps/jobs/job.png
+ - img/apps/jobs/jobDetail.png
+ - img/apps/jobs/search.png
+ - img/apps/jobs/searchResult.png
 weight: 40
 features:
  - Search by location, keywords, job title, and experience level.

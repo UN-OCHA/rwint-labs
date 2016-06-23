@@ -64,10 +64,20 @@ images:
       <div class="app-images col-sm-4 col-sm-offset-2 col-xs-10 col-xs-offset-1">
         {% assign visibility = '' %}
         {% for app in site.apps %}
-        <img class="{{ app.name }} {{ visibility }}" src="{{ app.slideshow }}">
+        <div class="{{ app.name }} {{ visibility }} carousel slide phone-slides" data-ride="carousel">
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner phone-frame" role="listbox">
+            {% assign state = 'active' %}
+            {% for image in app.images %}
+            <div class="item {{ state }}">
+              <img src="{{ image }}">
+            </div>
+            {% assign state = '' %}
+            {% endfor %}
+          </div>
+        </div>
         {% assign visibility = 'hidden' %}
         {% endfor %}
-
       </div>
     </div>
   </div>
