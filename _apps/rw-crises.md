@@ -8,6 +8,7 @@ logo: img/apps/crises/rw-apps-crises.png
 images:
  - img/apps/crises/crisis_splash.png
  - img/apps/crises/crisis_contentCards.png
+ - img/apps/crises/MAP_BLUE.png
  - img/apps/crises/crisis_country1.png
  - img/apps/crises/crisis_country1_option2.png
  - img/apps/crises/crisis_country1_option3.png
