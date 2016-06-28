@@ -1,12 +1,10 @@
 ---
 layout: app
-id: rw-jobs-app
 name: rw-jobs-app
 title: RW Jobs
 link: apps/rw-jobs.html
 phase: Alpha
 logo: img/apps/jobs/rw-apps-jobs.png
-slideshow: img/apps/jobs/jobs-app-screens.gif
 images:
  - img/apps/jobs/splashScreen.png
  - img/apps/jobs/walk-through01.png

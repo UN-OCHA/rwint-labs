@@ -1,7 +1,6 @@
 ---
 layout: app
-id: rw-headlines
-name: rw-headlines
+name: rw-headlines-app
 title: RW Headlines
 tagline:
 link: apps/rw-headlines.html

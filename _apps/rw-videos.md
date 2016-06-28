@@ -1,12 +1,10 @@
 ---
 layout: app
-id: rw-video-app
 name: rw-video-app
 title: RW Videos
 link: apps/rw-videos.html
 phase: Alpha
 logo: img/apps/videos/rw-apps-videos.png
-slideshow: img/apps/videos/videos-app-screens.gif
 images:
  - img/apps/videos/video_splash.png
  - img/apps/videos/video_walkthrough1.png
