@@ -9,7 +9,6 @@ images:
  - img/apps/crises/crisis_splash.png
  - img/apps/crises/crisis_contentCards.png
  - img/apps/crises/MAP_BLUE.png
- - img/apps/crises/crisis_followCountries.png
  - img/apps/crises/crisis_fundingDetail.png
  - img/apps/crises/crisis_settings2.png
 features:
