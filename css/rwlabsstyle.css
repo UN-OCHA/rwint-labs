@@ -9,11 +9,6 @@ a {
   text-decoration: none;
 }
 
-.whitespace {
-  min-height: 180px;
-  min-width: 180px;
-}
-
 /* Font */
 @font-face {
   font-family: 'Volkhov-Regular';
