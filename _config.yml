@@ -3,7 +3,7 @@ lsi: false
 highlighter: pygments
 markdown: kramdown
 
-baseurl: https://lazysoundsystem.github.io/labs
+baseurl: http://labs.reliefweb.int
 
 collections:
   projects:
