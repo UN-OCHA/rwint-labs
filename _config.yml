@@ -8,3 +8,5 @@ baseurl: http://labs.reliefweb.int
 collections:
   projects:
     output: true
+  apps:
+    output: true
