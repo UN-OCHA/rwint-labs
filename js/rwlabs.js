@@ -1,12 +1,10 @@
 $(document).ready(function() {
-	// navigation click actions
-	$('.app-logos img').on('click', function(event){
-		event.preventDefault();
-    var type = $( this ).attr('type');
+
+  var app_display = function(type) {
 
     // Highlight selected logo.
     $( '.app-logos img' ).removeClass('active');
-    $( this ).addClass('active')
+    $( 'img[type=' + type + ']' ).addClass('active')
 
     // Show only selected app description.
     $( '.rw-app-list-item' ).addClass('hidden');
@@ -15,5 +13,20 @@ $(document).ready(function() {
     // Show only selected screen slideshow.
     $( '.app-images .carousel' ).addClass('hidden');
     $( '.app-images .' + type ).removeClass('hidden');
-	});
+  }
+
+  // set initial app from fragment
+  if (window.location.hash != 'undefined') {
+    hash = window.location.hash.substring(1);
+    app_display(hash);
+  }
+
+  // navigation clicks
+  $('.app-logos img').on('click', function(event){
+    event.preventDefault();
+    var type = $( this ).attr('type');
+    window.location.hash = type;
+    app_display(type);
+  });
 });
+
