@@ -10,11 +10,14 @@ images:
  - img/apps/jobs/walk-through01.png
  - img/apps/jobs/walk-through02.png
  - img/apps/jobs/walk-through03.png
- - img/apps/jobs/home.png
- - img/apps/jobs/job.png
- - img/apps/jobs/jobDetail.png
- - img/apps/jobs/search.png
- - img/apps/jobs/searchResult.png
+ - img/apps/jobs/jobs1-recent-searches.png
+ - img/apps/jobs/jobs2-search-field.png
+ - img/apps/jobs/jobs3-career-category.png
+ - img/apps/jobs/jobs4-organization-type.png
+ - img/apps/jobs/jobs5-theme.png
+ - img/apps/jobs/jobs6-feed-share-favorite-unsave.png
+ - img/apps/jobs/jobs7-saved-jobs.png
+ - img/apps/jobs/jobs8-sample-job-post.png
 weight: 40
 features:
  - Search by location, keywords, job title, and experience level.

@@ -6,13 +6,14 @@ link: apps/rw-videos.html
 phase: Alpha
 logo: img/apps/videos/rw-apps-videos.png
 images:
- - img/apps/videos/video_splash.png
- - img/apps/videos/video_walkthrough1.png
- - img/apps/videos/video_walkthrough2.png
- - img/apps/videos/video_country.png
- - img/apps/videos/video_home+browse.png
- - img/apps/videos/video_home+browse_Bylatest.png
- - img/apps/videos/video_theme.png
+ - img/apps/videos/videos-splash.png
+ - img/apps/videos/videos-walkthrough1.png
+ - img/apps/videos/videos-walkthrough2.png
+ - img/apps/videos/videos1-browse-by-theme.png
+ - img/apps/videos/videos2-all-videos.png
+ - img/apps/videos/videos3-saved-videos.png
+ - img/apps/videos/videos4-latest-videos.png
+ - img/apps/videos/videos5-browse-by-country.png
 features:
  - Watch the latest humanitarian videos, carefully selected by our editors from over 300 sources.
  - Browse channels by country, theme and organization.
