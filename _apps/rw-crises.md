@@ -6,11 +6,14 @@ link: apps/rw-crises.html
 phase: Alpha
 logo: img/apps/crises/rw-apps-crises.png
 images:
- - img/apps/crises/crisis_splash.png
- - img/apps/crises/crisis_contentCards.png
- - img/apps/crises/MAP_BLUE.png
- - img/apps/crises/crisis_fundingDetail.png
- - img/apps/crises/crisis_settings2.png
+ - img/apps/crises/crises_splash.png
+ - img/apps/crises/crises1-home.png
+ - img/apps/crises/crises2-funding.png
+ - img/apps/crises/crises3-key-figures.png
+ - img/apps/crises/crises4-overview.png
+ - img/apps/crises/crises5-settings-countries.png
+ - img/apps/crises/crises6-settings-content.png
+ - img/apps/crises/crises7-samplereport.png
 features:
  - Stay current with key figures such as the number of affected population and funding status.
  - View and download the latest maps, infographics and situation reports.
