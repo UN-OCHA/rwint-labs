@@ -2,6 +2,10 @@ $(document).ready(function() {
 
   var app_display = function(type) {
 
+    if (!type) {
+      return;
+    }
+
     // Highlight selected logo.
     $( '.app-logos img' ).removeClass('active');
     $( 'img[type=' + type + ']' ).addClass('active')
@@ -16,7 +20,7 @@ $(document).ready(function() {
   }
 
   // set initial app from fragment
-  if (window.location.hash != 'undefined') {
+  if (window.location.hash) {
     hash = window.location.hash.substring(1);
     app_display(hash);
   }
