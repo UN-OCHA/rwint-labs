@@ -1,0 +1,76 @@
+---
+layout: appspage
+---
+
+<div class="page-header app">
+  <div class="container">
+    <div class="row">
+
+      <div class="app-logo col-sm-6 col-xs-12">
+        <img width="100%" src="{{ site.baseurl }}/img/apps/rwlabs-apps-logo.png" alt="RW Apps logo" />
+
+        <div class="app-introduction">
+          <p>In 2015, mobile visitors to ReliefWeb increased by 71%.</p>
+
+          <p>To meet this growing demand, ReliefWeb is developing four mobile apps.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% for app in site.apps %}
+  {% if app.phase != 'Alpha' %}
+
+  <div id="{{ app.name }}" class="container-fluid rw-apps-{{ app.name }}">
+    <div class="row">
+      <div class="container app-container">
+        <div class="row">
+          <div class="app-details col-sm-5 col-xs-12">
+            <div class="row">
+              <div class="app-logo col-sm-3">
+                <img type="{{ app.name }}" src="{{ site.baseurl }}/img/apps/rw-apps-{{ app.name }}.png" alt="" class="img-responsive">
+              </div>
+              <div class="app-title col-sm-9">
+                <div class="surtitle">ReliefWeb</div>
+                <div class="app-name">{{ app.name | capitalize }} app</div>
+              </div>
+            </div>
+            <div class="row rw-app-description col-sm-10">
+              <div class="rw-app-content">
+                {{ app.content }}
+              </div>
+              <div class="rw-app-highlights">
+                <p>Highlights:</p>
+                {% for feature in app.features %}
+                <p>{{ feature }}</p>
+                {% endfor %}
+              </div>
+            </div><!-- /rw-app-description -->
+            <div class="row rw-app-stores col-sm-12">
+              {% if app.play-url %}
+              <div class="rw-stores android">
+                <a href="{{ app.play-url }}"><img src="{{ site.baseurl }}/img/apps/androidstore.png" width="45%"/></a>
+              </div>
+              {% endif %}
+              {% if app.itunes-url %}
+              <div class="rw-stores apple">
+                <a href="{{ app.itunes-url }}"><img src="{{ site.baseurl }}/img/apps/applestore.png" width="45%"/></a></p>
+              </div>
+              {% endif %}
+            </div><!-- /rw-app-stores -->
+          </div>
+          <div class="app-demo col-sm-offset-4 col-sm-3 col-xs-12">
+            <div class="phone-frame">
+              <video loop="true" autoplay="true" width="248">
+                <source src="{{ site.baseurl }}/img/apps/{{ app.name }}-demo.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+  {% endfor %}
+
+</div>

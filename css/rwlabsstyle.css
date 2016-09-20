@@ -215,13 +215,10 @@ ul.social-icons {
   background-color: #0988BB;
 }
 
-.rw-app-list-item a,
 .rw-project-list-item a {
   color: #cda7ff;
 }
 
-.rw-app-list-item a:hover,
-.rw-app-list-item a:focus,
 .rw-project-list-item a:hover,
 .rw-project-list-item a:focus {
   color: #cda7ff;
@@ -248,72 +245,88 @@ ul.social-icons {
 }
 
 /* RW-Apps */
-.mc-field-group div {
-  padding-top: 20px;
+.rw-apps-videos {
+  background-color: #d2bfef;
 }
 
-.app-logos img {
-  display: inline;
+.rw-apps-headlines {
+  background-color: #46b5f4;
 }
 
-.app-logos img.active {
-  border: #999 5px solid;
+.rw-apps-jobs {
+  background-color: #ff8278;
 }
 
-.app-logo,
-.phone-slides {
+.app-container {
   padding-top: 50px;
 }
 
-.page-header.app {
+.app-details {
+  padding-top: 80px;
+  color: white;
+}
+
+.app-title {
+  padding-top: 18px;
+}
+
+.surtitle {
+  font-size: 1.4em;
+  font-family: "Volkhov-Regular";
+}
+
+.app-name {
+  font-size: 2.2em;
+  font-weight: 700;
+}
+
+.app-demo {
   margin-bottom: 60px;
-}
-
-.apps-logo-small {
-  padding-top: 66px;
-}
-
-.rw-app-list-item {
-  padding-top: 40px;
 }
 
 .app-introduction {
   font-size: 1.3em;
   padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.rw-app-content {
+  font-weight: 700;
 }
 
 .rw-app-description {
-  padding: 17px 17px 17px 0;
-  font-size: 16px;
+  font-size: 1.4em;
+  padding-top: 18px;
+  padding-bottom: 18px;
 }
 
-.mc-field-group div:last-child {
-  padding-bottom: 80px;
+.rw-app-stores {
+  padding-bottom: 60px;
+}
+
+.rw-app-stores div {
+  display: inline;
 }
 
 .back-link {
   padding: 20px 0;
 }
 
-.features {
-  padding-left: 10px;
+/* Video demo */
+
+.phone-frame {
+  background: url(../img/apps/iphone6-black-blank.png) no-repeat top left;
+  width: 272px;
+  height: 565px;
+  display: block;
 }
 
-.features li {
-  list-style: none;
-}
-
-.features li:before {
+video {
   position: relative;
-  top: 1px;
-  display: inline-block;
-  font-family: 'Glyphicons Halflings';
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  padding: 0 10px;
-  content: "\e250";
+  top: 55px;
+  left: 12px;
 }
+
 
 /* Resources */
 
@@ -403,34 +416,6 @@ ul.social-icons {
   height: 32px;
   margin: 4px 4px 8px 0;
   width: 32px;
-}
-
-/* Carousel */
-
-.phone-slides {
-  width: 272px;
-}
-
-.phone-frame {
-  background: url(../img/apps/iphone6-black-blank.png) no-repeat top left;
-}
-
-.phone-frame img {
-  padding: 52px 12px 72px;
-}
-
-.phone-frame .item {
-  opacity: 0.3;
-}
-
-.phone-frame .active {
-  transition: opacity 1s;
-  opacity: 1;
-}
-
-.phone-frame .active.left {
-  transition: opacity 1s;
-  opacity: 0.3;
 }
 
 /* Divider */
