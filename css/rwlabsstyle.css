@@ -258,11 +258,11 @@ ul.social-icons {
 }
 
 .app-container {
-  padding-top: 50px;
+  padding-top: 80px;
 }
 
 .app-details {
-  padding-top: 80px;
+  padding-top: 20px;
   color: white;
 }
 
@@ -271,7 +271,7 @@ ul.social-icons {
 }
 
 .surtitle {
-  font-size: 1.4em;
+  font-size: 1.2em;
   font-family: "Volkhov-Regular";
 }
 
