@@ -1,0 +1,85 @@
+<div class="row">
+  <div class="playlist-title">
+    <a href="http://youtube.com/playlist?list=PLA82EFAD988C16D1D" class="logo-youtube pull-left text-hide">
+    Humanitarian Projects Playlist
+    </a>
+    <h4>Humanitarian Project Videos</h4>
+  </div>
+</div>
+<div class="row playlist-row">
+  <div class="col-xs-6">
+    <div class="embed-responsive embed-responsive-16by9">
+        <div id="youtube-video1"></div>
+    </div>
+  </div>
+  <div class="col-xs-6">
+    <div class="embed-responsive embed-responsive-16by9">
+        <div id="youtube-video2"></div>
+    </div>
+  </div>
+</div>
+<div class="row playlist-row">
+  <div class="col-xs-6">
+    <div class="embed-responsive embed-responsive-16by9">
+        <div id="youtube-video3"></div>
+    </div>
+  </div>
+  <div class="col-xs-6">
+    <div class="embed-responsive embed-responsive-16by9">
+      <div id="youtube-playlist"></div>
+    </div>
+    <a href="http://reliefweb.int/videos/playlist/Innovative+Humanitarian+Projects">
+      <div class="view-all button-link pull-right">
+        View Full Playlist &raquo;
+      </div>
+    </a>
+  </div>
+</div>
+<script>
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  var player;
+  function onYouTubeIframeAPIReady() {
+    player = new YT.Player('youtube-playlist', {
+      events: {
+        'onReady': onPlayerReady,
+        'onStateChange': onPlayerStateChange
+      }
+    });
+  }
+
+  function onPlayerReady(event) {
+    event.target.cuePlaylist({
+      listType: 'playlist',
+      list: 'PLA82EFAD988C16D1D'
+    });
+  }
+
+  var firstLoad = true;
+  function onPlayerStateChange(event) {
+    if (firstLoad) {
+      firstLoad = false;
+      loadVideos(event.target.getPlaylist());
+    }
+  }
+
+  function loadVideos(playlistItems) {
+    // player.setShuffle() isn't working, do it manually, removing first item
+    // as it shows in the playlist display, and starting from the middle.
+    playlistItems.shift();
+    _.shuffle(playlistItems);
+    var videos = playlistItems.slice(Math.floor(Math.random() * (playlistItems.length - 3)));
+
+    for (var i=1; i < 4; i++) {
+      player = new YT.Player('youtube-video' + i, {
+        playerVars: {
+          modestbranding: '1',
+        },
+        videoId: videos[i],
+      });
+    }
+  }
+</script>

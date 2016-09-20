@@ -2,3 +2,11 @@ safe: true
 lsi: false
 highlighter: pygments
 markdown: kramdown
+
+baseurl: http://labs.reliefweb.int
+
+collections:
+  projects:
+    output: true
+  apps:
+    output: true
