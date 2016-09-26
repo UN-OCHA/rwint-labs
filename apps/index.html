@@ -62,9 +62,17 @@ title: ReliefWeb Apps
           </div>
           <div class="app-demo col-sm-offset-3 col-sm-3 col-xs-12">
             <div class="phone-frame">
+              <!-- temporary, until we have a video for crises. -->
+              {% if app.name == 'crises' %}
+              <div class="crises-image">
+                <img width="248" src="{{ site.baseurl }}/img/apps/crises/crises_splash.png">
+              </div>
+              {% endif %}
+              {% if app.name != 'crises' %}
               <video loop="true" autoplay="true" width="248">
                 <source src="{{ site.baseurl }}/img/apps/{{ app.name }}-demo.mp4" type="video/mp4">
               </video>
+              {% endif %}
             </div>
           </div>
         </div>
