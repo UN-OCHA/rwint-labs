@@ -257,6 +257,10 @@ ul.social-icons {
   background-color: #ff8278;
 }
 
+.rw-apps-crises {
+  background-color: #0392c1;
+}
+
 .app-container {
   padding-top: 80px;
 }
@@ -322,6 +326,7 @@ ul.social-icons {
   display: block;
 }
 
+.crises-image,
 video {
   position: relative;
   top: 55px;
