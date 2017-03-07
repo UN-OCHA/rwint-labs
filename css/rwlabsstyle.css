@@ -479,21 +479,21 @@ video {
 }
 
 /* Partners */
-.footer .partners .row .column {
+.footer div.partner-link {
   height: 60px;
   float: left;
 }
-.footer .partners .partner-links a {
+.footer .partner-link a {
   float: left;
   width: 130px;
   height: 40px;
 }
-.footer .partners .partner-links a:active,
-.footer .partners .partner-links a:hover {
+.footer .partner-link a:active,
+.footer .partner-link a:hover {
   opacity: 0.8;
 }
 
-.footer .partner-links a[class^="related logo-"] {
+.footer .partner-link a[class^="related logo-"] {
   background-image: url(../img/partner-logos.png);
   background-repeat: no-repeat;
 }
