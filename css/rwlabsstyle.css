@@ -99,7 +99,7 @@ smaller subset above will be used. */
 
 .navbar ul#rw-nav-global-utilities {
   margin-top: 12px;
-  padding-bottom: 9px;
+  padding-bottom: 4px;
 }
 
 .navbar a#rw-nav-rwhome {
@@ -124,12 +124,20 @@ smaller subset above will be used. */
   padding: 15px 8px 16px 28px;
 }
 
-ul.social-icons {
-  padding-left: 4px;
-}
-
-.social-icons li {
+.social-media-icons a {
   display: inline;
+  margin-left: 6px;
+}
+.social-media-icons a svg path {
+  transform: translate(-8px,-8px) scale(1.5);
+}
+.social-media-icons a svg {
+  height: 32px;
+  width: 32px;
+  fill: #3A5592;
+}
+.social-media-icons a:hover svg {
+  fill: #8C8887;
 }
 
 /* Page-header */
