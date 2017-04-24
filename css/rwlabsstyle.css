@@ -99,7 +99,7 @@ smaller subset above will be used. */
 
 .navbar ul#rw-nav-global-utilities {
   margin-top: 12px;
-  padding-bottom: 9px;
+  padding-bottom: 4px;
 }
 
 .navbar a#rw-nav-rwhome {
@@ -124,12 +124,20 @@ smaller subset above will be used. */
   padding: 15px 8px 16px 28px;
 }
 
-ul.social-icons {
-  padding-left: 4px;
-}
-
-.social-icons li {
+.social-media-icons a {
   display: inline;
+  margin-left: 6px;
+}
+.social-media-icons a svg path {
+  transform: translate(-8px,-8px) scale(1.5);
+}
+.social-media-icons a svg {
+  height: 32px;
+  width: 32px;
+  fill: #3A5592;
+}
+.social-media-icons a:hover svg {
+  fill: #8C8887;
 }
 
 /* Page-header */
@@ -317,6 +325,169 @@ ul.social-icons {
   padding: 20px 0;
 }
 
+/* app detail page */
+.app-detail-landing {
+  border-bottom: 60px #3e3d3f solid;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-column-gap: 20px;
+}
+
+.app-detail-landing h1,
+.app-detail-landing h2 {
+  font-family: "Volkhov-Regular";
+}
+
+.app-detail-landing h1 {
+  font-size: 50px;
+}
+
+.app-detail-landing h2 {
+  font-size: 40px;
+  color: #3e3e3e;
+}
+
+.app-detail-landing .hero {
+  background-color: #615480;
+  background-image: url(../img/apps/Crises-backgroundA-04.jpg);
+  background-size: cover;
+  display: grid;
+  grid-column: span 8;
+  grid-template-columns: repeat(8, 1fr);
+}
+
+.app-detail-landing .hero,
+.app-detail-landing .hero a {
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.app-detail-landing .hero .wrapper {
+  grid-column: 2 / span 3;
+  padding: 80px 0 120px;
+}
+
+.app-detail-landing .appnav {
+  list-style: none;
+  padding: 0 0 80px;
+}
+
+.app-detail-landing .appnav li {
+  display: inline;
+}
+
+.app-detail-landing .appnav li:not(:first-child) {
+  padding-left: 40px;
+}
+
+.app-detail-landing .appnav img {
+  height: 60px;
+}
+
+.app-detail-landing .slides {
+  grid-column: span 8;
+}
+
+.app-detail-landing .slide {
+  background-image: radial-gradient(ellipse, #ffffff, #e6e7e8);
+  background-size: cover;
+  color: #027ab0;
+  display: grid;
+  font-size: 20px;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 20px;
+  padding: 80px 0;
+}
+
+.app-detail-landing .slide img {
+  grid-column: 2 / span 3;
+  max-height: 600px;
+}
+
+.app-detail-landing .slide .description {
+  grid-column: 5 / span 3;
+  text-align: right;
+}
+
+.app-detail-landing .carousel-indicators li {
+  margin-left: 12px;
+}
+
+.app-detail-landing .features-wrapper {
+  background-image: url(../img/apps/Crises-backgroundB-05.jpg), linear-gradient(to top right, #7eb8dd, #4795c6);
+  background-size: cover;
+  grid-column: span 8;
+  display: grid;
+  grid-template-columns: 1fr 6fr 1fr;
+  padding: 80px 0;
+}
+
+.app-detail-landing .features {
+  display: grid;
+  grid-column: 2;
+  grid-gap: 20px;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.app-detail-landing .feature {
+  color: #ffffff;
+  font-size: 18px;
+  grid-column: span 2;
+  text-align: center;
+}
+
+.app-detail-landing .feature img {
+  display: block;
+  margin: auto;
+  width: 80%;
+}
+
+.app-detail-landing .download {
+  border-bottom: 20px #3e3d3f;
+  color: #027ab0;
+  display: grid;
+  grid-column: 2 / span 6;
+  grid-gap: 20px;
+  grid-template-columns: repeat(6, 1fr);
+  padding: 80px 0;
+}
+
+.app-detail-landing .download h2 {
+  grid-column: span 6;
+}
+
+.app-detail-landing .download .rw-app-stores {
+  font-size: 20px;
+  grid-column: span 4;
+}
+
+.app-detail-landing .download .rw-app-stores p {
+  padding-bottom: 60px;
+}
+
+.app-detail-landing .download img {
+  grid-column: span 2;
+  max-height: 300px;
+}
+
+.app-detail-landing .download .other-apps {
+  display: grid;
+  font-size: 16px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 20px;
+  grid-column: span 6;
+}
+
+.app-detail-landing .download .other-apps p {
+  grid-column: span 6;
+}
+
+.app-detail-landing .download .other-app {
+  grid-column: span 1;
+  max-width: 60%;
+  max-height: 140px;
+}
+
 /* Video demo */
 
 .phone-frame {
@@ -473,65 +644,84 @@ video {
   font-family: "Volkhov-Regular";
 }
 
-.related-site {
-  min-width: 120px;
-  min-height: 80px;
-}
-
-.logo-humanitarianresponse {
-  background: url(../img/logo-humanitarianresponse-tall.png) no-repeat top left;
-}
-
-.logo-gdacs {
-  background: url(../img/logo-gdacs.png) no-repeat top left;
-}
-
-.logo-inform {
-  background: url(../img/logo-inform.png) no-repeat top left;
-}
-
-.logo-iasc {
-  background: url(../img/logo-iasc.png) no-repeat top left;
-}
-
-.logo-pw {
-  background: url(../img/logo-pw.png) no-repeat top left;
-}
-
-.logo-hdx {
-  background: url(../img/logo-hdx.png) no-repeat top left;
-}
-
-.logo-hews {
-  background: url(../img/logo-hews.png) no-repeat top left;
-}
-
-.logo-cerf {
-  background: url(../img/logo-cerf.png) no-repeat top left;
-}
-
-.logo-vosocc {
-  background: url(../img/logo-vosocc.png) no-repeat top left;
-}
-
-.logo-fts {
-  background: url(../img/logo-fts.png) no-repeat top left;
-}
-
-.logo-redhum {
-  background: url(../img/logo-redhum.png) no-repeat top left;
-}
-
-.logo-whs {
-  background: url(../img/logo-whs.png) no-repeat top left;
-}
-
-.logo-insarag {
-  background: url(../img/logo-insarag.png) no-repeat top left;
-}
-
 .rw-copyright {
   margin: 20px 0 60px 0;
   color: #babab3;
+}
+
+/* Partners */
+.footer div.partner-link {
+  height: 60px;
+  float: left;
+}
+.footer .partner-link a {
+  float: left;
+  width: 130px;
+  height: 40px;
+}
+.footer .partner-link a:active,
+.footer .partner-link a:hover {
+  opacity: 0.8;
+}
+
+.footer .partner-link a[class^="related logo-"] {
+  background-image: url(../img/partner-logos.png);
+  background-repeat: no-repeat;
+}
+
+.footer .logo-humanitarianresponse {
+  background-position: 0 -200px;
+}
+
+.footer .logo-hdx {
+  background-position: 0 -160px;
+}
+
+.footer .logo-fts {
+  background-position: 0 -80px;
+}
+
+.footer .logo-hid {
+  background-position: 0 -520px;
+}
+
+.footer .logo-gdacs {
+  background-position: 0 -120px;
+}
+
+.footer .logo-redhum {
+  background-position: 0 -400px;
+}
+
+.footer .logo-inform {
+  background-position: 0 -440px;
+}
+
+.footer .logo-cerf {
+  background-position: 0 -40px;
+}
+
+.footer .logo-afh {
+  background-position: 0 -360px;
+}
+
+.footer .logo-iasc {
+  background-position: 0 0;
+}
+
+.footer .logo-kobo {
+  background-position: 0 -560px;
+}
+
+.footer .logo-vosocc {
+  background-position: 0 -480px;
+}
+
+.footer .logo-insarag {
+  background-position: 0 -240px;
+}
+
+.footer .logo-pw {
+  background-position: 0 -280px;
 }
 

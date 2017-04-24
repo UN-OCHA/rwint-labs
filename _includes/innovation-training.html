@@ -33,7 +33,7 @@ var INNOVATION_TRAINING = {
   },
   loadReports : function() {
     $.ajax({
-      url:'http://api.rwlabs.org/v1/training?query[value]=technology%20AND%20information&query[fields][]=title&query[fields][]=body&query[fields][]=career_categories&fields[include][]=title&fields[include][]=date.created&fields[include][]=url&fields[include][]=country.name&fields[include][]=source.shortname&fields[include][]=country.iso3&sort[]=date:desc&limit=5',
+      url:'http://api.reliefweb.int/v1/training?appname=rwlabs-training&query[value]=technology%20AND%20information&query[fields][]=title&query[fields][]=body&query[fields][]=career_categories&fields[include][]=title&fields[include][]=date.created&fields[include][]=url&fields[include][]=country.name&fields[include][]=source.shortname&fields[include][]=country.iso3&sort[]=date:desc&limit=5',
       method:'get',
     }).done(this.handlerData);
   }

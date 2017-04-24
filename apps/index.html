@@ -11,9 +11,6 @@ title: ReliefWeb Apps
         <img width="100%" src="{{ site.baseurl }}/img/apps/rwlabs-apps-logo.png" alt="RW Apps logo" />
 
         <div class="app-introduction">
-          <p>In 2015, mobile visitors to ReliefWeb increased by 71%.</p>
-
-          <p>To meet this growing demand, ReliefWeb is developing four mobile apps.</p>
         </div>
       </div>
     </div>
@@ -29,7 +26,13 @@ title: ReliefWeb Apps
           <div class="app-details col-sm-5 col-xs-12">
             <div class="row">
               <div class="app-logo col-sm-3">
+                {% if app.permalink %}
+                <a href="{{ site.baseurl }}{{ app.permalink }}#{{ app.name }}">
+                {% endif %}
                 <img type="{{ app.name }}" src="{{ site.baseurl }}/img/apps/rw-apps-{{ app.name }}.png" alt="" class="img-responsive">
+                {% if app.permalink %}
+                </a>
+                {% endif %}
               </div>
               <div class="app-title col-sm-9">
                 <div class="surtitle">ReliefWeb</div>
@@ -42,8 +45,8 @@ title: ReliefWeb Apps
               </div>
               <div class="rw-app-highlights">
                 <p>Highlights:</p>
-                {% for feature in app.features %}
-                <p>{{ feature }}</p>
+                {% for banner in app.banners %}
+                <p>{{ banner }}</p>
                 {% endfor %}
               </div>
             </div><!-- /rw-app-description -->
@@ -62,17 +65,9 @@ title: ReliefWeb Apps
           </div>
           <div class="app-demo col-sm-offset-3 col-sm-3 col-xs-12">
             <div class="phone-frame">
-              <!-- temporary, until we have a video for crises. -->
-              {% if app.name == 'crises' %}
-              <div class="crises-image">
-                <img width="248" src="{{ site.baseurl }}/img/apps/crises/crises_splash.png">
-              </div>
-              {% endif %}
-              {% if app.name != 'crises' %}
               <video loop="true" autoplay="true" width="248">
                 <source src="{{ site.baseurl }}/img/apps/{{ app.name }}-demo.mp4" type="video/mp4">
               </video>
-              {% endif %}
             </div>
           </div>
         </div>

@@ -28,7 +28,7 @@ var INNOVATION_NEWS = {
   },
   loadReports : function() {
     $.ajax({
-      url:'http://api.rwlabs.org/v1/reports?query[value]=technology%20AND%20information&query[fields][]=title&query[fields][]=body&fields[include][]=title&fields[include][]=date.original&fields[include][]=url&fields[include][]=primary_country.name&fields[include][]=source.shortname&fields[include][]=primary_country.iso3&sort[]=date:desc&limit=5',
+      url:'http://api.reliefweb.int/v1/reports?appname=rwlabs-news&query[value]=technology%20AND%20information&query[fields][]=title&query[fields][]=body&fields[include][]=title&fields[include][]=date.original&fields[include][]=url&fields[include][]=primary_country.name&fields[include][]=source.shortname&fields[include][]=primary_country.iso3&sort[]=date:desc&limit=5',
       method:'get',
     }).done(this.handlerData);
   }
