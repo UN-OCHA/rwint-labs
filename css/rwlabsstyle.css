@@ -325,6 +325,169 @@ smaller subset above will be used. */
   padding: 20px 0;
 }
 
+/* app detail page */
+.app-detail-landing {
+  border-bottom: 60px #3e3d3f solid;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-column-gap: 20px;
+}
+
+.app-detail-landing h1,
+.app-detail-landing h2 {
+  font-family: "Volkhov-Regular";
+}
+
+.app-detail-landing h1 {
+  font-size: 50px;
+}
+
+.app-detail-landing h2 {
+  font-size: 40px;
+  color: #3e3e3e;
+}
+
+.app-detail-landing .hero {
+  background-color: #615480;
+  background-image: url(../img/apps/Crises-backgroundA-04.jpg);
+  background-size: cover;
+  display: grid;
+  grid-column: span 8;
+  grid-template-columns: repeat(8, 1fr);
+}
+
+.app-detail-landing .hero,
+.app-detail-landing .hero a {
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.app-detail-landing .hero .wrapper {
+  grid-column: 2 / span 3;
+  padding: 80px 0 120px;
+}
+
+.app-detail-landing .appnav {
+  list-style: none;
+  padding: 0 0 80px;
+}
+
+.app-detail-landing .appnav li {
+  display: inline;
+}
+
+.app-detail-landing .appnav li:not(:first-child) {
+  padding-left: 40px;
+}
+
+.app-detail-landing .appnav img {
+  height: 60px;
+}
+
+.app-detail-landing .slides {
+  grid-column: span 8;
+}
+
+.app-detail-landing .slide {
+  background-image: radial-gradient(ellipse, #ffffff, #e6e7e8);
+  background-size: cover;
+  color: #027ab0;
+  display: grid;
+  font-size: 20px;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 20px;
+  padding: 80px 0;
+}
+
+.app-detail-landing .slide img {
+  grid-column: 2 / span 3;
+  max-height: 600px;
+}
+
+.app-detail-landing .slide .description {
+  grid-column: 5 / span 3;
+  text-align: right;
+}
+
+.app-detail-landing .carousel-indicators li {
+  margin-left: 12px;
+}
+
+.app-detail-landing .features-wrapper {
+  background-image: url(../img/apps/Crises-backgroundB-05.jpg), linear-gradient(to top right, #7eb8dd, #4795c6);
+  background-size: cover;
+  grid-column: span 8;
+  display: grid;
+  grid-template-columns: 1fr 6fr 1fr;
+  padding: 80px 0;
+}
+
+.app-detail-landing .features {
+  display: grid;
+  grid-column: 2;
+  grid-gap: 20px;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.app-detail-landing .feature {
+  color: #ffffff;
+  font-size: 18px;
+  grid-column: span 2;
+  text-align: center;
+}
+
+.app-detail-landing .feature img {
+  display: block;
+  margin: auto;
+  width: 80%;
+}
+
+.app-detail-landing .download {
+  border-bottom: 20px #3e3d3f;
+  color: #027ab0;
+  display: grid;
+  grid-column: 2 / span 6;
+  grid-gap: 20px;
+  grid-template-columns: repeat(6, 1fr);
+  padding: 80px 0;
+}
+
+.app-detail-landing .download h2 {
+  grid-column: span 6;
+}
+
+.app-detail-landing .download .rw-app-stores {
+  font-size: 20px;
+  grid-column: span 4;
+}
+
+.app-detail-landing .download .rw-app-stores p {
+  padding-bottom: 60px;
+}
+
+.app-detail-landing .download img {
+  grid-column: span 2;
+  max-height: 300px;
+}
+
+.app-detail-landing .download .other-apps {
+  display: grid;
+  font-size: 16px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 20px;
+  grid-column: span 6;
+}
+
+.app-detail-landing .download .other-apps p {
+  grid-column: span 6;
+}
+
+.app-detail-landing .download .other-app {
+  grid-column: span 1;
+  max-width: 60%;
+  max-height: 140px;
+}
+
 /* Video demo */
 
 .phone-frame {

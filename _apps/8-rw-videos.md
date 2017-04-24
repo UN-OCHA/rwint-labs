@@ -1,8 +1,7 @@
 ---
-layout: app
 name: videos
 phase: Beta
-features:
+banners:
  - Watch the latest humanitarian videos, carefully selected by our editors from over 300 sources.
  - Browse channels by country, theme and organization.
  - Save your favorite videos to watch later and share via social media.
