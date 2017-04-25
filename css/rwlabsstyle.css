@@ -114,6 +114,7 @@ smaller subset above will be used. */
 .navbar a#rw-nav-rwlabs {
   background: #F4F4F0 url("../img/rw-nav-labs.png") no-repeat left center;
   padding: 15px 8px 16px 28px;
+  cursor: pointer;
 }
 
 .navbar a#rw-nav-rwblog {
@@ -157,7 +158,6 @@ smaller subset above will be used. */
 /* Carousel */
 
 .carousel-control.left {
-  /* background-image: linear-gradient(to right, #dddddd 0px, transparent 100%); */
   background-image: linear-gradient(to left, transparent 0px, #dddddd 100%);
 }
 
@@ -366,7 +366,7 @@ smaller subset above will be used. */
 }
 
 .app-detail-landing .hero .wrapper {
-  grid-column: 2 / span 4;
+  grid-column: 2 / span 3;
   padding: 100px 0 280px;
 }
 
