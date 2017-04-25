@@ -24,7 +24,9 @@
           {% for slide in page.slides %}
           <div class="item{% if forloop.first == true %} active{% endif %}">
             <div class="slide">
-              <img src="{{ site.baseurl }}/img/apps/{{ slide.image }}" alt=""/>
+              <div class="screenshot">
+                <img src="{{ site.baseurl }}/img/apps/{{ slide.image }}" alt="app screenshot"/>
+              </div>
               <div class="description">
                 <h2>{{ slide.title }}</h2>
                 <p>{{ slide.text }}</p>
@@ -69,12 +71,16 @@
           </div>
           {% endif %}
         </div><!-- /rw-app-stores -->
-        <img class="illustration" alt="download illustration" src="{{ site.baseurl }}/img/apps/{{ download.image }}"/>
+        <div class="illustration">
+          <img src="{{ site.baseurl }}/img/apps/{{ download.image }}" alt="download illustration"/>
+        </div>
         {% endfor %}
         <div class="other-apps">
           <p>You might also be interested in:</p>
           {% for appname in page.otherapps %}
-          <a href="../apps/index.html#{{ appname }}"><img class="other-app" alt="Link to {{ appname }} app" src="{{ site.baseurl }}/img/apps/rw-apps-{{ appname }}.png"/></a>
+          <a class="other-app" href="../apps/index.html#{{ appname }}">
+            <img alt="Link to {{ appname }} app" src="{{ site.baseurl }}/img/apps/rw-apps-{{ appname }}.png"/>
+          </a>
           {% endfor %}
         </div>
       </div>

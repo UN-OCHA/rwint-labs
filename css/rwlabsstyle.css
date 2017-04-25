@@ -157,11 +157,12 @@ smaller subset above will be used. */
 /* Carousel */
 
 .carousel-control.left {
-  background-image: linear-gradient(to right, rgba(247, 122, 108, 0.5) 0px, transparent 100%);
+  /* background-image: linear-gradient(to right, #dddddd 0px, transparent 100%); */
+  background-image: linear-gradient(to left, transparent 0px, #dddddd 100%);
 }
 
 .carousel-control.right {
-  background-image: linear-gradient(to right, transparent 0px, rgba(247, 122, 108, 0.5) 100%);
+  background-image: linear-gradient(to right, transparent 0px, #dddddd 100%);
 }
 
 /* Common */
@@ -325,10 +326,11 @@ smaller subset above will be used. */
   padding: 20px 0;
 }
 
-/* app detail page */
+/* App detail page */
 .app-detail-landing {
-  border-bottom: 60px #3e3d3f solid;
+  border-bottom: 1px #cccccc solid;
   display: grid;
+  font-weight: 300;
   grid-template-columns: repeat(8, 1fr);
   grid-column-gap: 20px;
 }
@@ -350,6 +352,7 @@ smaller subset above will be used. */
 .app-detail-landing .hero {
   background-color: #615480;
   background-image: url(../img/apps/Crises-backgroundA-04.jpg);
+  background-position-x: center;
   background-size: cover;
   display: grid;
   grid-column: span 8;
@@ -363,13 +366,13 @@ smaller subset above will be used. */
 }
 
 .app-detail-landing .hero .wrapper {
-  grid-column: 2 / span 3;
-  padding: 80px 0 120px;
+  grid-column: 2 / span 4;
+  padding: 100px 0 280px;
 }
 
 .app-detail-landing .appnav {
   list-style: none;
-  padding: 0 0 80px;
+  padding: 0 0 100px;
 }
 
 .app-detail-landing .appnav li {
@@ -381,7 +384,7 @@ smaller subset above will be used. */
 }
 
 .app-detail-landing .appnav img {
-  height: 60px;
+  width: 60px;
 }
 
 .app-detail-landing .slides {
@@ -393,15 +396,18 @@ smaller subset above will be used. */
   background-size: cover;
   color: #027ab0;
   display: grid;
-  font-size: 20px;
+  font-size: 18px;
   grid-template-columns: repeat(8, 1fr);
   grid-gap: 20px;
   padding: 80px 0;
 }
 
-.app-detail-landing .slide img {
+.app-detail-landing .slide .screenshot {
   grid-column: 2 / span 3;
-  max-height: 600px;
+}
+
+.app-detail-landing .screenshot img {
+  width: 100%;
 }
 
 .app-detail-landing .slide .description {
@@ -431,7 +437,7 @@ smaller subset above will be used. */
 
 .app-detail-landing .feature {
   color: #ffffff;
-  font-size: 18px;
+  font-size: 16px;
   grid-column: span 2;
   text-align: center;
 }
@@ -457,7 +463,7 @@ smaller subset above will be used. */
 }
 
 .app-detail-landing .download .rw-app-stores {
-  font-size: 20px;
+  font-size: 18px;
   grid-column: span 4;
 }
 
@@ -465,14 +471,17 @@ smaller subset above will be used. */
   padding-bottom: 60px;
 }
 
-.app-detail-landing .download img {
+.app-detail-landing .download .illustration {
   grid-column: span 2;
-  max-height: 300px;
+}
+
+.app-detail-landing .illustration img {
+  width: 100%;
 }
 
 .app-detail-landing .download .other-apps {
   display: grid;
-  font-size: 16px;
+  font-size: 14px;
   grid-template-columns: repeat(6, 1fr);
   grid-gap: 20px;
   grid-column: span 6;
@@ -484,8 +493,42 @@ smaller subset above will be used. */
 
 .app-detail-landing .download .other-app {
   grid-column: span 1;
+}
+
+.app-detail-landing .download .other-app img {
   max-width: 60%;
-  max-height: 140px;
+}
+
+/* App detail media queries */
+@media (max-width: 700px) {
+  .app-detail-landing .hero .wrapper {
+    grid-column: 2 / span 6;
+  }
+
+  .app-detail-landing .appnav li:not(:first-child) {
+    padding-left: 20px;
+  }
+
+  .app-detail-landing .slide .screenshot {
+    grid-column: 2 / span 6;
+  }
+
+  .app-detail-landing .slide .description {
+    grid-column: 2 / span 6;
+    text-align: left;
+  }
+
+  .app-detail-landing .download .rw-app-stores {
+    grid-column: span 8;
+  }
+
+  .app-detail-landing .download .illustration {
+    grid-column: 2 / span 4;
+  }
+
+  .app-detail-landing .download .other-app {
+    grid-column: span 2;
+  }
 }
 
 /* Video demo */
