@@ -371,7 +371,13 @@ smaller subset above will be used. */
   grid-template-columns: repeat(6, 1fr);
   margin: auto;
   max-width: 1000px;
-  padding: 100px 0 280px;
+  padding: 100px 0;
+}
+
+.app-detail-landing .hero .read-on {
+  grid-column: 4 / span 2;
+  margin: auto;
+  padding: 80px 0;
 }
 
 .app-detail-landing .appnav {
