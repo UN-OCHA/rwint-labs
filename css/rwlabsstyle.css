@@ -691,6 +691,10 @@ video {
 
 /* Footer */
 
+.footer {
+  padding-top: 80px;
+}
+
 .logo-footer {
   width: 133px;
   height: 38px;

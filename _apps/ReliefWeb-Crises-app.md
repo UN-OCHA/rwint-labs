@@ -31,11 +31,11 @@ features:
  - image: Crisesapp-icons-09.png
    text: Overview and latest developments
  - image: Crisesapp-icons-10.png
-   text: Contacts in country
+   text: Links to datasets
  - image: Crisesapp-icons-11.png
    text: Financial status and detailed breakdown by cluster and donors
  - image: Crisesapp-icons-12.png
-   text: Links to datasets
+   text: Contacts in country
  - image: Crisesapp-icons-13.png
    text: Disaster history
  - image: Crisesapp-icons-14.png
