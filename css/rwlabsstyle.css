@@ -416,6 +416,7 @@ smaller subset above will be used. */
 
 .app-detail-landing .slide {
   color: #027ab0;
+  column-count: 2;
   display: grid;
   font-size: 18px;
   grid-template-columns: repeat(6, 1fr);
@@ -453,6 +454,7 @@ smaller subset above will be used. */
 }
 
 .app-detail-landing .features {
+  column-count: 3;
   display: grid;
   grid-column: 2;
   grid-gap: 20px;
