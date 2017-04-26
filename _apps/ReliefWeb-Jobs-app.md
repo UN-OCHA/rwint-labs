@@ -1,9 +1,8 @@
 ---
-layout: app
 name: jobs
 phase: Beta
 weight: 40
-features:
+banners:
  - Search by location, keywords, job title, and experience level.
  - Save your search criteria.
  - Share job openings with friends and colleagues via email or social media.

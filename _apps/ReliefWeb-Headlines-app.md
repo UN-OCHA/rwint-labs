@@ -1,9 +1,8 @@
 ---
-layout: app
 name: headlines
 tagline:
 phase: Beta
-features:
+banners:
  - Create a personalized news feed based on your interests. Get headlines, new disasters and updates on your chosen countries or topics.
  - Bookmark your favorite reports to read later.
  - Export and share content via social media.
