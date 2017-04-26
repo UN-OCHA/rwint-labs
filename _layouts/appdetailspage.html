@@ -25,7 +25,9 @@
           <div class="item{% if forloop.first == true %} active{% endif %}">
             <div class="slide">
               <div class="screenshot">
-                <img src="{{ site.baseurl }}/img/apps/{{ slide.image }}" alt="app screenshot"/>
+                <div class="phone-frame">
+                  <img src="{{ site.baseurl }}/img/apps/{{ slide.image }}" alt="app screenshot"/>
+                </div>
               </div>
               <div class="description">
                 <h2>{{ slide.title }}</h2>
