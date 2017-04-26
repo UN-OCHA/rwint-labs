@@ -510,14 +510,18 @@ smaller subset above will be used. */
 }
 
 .app-detail-landing .download .other-apps {
-  display: grid;
-  font-size: 14px;
-  grid-template-columns: repeat(6, 1fr);
-  grid-gap: 20px;
   grid-column: span 6;
 }
 
 .app-detail-landing .download .other-apps p {
+  font-size: 14px;
+}
+
+.app-detail-landing .other-apps .app-links {
+  column-count: 6;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 20px;
   grid-column: span 6;
 }
 
@@ -558,6 +562,10 @@ smaller subset above will be used. */
 
   .app-detail-landing .download .illustration {
     grid-column: 2 / span 4;
+  }
+
+  .app-detail-landing .other-apps .app-links {
+    column-count: 3;
   }
 
   .app-detail-landing .download .other-app {
