@@ -79,11 +79,13 @@
         {% endfor %}
         <div class="other-apps">
           <p>You might also be interested in:</p>
-          {% for appname in page.otherapps %}
-          <a class="other-app" href="../apps/index.html#{{ appname }}">
-            <img alt="Link to {{ appname }} app" src="{{ site.baseurl }}/img/apps/rw-apps-{{ appname }}.png"/>
-          </a>
-          {% endfor %}
+          <div class="app-links">
+            {% for appname in page.otherapps %}
+            <a class="other-app" href="../apps/index.html#{{ appname }}">
+              <img alt="Link to {{ appname }} app" src="{{ site.baseurl }}/img/apps/rw-apps-{{ appname }}.png"/>
+            </a>
+            {% endfor %}
+          </div>
         </div>
       </div>
     </div>
