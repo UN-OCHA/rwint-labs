@@ -48,6 +48,11 @@ title: ReliefWeb Apps
                 {% for banner in app.banners %}
                 <p>{{ banner }}</p>
                 {% endfor %}
+                {% if app.permalink %}
+                <a href="{{ site.baseurl }}{{ app.permalink }}#{{ app.name }}">
+                  <p>See more details</p>
+                </a>
+                {% endif %}
               </div>
             </div><!-- /rw-app-description -->
             <div class="row rw-app-stores col-sm-12">
@@ -66,7 +71,7 @@ title: ReliefWeb Apps
           <div class="app-demo col-sm-offset-3 col-sm-3 col-xs-12">
             <div class="phone-frame">
               <video loop="true" autoplay="true" width="248">
-                <source src="{{ site.baseurl }}/img/apps/{{ app.name }}-demo.mp4" type="video/mp4">
+                <source src="{{ site.baseurl }}/img/apps/demo-{{ app.name }}.mp4" type="video/mp4">
               </video>
             </div>
           </div>

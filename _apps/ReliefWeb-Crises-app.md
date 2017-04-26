@@ -15,13 +15,13 @@ slides:
    image: Crises-feature-fts.png
    text: People in need, displacement, funding gaps, humanitarian responders on the ground, and more - the Crises app is updated around the clock by the ReliefWeb editorial team with timely and relevant information from trusted sources.
  - title: Browse and share
-   image:
+   image: Crises-feature-browse-share.png
    text: Easily browse and switch between countries. Interested in only certain types of reports? Use the tabs to swipe through the reports you want to read. Share important updates via email or social media.
  - title: Offline access
    image: Crises-feature-offline-access.png
    text: Travelling to a remote location in the the field? Save data for offline use in areas with poor internet connectivity.
  - title: Analysis
-   image:
+   image: Crises-feature-analysis.png
    text: Monitor historical trends across all countries, compare with other indicators and contact the experts on the ground.
 features:
  - image: Crisesapp-icons-07.png

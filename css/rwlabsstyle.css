@@ -114,6 +114,7 @@ smaller subset above will be used. */
 .navbar a#rw-nav-rwlabs {
   background: #F4F4F0 url("../img/rw-nav-labs.png") no-repeat left center;
   padding: 15px 8px 16px 28px;
+  cursor: pointer;
 }
 
 .navbar a#rw-nav-rwblog {
@@ -157,11 +158,11 @@ smaller subset above will be used. */
 /* Carousel */
 
 .carousel-control.left {
-  background-image: linear-gradient(to right, rgba(247, 122, 108, 0.5) 0px, transparent 100%);
+  background-image: linear-gradient(to left, transparent 0px, #dddddd 100%);
 }
 
 .carousel-control.right {
-  background-image: linear-gradient(to right, transparent 0px, rgba(247, 122, 108, 0.5) 100%);
+  background-image: linear-gradient(to right, transparent 0px, #dddddd 100%);
 }
 
 /* Common */
@@ -273,7 +274,8 @@ smaller subset above will be used. */
   padding-top: 80px;
 }
 
-.app-details {
+.app-details,
+.app-details a p {
   padding-top: 20px;
   color: white;
 }
@@ -325,10 +327,11 @@ smaller subset above will be used. */
   padding: 20px 0;
 }
 
-/* app detail page */
+/* App detail page */
 .app-detail-landing {
-  border-bottom: 60px #3e3d3f solid;
+  border-bottom: 1px #cccccc solid;
   display: grid;
+  font-weight: 300;
   grid-template-columns: repeat(8, 1fr);
   grid-column-gap: 20px;
 }
@@ -348,8 +351,8 @@ smaller subset above will be used. */
 }
 
 .app-detail-landing .hero {
-  background-color: #615480;
-  background-image: url(../img/apps/Crises-backgroundA-04.jpg);
+  background-image: linear-gradient(80deg, rgba(05,115,187,0.6) 10%, rgba(13,113,186,1) 95%), url(../img/apps/Crises-background-top.png);
+  background-position-x: center;
   background-size: cover;
   display: grid;
   grid-column: span 8;
@@ -363,13 +366,18 @@ smaller subset above will be used. */
 }
 
 .app-detail-landing .hero .wrapper {
-  grid-column: 2 / span 3;
-  padding: 80px 0 120px;
+  display: grid;
+  grid-column: 2 / span 6;
+  grid-template-columns: repeat(6, 1fr);
+  margin: auto;
+  max-width: 1000px;
+  padding: 100px 0 280px;
 }
 
 .app-detail-landing .appnav {
+  grid-column: 1 / span 4;
   list-style: none;
-  padding: 0 0 80px;
+  padding: 0 0 100px;
 }
 
 .app-detail-landing .appnav li {
@@ -381,31 +389,53 @@ smaller subset above will be used. */
 }
 
 .app-detail-landing .appnav img {
-  height: 60px;
+  width: 60px;
+}
+
+.app-detail-landing h1 {
+  grid-column: 1 / span 3;
 }
 
 .app-detail-landing .slides {
+  background-image: radial-gradient(ellipse, #ffffff, #e6e7e8);
+  background-size: cover;
   grid-column: span 8;
 }
 
+.app-detail-landing .carousel-inner {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 20px;
+}
+
+.app-detail-landing .item {
+  grid-column: 2 / span 6;
+  margin: auto;
+  max-width: 1000px;
+}
+
 .app-detail-landing .slide {
-  background-image: radial-gradient(ellipse, #ffffff, #e6e7e8);
-  background-size: cover;
   color: #027ab0;
   display: grid;
-  font-size: 20px;
-  grid-template-columns: repeat(8, 1fr);
+  font-size: 18px;
+  grid-template-columns: repeat(6, 1fr);
   grid-gap: 20px;
   padding: 80px 0;
 }
 
-.app-detail-landing .slide img {
-  grid-column: 2 / span 3;
-  max-height: 600px;
+.app-detail-landing .slide .screenshot {
+  grid-column: 1 / span 3;
+}
+
+.app-detail-landing .screenshot img {
+  left: 4%;
+  position: relative;
+  top: 10%;
+  width: 92%;
 }
 
 .app-detail-landing .slide .description {
-  grid-column: 5 / span 3;
+  grid-column: 4 / span 3;
   text-align: right;
 }
 
@@ -414,7 +444,7 @@ smaller subset above will be used. */
 }
 
 .app-detail-landing .features-wrapper {
-  background-image: url(../img/apps/Crises-backgroundB-05.jpg), linear-gradient(to top right, #7eb8dd, #4795c6);
+  background-image: linear-gradient(200deg, rgba(05,115,187,0.6) 20%, rgba(05,115,187,0.9) 80%), url(../img/apps/Crises-background-features.png);
   background-size: cover;
   grid-column: span 8;
   display: grid;
@@ -427,11 +457,13 @@ smaller subset above will be used. */
   grid-column: 2;
   grid-gap: 20px;
   grid-template-columns: repeat(6, 1fr);
+  margin: auto;
+  max-width: 1000px;
 }
 
 .app-detail-landing .feature {
   color: #ffffff;
-  font-size: 18px;
+  font-size: 16px;
   grid-column: span 2;
   text-align: center;
 }
@@ -449,6 +481,8 @@ smaller subset above will be used. */
   grid-column: 2 / span 6;
   grid-gap: 20px;
   grid-template-columns: repeat(6, 1fr);
+  margin: auto;
+  max-width: 1000px;
   padding: 80px 0;
 }
 
@@ -457,7 +491,7 @@ smaller subset above will be used. */
 }
 
 .app-detail-landing .download .rw-app-stores {
-  font-size: 20px;
+  font-size: 18px;
   grid-column: span 4;
 }
 
@@ -465,14 +499,17 @@ smaller subset above will be used. */
   padding-bottom: 60px;
 }
 
-.app-detail-landing .download img {
+.app-detail-landing .download .illustration {
   grid-column: span 2;
-  max-height: 300px;
+}
+
+.app-detail-landing .illustration img {
+  width: 100%;
 }
 
 .app-detail-landing .download .other-apps {
   display: grid;
-  font-size: 16px;
+  font-size: 14px;
   grid-template-columns: repeat(6, 1fr);
   grid-gap: 20px;
   grid-column: span 6;
@@ -484,8 +521,46 @@ smaller subset above will be used. */
 
 .app-detail-landing .download .other-app {
   grid-column: span 1;
+}
+
+.app-detail-landing .download .other-app img {
   max-width: 60%;
-  max-height: 140px;
+}
+
+/* App detail media queries */
+@media (max-width: 700px) {
+  .app-detail-landing .hero .wrapper {
+    grid-column: 2 / span 6;
+  }
+
+  .app-detail-landing .appnav h1 {
+    grid-column: 1 / span 4;
+  }
+
+  .app-detail-landing .appnav li:not(:first-child) {
+    padding-left: 20px;
+  }
+
+  .app-detail-landing .slide .screenshot {
+    grid-column: 1 / span 6;
+  }
+
+  .app-detail-landing .slide .description {
+    grid-column: 1 / span 6;
+    text-align: left;
+  }
+
+  .app-detail-landing .download .rw-app-stores {
+    grid-column: span 8;
+  }
+
+  .app-detail-landing .download .illustration {
+    grid-column: 2 / span 4;
+  }
+
+  .app-detail-landing .download .other-app {
+    grid-column: span 2;
+  }
 }
 
 /* Video demo */
@@ -497,7 +572,6 @@ smaller subset above will be used. */
   display: block;
 }
 
-.crises-image,
 video {
   position: relative;
   top: 55px;
