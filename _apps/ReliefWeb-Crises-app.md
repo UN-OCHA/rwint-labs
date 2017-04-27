@@ -36,8 +36,6 @@ features:
    text: Financial status and detailed breakdown by cluster and donors
  - image: Crisesapp-icons-12.png
    text: Contacts in country
- - image: Crisesapp-icons-13.png
-   text: Disaster history
  - image: Crisesapp-icons-14.png
    text: Inform index
  - image: Crisesapp-icons-15.png

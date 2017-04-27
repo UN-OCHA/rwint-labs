@@ -26,13 +26,7 @@ title: ReliefWeb Apps
           <div class="app-details col-sm-5 col-xs-12">
             <div class="row">
               <div class="app-logo col-sm-3">
-                {% if app.permalink %}
-                <a href="{{ site.baseurl }}{{ app.permalink }}#{{ app.name }}">
-                {% endif %}
                 <img type="{{ app.name }}" src="{{ site.baseurl }}/img/apps/rw-apps-{{ app.name }}.png" alt="" class="img-responsive">
-                {% if app.permalink %}
-                </a>
-                {% endif %}
               </div>
               <div class="app-title col-sm-9">
                 <div class="surtitle">ReliefWeb</div>
@@ -48,11 +42,6 @@ title: ReliefWeb Apps
                 {% for banner in app.banners %}
                 <p>{{ banner }}</p>
                 {% endfor %}
-                {% if app.permalink %}
-                <a href="{{ site.baseurl }}{{ app.permalink }}#{{ app.name }}">
-                  <p>See more details</p>
-                </a>
-                {% endif %}
               </div>
             </div><!-- /rw-app-description -->
             <div class="row rw-app-stores col-sm-12">
