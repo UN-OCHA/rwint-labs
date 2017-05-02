@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html>
   {% include head.html %}
-  <body class="rwlabs" data-spy="scroll">
+  <body class="rwlabs">
     {% include nav.html %}
     <div id="{{ page.name }}" class="app-detail-landing">
       <div class="hero">
         <div class="wrapper">
           <ul class="appnav">
             <li><img class="this-app" alt="{{ page.name }} app" src="{{ site.baseurl }}/img/apps/rw-apps-{{ page.name }}.png"/></li>
-            <li><a href="#features" class="scroll-link" data-id="features">Features</a></li>
-            <li><a href="#download" class="scroll-link" data-id="download">Download</a></li>
+            <li><a href="#features" class="scroll-link">Features</a></li>
+            <li><a href="#download" class="scroll-link">Download</a></li>
           </ul>
           <h1>{{ page.headline }}</h1>
         </div>
         <div class="read-on">
-          <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+          <a href="#carousel" class="scroll-link"><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
         </div>
       </div>
       <div id="carousel" class="carousel slides" data-interval="7000" data-ride="carousel">
