@@ -371,6 +371,7 @@ smaller subset above will be used. */
   grid-template-columns: repeat(6, 1fr);
   margin: auto;
   max-width: 1000px;
+  opacity: 0.6;
   padding: 100px 0;
 }
 
