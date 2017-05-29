@@ -143,16 +143,54 @@ smaller subset above will be used. */
 
 /* Page-header */
 
+.page-header {
+  padding: 120px 0;
+}
+
 .page-header .title-image {
   padding-bottom: 10px;
 }
 
 .page-header .title-text {
   font-size: 1.2em;
+  padding-top: 20px;
 }
 
 .page-header form {
   font-size: 0.8em;
+}
+
+/* Header illustration */
+
+#potion {
+  animation: disappear ease-in-out 4s infinite alternate;
+}
+
+#potion-right {
+  animation: appear ease-in-out 4s infinite alternate;
+}
+
+.page-header ellipse {
+  animation: bubble ease 6s infinite alternate;
+}
+
+@keyframes appear {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes disappear {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+
+@keyframes bubble {
+  from {transform: scale(1.0); transform: translate( 4px,-4px)}
+  20%  {transform: scale(0.8); transform: translate( 0px,-2px)}
+  40%  {transform: scale(0.9); transform: translate( 2px, 0px)}
+  60%  {transform: scale(1.0); transform: translate( 0px, 2px)}
+  80%  {transform: scale(0.9); transform: translate(-2px, 4px)}
+  to   {transform: scale(1.1); transform: translate(-4px, 4px)}
 }
 
 /* Carousel */
@@ -605,53 +643,6 @@ video {
   position: relative;
   padding-right: 10px;
   top: 14px;
-}
-
-.innovation-report-list,
-.innovation-job-list,
-.innovation-training-list {
-  background-color: #fff;
-  color: #999;
-}
-
-.innovation-report {
-  padding: 10px;
-  border-bottom: 1px dotted #ccc;
-  font-size: 0.9em;
-}
-
-.innovation-report img {
-  height: 40px;
-  width: 40px;
-}
-
-.innovation-report .date {
-  float: right;
-}
-
-.innovation-report .text {
-  padding-left: 50px;
-  font-weight: 400;
-}
-
-.innovation-report .text a {
-  text-decoration: none;
-}
-
-.innovation-report .country {
-  font-weight: 700;
-  color: #000;
-}
-
-.innovation-report .source::before {
-  content: url("../img/doc.gif");
-  position: relative;
-  padding-right: 4px;
-  top: 4px;
-}
-
-.innovation-report .source {
-  font-size: 0.7em;
 }
 
 .more-link {
