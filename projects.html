@@ -5,7 +5,7 @@ title: Labs Projects
 
 <div class="row">
   <div class="project-page rw-project-list">
-    {% assign sortedPosts = site.projects | sort: 'phase' %}
+    {% assign sortedPosts = site.projects | sort: 'weight' | reverse %}
     {% for post in sortedPosts %}
     <div id="{{ post.id }}" class="rw-project-list-item col-sm-4">
       {% if post.link %}
