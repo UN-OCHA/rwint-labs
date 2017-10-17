@@ -47,7 +47,6 @@ download:
 otherapps:
  - headlines
  - jobs
- - videos
 
 weight: 40
 
