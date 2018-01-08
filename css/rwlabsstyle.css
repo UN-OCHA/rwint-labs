@@ -220,7 +220,7 @@ smaller subset above will be used. */
 
 .view-all.button-link {
   font-size: 1.2em;
-  margin: 9px;
+  margin: 48px 9px;
   padding: 6px 18px;
 }
 
@@ -292,10 +292,6 @@ smaller subset above will be used. */
 }
 
 /* RW-Apps */
-.rw-apps-videos {
-  background-color: #d2bfef;
-}
-
 .rw-apps-headlines {
   background-color: #46b5f4;
 }
@@ -632,50 +628,6 @@ video {
   position: relative;
   top: 55px;
   left: 12px;
-}
-
-
-/* Resources */
-
-.resources h2:before {
-  content: url("../img/icon-meeting-white.png");
-  content: url("../img/activity_innovation_40px-white.png");
-  position: relative;
-  padding-right: 10px;
-  top: 14px;
-}
-
-.more-link {
-  padding-left: 100px;
-}
-
-.twitter-timeline {
-  padding-bottom: 14px;
-}
-
-.twitter-title,
-.playlist-title {
-  padding-left: 15px;
-}
-
-.logo-youtube {
-  background: url(../img/icon-youtube.png) no-repeat top left;
-  display: block;
-  height: 32px;
-  margin: 4px 4px 8px 0;
-  width: 32px;
-}
-
-.playlist-row {
-  margin-bottom: 20px;
-}
-
-.logo-twitter {
-  background: url(../img/icon-twitter.png) no-repeat top left;
-  display: block;
-  height: 32px;
-  margin: 4px 4px 8px 0;
-  width: 32px;
 }
 
 /* Divider */
