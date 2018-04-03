@@ -151,6 +151,13 @@ smaller subset above will be used. */
   padding-bottom: 10px;
 }
 
+.page-header h1 {
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 24px;
+  margin: 0;
+}
+
 .page-header .title-text {
   font-size: 1.2em;
   padding-top: 20px;
