@@ -1,5 +1,6 @@
 ---
 layout: appdetailspage
+title: ReliefWeb Crises App
 name: crises
 phase: Beta
 permalink: /apps/crises.html

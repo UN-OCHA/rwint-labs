@@ -4,13 +4,13 @@ layout: null
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
- <title>Reliefweb Labs RSS</title>
+ <title>ReliefWeb Labs RSS</title>
  <link href="http://labs.reliefweb.int/atom.xml" rel="self"/>
  <link href="http://labs.reliefweb.int/"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
  <id>http://labs.reliefweb.int/</id>
  <author>
-   <name>Reliefweb</name>
+   <name>ReliefWeb</name>
    <email>labs@reliefweb.int</email>
  </author>
 
