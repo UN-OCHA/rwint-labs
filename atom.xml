@@ -5,10 +5,10 @@ layout: null
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>ReliefWeb Labs RSS</title>
- <link href="http://labs.reliefweb.int/atom.xml" rel="self"/>
- <link href="http://labs.reliefweb.int/"/>
+ <link href="https://labs.reliefweb.int/atom.xml" rel="self"/>
+ <link href="https://labs.reliefweb.int/"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>http://labs.reliefweb.int/</id>
+ <id>https://labs.reliefweb.int/</id>
  <author>
    <name>ReliefWeb</name>
    <email>labs@reliefweb.int</email>
@@ -17,11 +17,11 @@ layout: null
  {% for post in site.posts %}
  <entry>
    <title>{{ post.title }}</title>
-   <link href="http://labs.reliefweb.int{{ post.url }}"/>
+   <link href="https://labs.reliefweb.int{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>http://labs.reliefweb.int{{ post.id }}</id>
+   <id>https://labs.reliefweb.int{{ post.id }}</id>
    <content type="html">{{ post.content | xml_escape }}</content>
  </entry>
  {% endfor %}
- 
+
 </feed>

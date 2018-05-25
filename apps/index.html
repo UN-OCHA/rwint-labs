@@ -8,7 +8,7 @@ title: ReliefWeb Apps
     <div class="row">
 
       <div class="app-logo col-sm-6 col-xs-12">
-        <img width="100%" src="{{ site.baseurl }}/img/apps/rwlabs-apps-logo.png" alt="RW Apps logo" />
+        <img width="100%" src="/img/apps/rwlabs-apps-logo.png" alt="RW Apps logo" />
 
         <div class="app-introduction">
         </div>
@@ -27,9 +27,9 @@ title: ReliefWeb Apps
             <div class="row">
               <div class="app-logo col-sm-3">
                 {% if app.permalink %}
-                <a href="{{ site.baseurl }}{{ app.permalink }}#{{ app.name }}">
+                <a href="{{ app.permalink }}#{{ app.name }}">
                 {% endif %}
-                <img type="{{ app.name }}" src="{{ site.baseurl }}/img/apps/rw-apps-{{ app.name }}.png" alt="" class="img-responsive">
+                <img type="{{ app.name }}" src="/img/apps/rw-apps-{{ app.name }}.png" alt="" class="img-responsive">
                 {% if app.permalink %}
                 </a>
                 {% endif %}
@@ -49,7 +49,7 @@ title: ReliefWeb Apps
                 <p>{{ banner }}</p>
                 {% endfor %}
                 {% if app.permalink %}
-                <a href="{{ site.baseurl }}{{ app.permalink }}#{{ app.name }}">
+                <a href="{{ app.permalink }}#{{ app.name }}">
                   <p>See more details</p>
                 </a>
                 {% endif %}
@@ -58,12 +58,12 @@ title: ReliefWeb Apps
             <div class="row rw-app-stores col-sm-12">
               {% if app.play-url %}
               <div class="rw-stores android">
-                <a href="{{ app.play-url }}"><img src="{{ site.baseurl }}/img/apps/androidstore.png" width="40%"/></a>
+                <a href="{{ app.play-url }}"><img src="/img/apps/androidstore.png" width="40%"/></a>
               </div>
               {% endif %}
               {% if app.itunes-url %}
               <div class="rw-stores apple">
-                <a href="{{ app.itunes-url }}"><img src="{{ site.baseurl }}/img/apps/applestore.png" width="40%"/></a></p>
+                <a href="{{ app.itunes-url }}"><img src="/img/apps/applestore.png" width="40%"/></a></p>
               </div>
               {% endif %}
             </div><!-- /rw-app-stores -->
@@ -71,7 +71,7 @@ title: ReliefWeb Apps
           <div class="app-demo col-sm-offset-3 col-sm-3 col-xs-12">
             <div class="phone-frame">
               <video loop="true" autoplay="true" width="248">
-                <source src="{{ site.baseurl }}/img/apps/demo-{{ app.name }}.mp4" type="video/mp4">
+                <source src="/img/apps/demo-{{ app.name }}.mp4" type="video/mp4">
               </video>
             </div>
           </div>

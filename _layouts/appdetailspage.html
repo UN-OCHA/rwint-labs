@@ -7,7 +7,7 @@
       <div class="hero">
         <div class="wrapper">
           <ul class="appnav">
-            <li><img class="this-app" alt="{{ page.name }} app" src="{{ site.baseurl }}/img/apps/rw-apps-{{ page.name }}.png"/></li>
+            <li><img class="this-app" alt="{{ page.name }} app" src="/img/apps/rw-apps-{{ page.name }}.png"/></li>
             <li><a href="#features" class="scroll-link">Features</a></li>
             <li><a href="#download" class="scroll-link">Download</a></li>
           </ul>
@@ -29,7 +29,7 @@
             <div class="slide">
               <div class="screenshot">
                 <div class="phone-frame">
-                  <img src="{{ site.baseurl }}/img/apps/{{ slide.image }}" alt="app screenshot"/>
+                  <img src="/img/apps/{{ slide.image }}" alt="app screenshot"/>
                 </div>
               </div>
               <div class="description">
@@ -54,7 +54,7 @@
         <div class="features">
           {% for feature in page.features %}
           <div class="feature">
-            <img src="{{ site.baseurl }}/img/apps/{{ feature.image }}" alt="feature-illustration"/>
+            <img src="/img/apps/{{ feature.image }}" alt="feature-illustration"/>
             <p>{{ feature.text }}</p>
           </div>
           {% endfor %}
@@ -67,17 +67,17 @@
           <p>{{ download.text }}</p>
           {% if page.play-url %}
           <div class="rw-stores android">
-            <a href="{{ page.play-url }}"><img src="{{ site.baseurl }}/img/apps/androidstore_black.png" width="40%"/></a>
+            <a href="{{ page.play-url }}"><img src="/img/apps/androidstore_black.png" width="40%"/></a>
           </div>
           {% endif %}
           {% if page.itunes-url %}
           <div class="rw-stores apple">
-            <a href="{{ page.itunes-url }}"><img src="{{ site.baseurl }}/img/apps/applestore.svg" width="40%"/></a>
+            <a href="{{ page.itunes-url }}"><img src="/img/apps/applestore.svg" width="40%"/></a>
           </div>
           {% endif %}
         </div><!-- /rw-app-stores -->
         <div class="illustration">
-          <img src="{{ site.baseurl }}/img/apps/{{ download.image }}" alt="download illustration"/>
+          <img src="/img/apps/{{ download.image }}" alt="download illustration"/>
         </div>
         {% endfor %}
         <div class="other-apps">
@@ -85,7 +85,7 @@
           <div class="app-links">
             {% for appname in page.otherapps %}
             <a class="other-app" href="../apps/index.html#{{ appname }}">
-              <img alt="Link to {{ appname }} app" src="{{ site.baseurl }}/img/apps/rw-apps-{{ appname }}.png"/>
+              <img alt="Link to {{ appname }} app" src="/img/apps/rw-apps-{{ appname }}.png"/>
             </a>
             {% endfor %}
           </div>

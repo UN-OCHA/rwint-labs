@@ -22,7 +22,7 @@
                 {% for image in page.images %}
                 <div class="item {% if state == 'active' %}active{% endif %}">
                   {% assign state = 'inactive' %}
-                  <img src="{{ site.baseurl }}/{{ image }}" />
+                  <img src="/{{ image }}" />
                 </div>
                 {% endfor %}
               </div>
@@ -33,9 +33,9 @@
               <div class="col-sm-6 col-sm-offset-3">
                 {% if page.logo %}
                 {% if page.link %}
-                <div class="rw-img-cell"><a href="{{ page.link }}"><img src="{{ site.baseurl }}/{{ page.logo }}" alt="" class="img-responsive"></a></div>
+                <div class="rw-img-cell"><a href="{{ page.link }}"><img src="/{{ page.logo }}" alt="" class="img-responsive"></a></div>
                 {% else %}
-                <div class="rw-img-cell"><img src="{{ site.baseurl }}/{{ page.logo }}" alt="" class="img-responsive"></div>
+                <div class="rw-img-cell"><img src="/{{ page.logo }}" alt="" class="img-responsive"></div>
                 {% endif %}
                 {% endif %}
               </div>

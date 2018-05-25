@@ -3,7 +3,7 @@ lsi: false
 highlighter: rouge
 markdown: kramdown
 
-baseurl: http://labs.reliefweb.int
+baseurl: https://labs.reliefweb.int
 
 collections:
   projects:

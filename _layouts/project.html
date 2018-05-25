@@ -9,9 +9,9 @@
         <h1>{{ page.title }}</h1>
         {% if page.image %}
           {% if page.link %}
-          <div class="rw-img-cell"><a href="{{ page.link }}"><img src="{{ site.baseurl }}/{{ page.image }}" alt="" class="img-rounded img-responsive"></a></div>
+          <div class="rw-img-cell"><a href="{{ page.link }}"><img src="/{{ page.image }}" alt="" class="img-rounded img-responsive"></a></div>
           {% else %}
-          <div class="rw-img-cell"><img src="{{ site.baseurl }}/{{ page.image }}" alt="" class="img-rounded img-responsive"></div>
+          <div class="rw-img-cell"><img src="/{{ page.image }}" alt="" class="img-rounded img-responsive"></div>
           {% endif %}
         {% endif %}
         {{ content }}

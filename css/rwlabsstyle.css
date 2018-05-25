@@ -46,7 +46,7 @@ smaller subset above will be used. */
   position: relative;
   z-index: 1;
   padding: 0;
-  background: #F4F4F0 url("http://img.static.reliefweb.int/profiles/reliefweb/themes/kobe/images/global-navigation-shadow.png") repeat-x scroll center bottom;
+  background: #F4F4F0 url("https://reliefweb.int/profiles/reliefweb/themes/kobe/images/global-navigation-shadow.png") repeat-x scroll center bottom;
 }
 
 .navbar-header {
@@ -103,7 +103,7 @@ smaller subset above will be used. */
 }
 
 .navbar a#rw-nav-rwhome {
-  background-image: url("http://img.static.reliefweb.int/profiles/reliefweb/themes/kobe/images/logo-header.png");
+  background-image: url("https://reliefweb.int/profiles/reliefweb/themes/kobe/images/logo-header.png");
   background-position: center center;
   background-repeat: no-repeat;
   height: 53px;
