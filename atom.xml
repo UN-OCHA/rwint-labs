@@ -14,7 +14,8 @@ layout: null
    <email>labs@reliefweb.int</email>
  </author>
 
- {% for post in site.posts %}
+ {% assign sortedProjects = site.projects | sort: 'weight' | reverse %}
+ {% for post in sortedProjects %}
  <entry>
    <title>{{ post.title }}</title>
    <link href="https://labs.reliefweb.int{{ post.url }}"/>
