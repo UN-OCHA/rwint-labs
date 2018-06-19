@@ -255,6 +255,14 @@ smaller subset above will be used. */
   top: 14px;
 }
 
+.decommissioned {
+  background-color: #333;
+  border-radius: 4px 4px 4px 4px;
+  color: white;
+  line-height: 2em;
+  padding-left: 10px;
+}
+
 .project-origin {
   border-radius: 4px 4px 4px 4px;
   line-height: 2em;

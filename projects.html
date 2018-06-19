@@ -6,7 +6,18 @@ title: Labs Projects
 <div class="row">
   <div class="project-page rw-project-list">
     {% assign sortedPosts = site.projects | sort: 'weight' | reverse %}
+    {% assign decommissionedSection = 'false' %}
     {% for post in sortedPosts %}
+    {% assign phase = post.phase | upcase %}
+    {% if phase == 'DECOMMISSIONED' and decommissionedSection == 'false' %}
+    <div class="decommissioned"><a id="decommissioned"></a>Decommissioned projects</div>
+    {% assign decommissionedSection = 'true' %}
+    {% else %}
+    {% unless forloop.first %}
+    <div class="rw-divider-flip"></div>
+    {% endunless %}
+    {% endif %}
+
     <div id="{{ post.id }}" class="rw-project-list-item col-sm-4">
       {% if post.link %}
       <h3><a href="{{ post.link }}">{{ post.title }}</a></h3>
@@ -21,14 +32,10 @@ title: Labs Projects
       {% endif %}
     </div><!-- /rw-project-list-item -->
     <div id="{{ post.id }}" class="rw-project-list-item col-sm-8">
-      <p class="project-origin {{ post.origin }}"><strong>Origin: {{ post.origin | upcase }}</strong></p>
+      <p class="project-origin {{ post.origin | replace: ' ','' | downcase }}"><strong>Origin: {{ post.origin | upcase }}</strong></p>
       <p class="rw-description">{{ post.content }}</p>
     </div><!-- /rw-project-list-item -->
     <div class="clearfix"></div>
-    {% if forloop.last %}
-    {% else %}
-    <div class="rw-divider-flip"></div>
-    {% endif %}
     {% endfor %}
   </div><!-- /.rw-project-list -->
 </div><!-- /row -->
