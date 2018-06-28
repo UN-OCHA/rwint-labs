@@ -3,10 +3,10 @@ lsi: false
 highlighter: rouge
 markdown: kramdown
 
-baseurl: https://labs.reliefweb.int
-
 collections:
   projects:
     output: true
   apps:
     output: true
+  decommissioned:
+    output: false

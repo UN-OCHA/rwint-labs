@@ -248,6 +248,20 @@ smaller subset above will be used. */
   margin-bottom: 40px;
 }
 
+.rw-project-list {
+  display: grid;
+  grid-gap: 2em 4%;
+  margin: 4%;
+}
+
+.rw-project-list-item {
+  max-width: 400px;
+}
+
+.rw-projects h2 {
+  margin-left: 4%;
+}
+
 .rw-projects h2:before {
   content: url("../img/icon-rw-white-small.png");
   position: relative;
@@ -255,12 +269,8 @@ smaller subset above will be used. */
   top: 14px;
 }
 
-.decommissioned {
-  background-color: #333;
-  border-radius: 4px 4px 4px 4px;
-  color: white;
-  line-height: 2em;
-  padding-left: 10px;
+.rw-projects h3 {
+  height: 2em;
 }
 
 .project-origin {
@@ -779,3 +789,14 @@ video {
   background-position: 0 -280px;
 }
 
+@media (min-width: 500px) {
+  .rw-project-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 800px) {
+  .rw-project-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
