@@ -125,22 +125,6 @@ smaller subset above will be used. */
   padding: 15px 8px 16px 28px;
 }
 
-.social-media-icons a {
-  display: inline;
-  margin-left: 6px;
-}
-.social-media-icons a svg path {
-  transform: translate(-8px,-8px) scale(1.5);
-}
-.social-media-icons a svg {
-  height: 32px;
-  width: 32px;
-  fill: #3A5592;
-}
-.social-media-icons a:hover svg {
-  fill: #8C8887;
-}
-
 /* Page-header */
 
 .page-header {
@@ -198,16 +182,6 @@ smaller subset above will be used. */
   60%  {transform: scale(1.0); transform: translate( 0px, 2px)}
   80%  {transform: scale(0.9); transform: translate(-2px, 4px)}
   to   {transform: scale(1.1); transform: translate(-4px, 4px)}
-}
-
-/* Carousel */
-
-.carousel-control.left {
-  background-image: linear-gradient(to left, transparent 0px, #dddddd 100%);
-}
-
-.carousel-control.right {
-  background-image: linear-gradient(to right, transparent 0px, #dddddd 100%);
 }
 
 /* Common */
