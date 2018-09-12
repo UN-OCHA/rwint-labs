@@ -3,10 +3,14 @@ lsi: false
 highlighter: rouge
 markdown: kramdown
 
+# https://help.github.com/articles/redirects-on-github-pages/
+plugins:
+  - jekyll-redirect-from
+whitelist:
+  - jekyll-redirect-from
+
 collections:
   projects:
-    output: true
-  apps:
     output: true
   decommissioned:
     output: false
