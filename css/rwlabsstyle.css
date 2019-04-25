@@ -11,6 +11,7 @@ a {
 
 /* Font */
 @font-face {
+  font-display: fallback;
   font-family: 'Volkhov-Regular';
   src: url('../fonts/Volkhov-Regular-OTF-webfont.eot');
   src: local('?'),
@@ -254,20 +255,21 @@ smaller subset above will be used. */
 }
 
 .project-origin.rwideas {
-  background-color: #F15050;
+  background-color: #eb1405;
+  color: #ffffff;
 }
 
 .project-origin.community {
-  background-color: #0988BB;
+  background-color: #055372;
 }
 
 .rw-project-list-item a {
-  color: #cda7ff;
+  color: #f4f4f0;
 }
 
 .rw-project-list-item a:hover,
 .rw-project-list-item a:focus {
-  color: #cda7ff;
+  color: #f4f4f0;
   opacity: 0.8;
   text-decoration: none;
 }
@@ -314,6 +316,10 @@ smaller subset above will be used. */
   padding-top: 80px;
 }
 
+.footer a {
+  color: #055372;
+}
+
 .logo-footer {
   width: 133px;
   height: 38px;
@@ -333,7 +339,6 @@ smaller subset above will be used. */
 .footer-heading {
   text-transform: uppercase;
   font-size: 11px;
-  color: #757575;
   font-weight: bold;
   padding-top: 2em;
   margin-bottom: 2em;
@@ -345,7 +350,6 @@ smaller subset above will be used. */
 
 .rw-copyright {
   margin: 20px 0 60px 0;
-  color: #babab3;
 }
 
 /* Partners */
