@@ -1,3 +1,15 @@
+.element-invisible {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0,0,0,0);
+  overflow: hidden;
+}
 
 body.rwlabs {
   background-color: #f4f4f0;
@@ -7,32 +19,6 @@ body.rwlabs {
 a {
   color: #1188bb;
   text-decoration: none;
-}
-
-/* Font */
-@font-face {
-  font-display: fallback;
-  font-family: 'Volkhov-Regular';
-  src: url('../fonts/Volkhov-Regular-OTF-webfont.eot');
-  src: local('?'),
-       url('../fonts/Volkhov-Regular-OTF-webfont.woff') format('woff'),
-       url('../fonts/Volkhov-Regular-OTF-webfont.otf') format('opentype'),
-       url('../fonts/Volkhov-Regular-OTF-webfont.svg') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-/* These fonts include accents and other glyphs. If none are required, only the
-smaller subset above will be used. */
-@font-face {
-  font-family: 'Volkhov-Regular-Extra';
-  src: url('../fonts/Volkhov-Regular.eot');
-  src: local('?'),
-       url('../fonts/Volkhov-Regular.woff') format('woff'),
-       url('../fonts/Volkhov-Regular.otf') format('opentype'),
-       url('../fonts/Volkhov-Regular.svg') format('svg');
-  font-weight: normal;
-  font-style: normal;
 }
 
 /* Header */
@@ -345,7 +331,7 @@ smaller subset above will be used. */
 }
 
 .footer-subtitle {
-  font-family: "Volkhov-Regular";
+  font-family: Georgia, "Bitstream Charter", serif;
 }
 
 .rw-copyright {
