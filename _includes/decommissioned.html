@@ -1,0 +1,21 @@
+<section class="decommissioned-projects">
+  <h2>Decommissioned projects</h2>
+  <div class="rw-project-list">
+    {% assign sortedPosts = site.decommissioned | sort: 'weight' | reverse %}
+    {% for post in sortedPosts %}
+    <div id="{{ post.id }}" class="rw-project-list-item">
+      <h3>{{ post.title }}</h3>
+      <img src="{{ post.image }}" alt="{{ post.title }}">
+      <p class="decommissioned-dates">
+      {% if post.started %}
+        Started testing: <strong>{{ post.started }}</strong><br>
+      {% endif %}
+      {% if post.ended %}
+        Decommissioned: <strong>{{ post.ended }}</strong>
+      {% endif %}
+      </p>
+      <p class="rw-description">{{ post.content }}</p>
+    </div><!-- /rw-project-list-item -->
+    {% endfor %}
+  </div>
+</section>

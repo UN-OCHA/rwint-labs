@@ -1,17 +1,13 @@
-
 <!DOCTYPE html>
 <html lang="en">
   {% include head.html %}
   <body>
     {% include nav.html %}
-    {% include header.html %}
-    <div id="rw-bottom-half" class="container-fluid">
-        <div id="rw-project-list" class="container">
-            <div class="content">
-            {{ content }}
-            </div>
-            <div class="row-fluid rw-copyright">&copy; 2018 ReliefWeb</div>
-        </div><!-- /#rw-project-list -->
+    {% include intro.html %}
+    <div id="rw-bottom-half">
+      <div class="content">
+        {{ content }}
+      </div>
     </div><!-- /#rw-bottom-half -->
     {% include footer.html %}
   </body>

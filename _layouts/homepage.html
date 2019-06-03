@@ -3,9 +3,11 @@
   {% include head.html %}
   <body class="rwlabs">
     {% include nav.html %}
-    {% include header.html %}
-    {% include labs-projects.html %}
-    <div class="rw-divider-flip"></div>
-    {% include footer.html %}
+    <main id="main">
+      {% include intro.html %}
+      {% include labs-projects.html %}
+      {% include decommissioned.html %}
+      {% include footer.html %}
+    </main>
   </body>
 </html>

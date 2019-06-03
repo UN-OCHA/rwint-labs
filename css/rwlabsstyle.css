@@ -1,4 +1,16 @@
-.element-invisible {
+/* IE8 compatibility */
+article,
+aside,
+footer,
+header,
+main,
+nav,
+section {
+  display: block;
+}
+
+/* Screen Reader only */
+.accessibility {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -11,417 +23,780 @@
   overflow: hidden;
 }
 
-body.rwlabs {
-  background-color: #f4f4f0;
+/* Generic */
+html {
+  padding: 0 8px;
+  background: #e6ecef;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/* Default box-sizing */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
   position: relative;
-}
-
-a {
-  color: #1188bb;
-  text-decoration: none;
-}
-
-/* Header */
-/* Top Navigation */
-.nav-tabs,
-.rwlabs .navbar {
-  margin-bottom: 0;
-  border-bottom-color: #F0F0F4;
-}
-
-.navbar-default {
-  position: relative;
-  z-index: 1;
+  max-width: 1400px;
+  width: 100%;
+  overflow-x: hidden;
   padding: 0;
-  background: #F4F4F0 url("https://reliefweb.int/profiles/reliefweb/themes/kobe/images/global-navigation-shadow.png") repeat-x scroll center bottom;
+  margin: 0 auto;
+  background: white;
+  z-index: 1;
 }
 
-.navbar-header {
-  position: relative;
-  top: 12px;
-  padding-bottom: 11px;
-}
-
-.navbar-header ul {
-  list-style: none;
-}
-
-.navbar .nav > .active > a,
-.navbar .nav > .active > a:hover,
-.navbar .nav > .active > a:focus {
-  border-bottom-color: #f4f4f0;
-  color: #999999;
-  font-weight: bold;
-  text-decoration: none;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2);
-     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2);
-          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2);
-}
-
-.rwlabs .navbar .nav > li > a {
-  padding: 7px 10px;
-  text-transform: uppercase;
-  font-size: .8em;
-}
-
-.rwlabs .navbar-default .navbar-nav > .active > a:hover {
-  border-bottom: 1px solid #f4f4f0;
-}
-
-.rwlabs .navbar-default .navbar-nav > li > a:hover {
-  background-color: #e9e9e5;
-  border-bottom: 1px solid #e9e9e5;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2);
-     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2);
-          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2);
-}
-
-.nav-tabs > li > a {
-  border-radius: 6px 6px 0 0;
-}
-
-.nav-pills > li > a {
-  border-radius: 4px 4px 4px 4px;
-}
-
-.navbar ul#rw-nav-global-utilities {
-  margin-top: 12px;
-  padding-bottom: 4px;
-}
-
-.navbar a#rw-nav-rwhome {
-  background-image: url("https://reliefweb.int/profiles/reliefweb/themes/kobe/images/logo-header.png");
-  background-position: center center;
-  background-repeat: no-repeat;
-  height: 53px;
-  padding: 12px 8px 13px 40px;
-  width: 164px;
-}
-
-.navbar a#rw-nav-rwlabs {
-  background: #F4F4F0 url("../img/rw-nav-labs.png") no-repeat left center;
-  padding: 15px 8px 16px 28px;
+button {
   cursor: pointer;
 }
 
-.navbar a#rw-nav-rwblog {
-  background-image: url("../img/rw-nav-blog.png");
-  background-position: left center;
-  background-repeat: no-repeat;
-  color: #1188bb;
-  padding: 15px 8px 16px 28px;
+/* Skip to content link */
+a[href="#main"].accessibility:focus {
+  all: unset;
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 20px;
+  margin: 0;
+  clip-path: none;
+  clip: auto;
+  overflow: initial;
+}
+#header,
+#footer {
+  padding: 0 12px;
+  clear: both;
+}
+#header:after,
+#footer:after {
+  content: "";
+  display: block;
+  clear: both;
+  width: 100%;
+}
+#main {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.1px;
+  color: #2e3436;
+  /* Better Font Rendering */
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+}
+#main h2 {
+  font-family: Georgia, "Bitstream Charter", serif;
 }
 
-/* Page-header */
-
-.page-header {
-  padding: 120px 0;
+/**********
+ * Header *
+ **********/
+#header:before {
+  content: "";
+  display: block;
+  position: relative;
+  height: 35px;
+  background: #055372;
+  background-image: linear-gradient(-180deg, #055372 67%, #04415a 97%);
+  margin: 0 -12px;
+}
+#header:after {
+  content: "";
+  display: block;
+  position: relative;
+  top: -3px;
+  margin: -2px -12px;
+  border-top: 3px solid #e6ecef;
+  z-index: -1;
+  width: auto;
+}
+#header a,
+#header button {
+  position: relative;
+  display: inline-block;
+  height: inherit;
+  width: inherit;
+  font-size: inherit;
+  color: inherit;
+  text-transform: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+#header a:hover,
+#header a:visited,
+#header a:active {
+  text-decoration: none;
+}
+#header h1 {
+  position: absolute;
+  top: 35px;
+  width: 140px;
+  height: 60px;
+  margin: 0;
+  padding: 0;
+  background: url(images/rw-logo.png) 0 50% no-repeat;
+  background: rgba(0,0,0,0) url(images/rw-logo.svg) 0 50% no-repeat;
 }
 
-.page-header .title-image {
-  padding-bottom: 10px;
+/**********
+ * Footer *
+ **********/
+#footer {
+  background: #055372;
+  color: white;
 }
-
-.page-header h1 {
-  font-size: 1em;
+#footer a {
+  position: relative;
+  display: inline-block;
+  height: inherit;
+  width: inherit;
+  font-size: inherit;
+  color: inherit;
+  text-transform: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+#footer a:hover,
+#footer a:visited,
+#footer a:active {
+  text-decoration: none;
+}
+#footer ul {
+  margin: 0;
+  padding: 0;
+}
+#footer li {
+  list-style: none;
+}
+/** OCHA services **/
+#footer #ocha-services {
+  background: #055372;
+  z-index: 3;
+}
+#footer #ocha-services > ul {
+  position: relative;
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: 100px;
+}
+#footer #ocha-services > ul > li {
+  position: relative;
+  display: table-cell;
+  border: 0px solid transparent;
+  vertical-align: top;
+  padding-bottom: 1px;
+}
+#footer #ocha-services > ul > li + li + li + li {
+  padding-bottom: 0;
+}
+#footer #ocha-services li div {
+  font-size: 12px;
+  font-weight: 300;
+  color: #cef0fd;
+  line-height: 18px;
+  margin-bottom: 10px;
+  padding-bottom: 2px;
+}
+#footer #ocha-services li div + ul {
+  margin-top: -1px;
+}
+#footer #ocha-services li div.accessibility + ul {
+  padding-top: 30px;
+}
+#footer #ocha-services li li {
+  margin-bottom: 12px;
+}
+#footer #ocha-services a {
+  display: inline;
+  font-size: 12px;
+  font-weight: 600;
+  border-bottom: 1px solid transparent;
+}
+#footer #ocha-services a:hover,
+#footer #ocha-services a:active,
+#footer #ocha-services a:focus {
+  border-color: #0988bb;
+}
+#footer #ocha-services > ul > li + li + li + li a {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  border: none;
+  padding: 12px;
+  font-size: 14px;
   font-weight: 700;
-  line-height: 24px;
+  line-height: 21px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #055372;
+  background: #cef0fd;
+}
+#footer #ocha-services > ul > li + li + li + li a:hover,
+#footer #ocha-services > ul > li + li + li + li a:active,
+#footer #ocha-services > ul > li + li + li + li a:focus {
+  color: #0988bb;
+}
+
+#footer #additional-links {
+  padding: 47px 0;
+}
+#footer #additional-links ul:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#footer #additional-links li {
+  display: inline-block;
+}
+#footer #additional-links li {
+  padding: 0 31px 0 0;
+}
+#footer #additional-links li:first-child {
+  padding-left: 0;
+}
+#footer #additional-links li:last-child {
+  padding-right: 0;
+}
+#footer #additional-links {
+  display: inline-block;
+  max-width: 67%;
+  text-transform: uppercase;
+}
+#footer #additional-links a {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  border-bottom: 1px solid transparent;
+}
+#footer #additional-links a:hover,
+#footer #additional-links a:active,
+#footer #additional-links a:focus {
+  border-color: #0988bb;
+}
+#footer #ocha-disclaimer {
+  position: relative;
+  float: left;
+  width: 67%;
+  padding: 48px 0 69px;
+  margin-top: 15px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+}
+#footer #ocha-disclaimer p {
+  margin: 0;
+  line-height: 1.5;
+}
+#footer #ocha-disclaimer p + p {
+  position: absolute;
+  left: 160px;
+  bottom: 66px;
+  max-width: 540px;
+  margin: 0 0 0 14px;
+}
+#footer #ocha-disclaimer p + p:before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 37px;
+  background: white;
+  left: -13px;
+  top: -4px;
+}
+#footer #ocha-disclaimer #ocha-logo {
+  position: relative;
+  display: block;
+  height: 37px;
+  width: 149px;
+  margin-top: 12px;
+  background: url(images/ocha-logo.png) 0 0 no-repeat;
+  background: rgba(0,0,0,0) url(images/ocha-logo.svg) 0 no-repeat;
+}
+#footer #copyright {
+  float: right;
+  width: 33%;
+  padding: 10px 0 48px;
+  text-align: right;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+}
+#footer #copyright p {
   margin: 0;
 }
-
-.page-header .title-text {
-  font-size: 1.2em;
-  padding-top: 20px;
+#footer #copyright a {
+  display: inline-block;
+  background: rgba(0,0,0,0) url(images/rw-logo-white.svg) 0 no-repeat;
+  width: 140px;
+  height: 60px;
+  margin-bottom: -4px;
 }
 
-.page-header form {
+/* Page-intro */
+.intro {
+  padding: 120px 4%;
+}
+.intro .title-image {
+  padding-bottom: 10px;
+}
+.intro .title-text {
+  font-size: 1.2em;
+}
+.intro form {
   font-size: 0.8em;
 }
 
 /* Header illustration */
-
 #potion {
   animation: disappear ease-in-out 4s infinite alternate;
 }
-
 #potion-right {
   animation: appear ease-in-out 4s infinite alternate;
 }
-
-.page-header ellipse {
-  animation: bubble ease 6s infinite alternate;
+.intro ellipse {
+  animation: bubble ease 6s infinite normal;
 }
-
 @keyframes appear {
   from {opacity: 0;}
   to {opacity: 1;}
 }
-
 @keyframes disappear {
   from {opacity: 1;}
   to {opacity: 0;}
 }
-
 @keyframes bubble {
-  from {transform: scale(1.0); transform: translate( 4px,-4px)}
-  20%  {transform: scale(0.8); transform: translate( 0px,-2px)}
-  40%  {transform: scale(0.9); transform: translate( 2px, 0px)}
-  60%  {transform: scale(1.0); transform: translate( 0px, 2px)}
-  80%  {transform: scale(0.9); transform: translate(-2px, 4px)}
-  to   {transform: scale(1.1); transform: translate(-4px, 4px)}
-}
-
-/* Common */
-
-.dark-background,
-.rw-projects,
-.resources {
-  color: #f4f4f0;
-  background-color: #666666;
-}
-
-.rw-project-list,
-.resources-widgets {
-  overflow: auto;
-  margin-bottom: 20px;
-}
-
-.view-all.button-link {
-  font-size: 1.2em;
-  margin: 48px 9px;
-  padding: 6px 18px;
-}
-
-.button-link {
-  background-color: rgba(244, 240, 240, 1);
-  border-radius: 6px 6px 6px 6px;
-  margin: 6px;
-  padding: 12px;
-}
-
-.button-link:hover {
-  background-color: rgba(244, 240, 240, 0.9)
+  0% {transform: scale(0.9) translate(1%, 10%);}
+  30% {transform: scale(1.1) translate(-1%, -2%);}
+  60% {transform: scale(1.1) translate(-1%, -3%);}
+  to {transform: scale(1.2) translate(-2%, -8%);}
 }
 
 /* RW-Projects */
-
-.project-layout.container {
-  margin-bottom: 40px;
+.rw-projects {
+  color: #f4f4f0;
+  background-color: #666;
 }
-
+.decommissioned-projects {
+  color: #333;
+}
+.rw-project-list {
+  overflow: auto;
+}
 .rw-project-list {
   display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(300px, 1fr));
   grid-gap: 2em 4%;
-  margin: 4%;
+  margin: auto 4%;
+  padding-bottom: 80px;
 }
-
+/* Grid fallback - overridden by grid and in @supports block */
 .rw-project-list-item {
-  max-width: 400px;
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
 }
-
-.rw-projects h2 {
-  margin-left: 4%;
+.rw-projects h2,
+.decommissioned-projects h2 {
+  margin: 0 4%;
+  padding-top: 40px;
 }
-
 .rw-projects h2:before {
   content: url("../img/icon-rw-white-small.png");
   position: relative;
   padding-right: 10px;
   top: 14px;
 }
-
-.rw-projects h3 {
+.rw-projects h3,
+.decommissioned h3 {
   height: 2em;
 }
-
 .project-origin {
   border-radius: 4px 4px 4px 4px;
   line-height: 2em;
   padding-left: 10px;
 }
-
 .project-origin.rwideas {
   background-color: #eb1405;
   color: #ffffff;
 }
-
 .project-origin.community {
   background-color: #055372;
 }
-
-.rw-project-list-item a {
+.rw-projects .rw-project-list-item a {
   color: #f4f4f0;
 }
-
 .rw-project-list-item a:hover,
 .rw-project-list-item a:focus {
   color: #f4f4f0;
   opacity: 0.8;
   text-decoration: none;
 }
-
+.rw-project-list-item img {
+  border-radius: 10px;
+  margin: 18px 0;
+  width: 100%;
+}
+.decommissioned-projects .rw-project-list-item a {
+  color: #333;
+}
+.decommissioned-projects a:hover,
+.decommissioned-projects a:focus {
+  color: #333;
+}
+.decommissioned-projects img {
+  border: 1px solid #ddd;
+}
 .rw-description {
   font-size: 1.2em;
 }
-
 .project-page .rw-description,
 .project-page .project-origin {
   margin-top: 80px;
 }
-
 .rw-status {
   font-size: 0.9em;
-  margin-bottom: 0;
 }
 
-.rw-img-cell {
-  padding: 17px 0;
+/***********************
+ * Javascript disabled *
+ ***********************/
+
+/* Show OCHA Services title */
+.no-js #footer #ocha-services {
+  font-size: 14px;
+}
+.no-js #footer #ocha-services-title {
+  position: relative;
+  width: auto;
+  height: auto;
+  margin: 0 0 24px 0;
+  padding: 0;
+  white-space: normal;
+  clip-path: none;
+  clip: auto;
+  overflow: initial;
 }
 
-/* Divider */
+/**********************
+ * Javascript enabled *
+ **********************/
 
-.rw-divider {
-  background-image: url("../img/rw-project-list-shadow.png");
-  background-position: top;
-  background-repeat: repeat-x;
-  min-height: 10px;
+/* Footer - OCHA services */
+.js #footer #ocha-services {
+  display: none;
+  position: absolute;
+  top: 35px;
+  left: 0;
+  right: 0;
+  padding: 22px;
+  z-index: 10;
+  -webkit-box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.3);
+}
+.js #footer #ocha-services[data-hidden="false"] {
   display: block;
 }
-
-.rw-divider-flip {
-  background-image: url("../img/rw-project-list-shadow-flip.png");
-  background-position: top;
-  background-repeat: repeat-x;
-  min-height: 10px;
-  display: block;
+.js #footer #ocha-services-toggler {
+  position: absolute;
+  top: 0;
+  left: 12px;
+  height: 35px;
+  padding: 2px 0 0 0;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 300;
+  color: white;
+  z-index: 4;
+}
+.js #footer #ocha-services-toggler:hover,
+.js #footer #ocha-services-toggler:active,
+.js #footer #ocha-services-toggler:focus {
+  text-decoration: underline;
+  z-index: 3;
+}
+.js #footer #ocha-services-toggler:before {
+  content: "";
+  display: inline-block;
+  width: 21px;
+  height: 18px;
+  margin: -2px 4px 0 0;
+  vertical-align: middle;
+  background: url(images/ocha-logo-small.png) 50% no-repeat;
+  background: rgba(0,0,0,0) url(images/ocha-logo-small.svg) 50% no-repeat;
+}
+.js #footer #ocha-services-toggler:after {
+  content: "";
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  margin-left: 4px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath fill='%23fff' d='M48,14a4,4,0,0,1-1.17,2.83l-20,20a4,4,0,0,1-5.66,0l-20-20a4,4,0,0,1,5.66-5.66L24,28.34,41.17,11.17A4,4,0,0,1,48,14Z'/%3E%3C/svg%3E") 0 no-repeat;
+}
+.js #footer #ocha-services-toggler[aria-expanded="true"]:after {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath fill='%23fff' d='M0,34a4,4,0,0,1,1.17-2.83l20-20a4,4,0,0,1,5.66,0l20,20a4,4,0,1,1-5.66,5.66L24,19.66,6.83,36.83A4,4,0,0,1,0,34Z'/%3E%3C/svg%3E") 0 no-repeat;
+}
+.js #footer #ocha-services:before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  margin-left: 55px;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #055372;
+}
+.js #footer #ocha-disclaimer {
+  padding-top: 0;
 }
 
-/* Footer */
+/*****************
+ * Media Queries *
+ *****************/
+/** Display menu button **/
+@media screen and (max-width : 1023px) {
+  html {
+    padding: 0;
+  }
+  html:before,
+  html:after {
+    display: none;
+  }
+  #footer #additional-links {
+    width: 100%;
+    max-width: none;
+    text-align: center;
+  }
+  #footer #social-media {
+    float: none;
+    width: 100%;
+    max-width: none;
+    padding-top: 0;
+    text-align: center;
+  }
+  #footer #additional-links ul {
+    margin: 0 auto;
+    display: inline-block;
+  }
+  #footer #additional-links ul li {
+    padding: 0 15px 0 0;
+  }
 
-.footer {
-  padding-top: 80px;
-}
+  #footer #ocha-disclaimer {
+    text-align: center;
+    width: 100%;
+    margin-top: 2px;
+    padding: 48px 0;
+  }
+  #footer #ocha-disclaimer p {
+    display: block;
+    margin: 0 auto;
+  }
+  #footer #ocha-disclaimer p + p {
+    position: static;
+    border: none;
+    padding: 0 12px;
+    left: auto;
+    bottom: auto;
+    margin: 16px auto 0;
+  }
+  #footer #ocha-disclaimer p + p:before {
+    display: none;
+  }
+  #footer #ocha-disclaimer #ocha-logo {
+    margin: 16px auto 0;
+  }
+  #footer #copyright {
+    width: 100%;
+    text-align: center;
+    padding: 0 0 48px;
+  }
 
-.footer a {
-  color: #055372;
-}
-
-.logo-footer {
-  width: 133px;
-  height: 38px;
-  display:block;
-  background: url(../img/logo-footer.png) no-repeat top left;
-  margin-bottom: 3px;
-}
-
-.ocha-logo-footer {
-  width: 133px;
-  height: 38px;
-  display:block;
-  background: url(../img/logo-ocha.png) no-repeat top left;
-  margin-bottom: 3px;
-}
-
-.footer-heading {
-  text-transform: uppercase;
-  font-size: 11px;
-  font-weight: bold;
-  padding-top: 2em;
-  margin-bottom: 2em;
-}
-
-.footer-subtitle {
-  font-family: Georgia, "Bitstream Charter", serif;
-}
-
-.rw-copyright {
-  margin: 20px 0 60px 0;
-}
-
-/* Partners */
-.footer div.partner-link {
-  height: 60px;
-  float: left;
-}
-.footer .partner-link a {
-  float: left;
-  width: 130px;
-  height: 40px;
-}
-.footer .partner-link a:active,
-.footer .partner-link a:hover {
-  opacity: 0.8;
-}
-
-.footer .partner-link a[class^="related logo-"] {
-  background-image: url(../img/partner-logos.png);
-  background-repeat: no-repeat;
-}
-
-.footer .logo-humanitarianresponse {
-  background-position: 0 -200px;
-}
-
-.footer .logo-hdx {
-  background-position: 0 -160px;
-}
-
-.footer .logo-fts {
-  background-position: 0 -80px;
-}
-
-.footer .logo-hid {
-  background-position: 0 -520px;
-}
-
-.footer .logo-gdacs {
-  background-position: 0 -120px;
-}
-
-.footer .logo-redhum {
-  background-position: 0 -400px;
-}
-
-.footer .logo-inform {
-  background-position: 0 -440px;
-}
-
-.footer .logo-cerf {
-  background-position: 0 -40px;
-}
-
-.footer .logo-afh {
-  background-position: 0 -360px;
-}
-
-.footer .logo-iasc {
-  background-position: 0 0;
-}
-
-.footer .logo-kobo {
-  background-position: 0 -560px;
-}
-
-.footer .logo-vosocc {
-  background-position: 0 -480px;
-}
-
-.footer .logo-insarag {
-  background-position: 0 -240px;
-}
-
-.footer .logo-pw {
-  background-position: 0 -280px;
-}
-
-@media (min-width: 500px) {
-  .rw-project-list {
-    grid-template-columns: repeat(2, 1fr);
+  .js #header:before {
+    z-index: 3;
+  }
+  .js #header button[aria-expanded] {
+    margin-right: 0;
+  }
+  .js #header button[aria-expanded]:focus:after,
+  .js #header button[aria-expanded="true"]:after {
+    right: 0;
   }
 }
 
-@media (min-width: 800px) {
-  .rw-project-list {
-    grid-template-columns: repeat(3, 1fr);
+/** Content centering **/
+@media screen and (max-width : 767px) {
+  #footer #ocha-services {
+    font-size: 16px;
+  }
+  #footer #ocha-services > ul {
+    display: block;
+  }
+  #footer #ocha-services > ul > li {
+    display: block;
+    margin-bottom: 24px;
+  }
+  #footer #ocha-services > ul > li + li {
+    margin-bottom: 0;
+  }
+  #footer #ocha-services > ul > li + li + li + li {
+    margin: 24px 0;
+  }
+  #footer #ocha-services > ul > li + li + li + li a {
+    position: relative;
+    display: block;
+  }
+  #footer #ocha-services li div.accessibility + ul {
+    padding-top: 0;
+  }
+
+  #footer #additional-links ul li {
+    width: 100%;
+    padding: 0 0 12px;
+  }
+  #footer #additional-links ul li a {
+    display: inline;
+  }
+
+  .no-js #footer #ocha-services {
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .js #footer #ocha-services {
+    padding: 22px 12px;
+  }
+  .js #footer #ocha-services:before {
+    margin-left: 11px;
+  }
+  .js #footer #ocha-services-toggler span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0,0,0,0);
+    overflow: hidden;
+  }
+  .js #footer #ocha-services-toggler:after {
+    margin-left: 0;
+  }
+}
+@media screen and (min-width : 768px) and (max-width : 1199px) {
+  #header,
+  #footer {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  #header:before,
+  #header:after {
+    margin-left: -24px;
+    margin-right: -24px;
+  }
+  .js #footer #ocha-services-toggler {
+    left: 24px;
+  }
+  .js #footer #ocha-services {
+    padding: 22px 24px;
+  }
+  .js #footer #ocha-services > ul {
+    grid-gap: 12px;
+  }
+}
+@media screen and (min-width : 1200px) and (max-width : 1235px) {
+  #header,
+  #footer {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  #header:before,
+  #header:after {
+    margin-left: -40px;
+    margin-right: -40px;
+  }
+
+  .js #footer #ocha-services {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .js #footer #ocha-services-toggler {
+    left: 40px;
+  }
+}
+@media screen and (min-width : 1200px) {
+  #footer #ocha-services li li {
+    white-space: nowrap;
+  }
+}
+@media screen and (min-width : 1236px) {
+  #header,
+  #footer {
+    padding-left: 130px;
+    padding-right: 130px;
+  }
+  #header:before,
+  #header:after {
+    margin-left: -130px;
+    margin-right: -130px;
+  }
+
+  .js #footer #ocha-services {
+    padding-left: 130px;
+    padding-right: 130px;
+  }
+  .js #footer #ocha-services-toggler {
+    left: 130px;
+  }
+}
+
+/** Grid fallback **/
+@media screen and (min-width : 500px) {
+  .rw-project-list-item {
+    width: 46%;
+    margin-right: 3%;
+  }
+  .rw-project-list-item:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width : 768px) {
+  .rw-project-list-item {
+    width: 30%;
+    margin-right: 4%;
+  }
+  .rw-project-list-item:nth-child(2n) {
+    margin-right: 4%;
+  }
+  .rw-project-list-item:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+
+@supports (display: grid) {
+  .rw-project-list-item {
+    max-width: 400px;
+    width: auto;
+    margin: 0;
+  }
+  .rw-project-list-item:nth-child(n) {
+    margin-right: 0;
   }
 }

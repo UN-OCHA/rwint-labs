@@ -1,55 +1,19 @@
-<div id="rw-projects" class="rw-projects container-fluid page-section">
-  <div class="row">
-    <div class="container">
-      <div class="row">
-        <h2>Labs Projects</h2>
-      </div>
-      <div class="row">
-        <div class="rw-project-list">
-          {% assign sortedPosts = site.projects | sort: 'weight' | reverse %}
-          {% for post in sortedPosts %}
-          <div id="{{ post.id }}" class="rw-project-list-item">
-            {% if post.link %}
-            <h3><a href="{{ post.link }}">{{ post.title }}</a></h3>
-            {% else %}
-            <h3>{{ post.title }}</h3>
-            {% endif %}
-            <p class="rw-status"><strong>Phase: {{ post.phase | upcase }}</strong></p>
-            {% if post.link %}
-            <div class="rw-img-cell"><a href="{{ post.link }}"><img src="{{ post.image }}" alt="{{ post.title }}" class="img-rounded img-responsive"></a></div>
-            {% else %}
-            <div class="rw-img-cell"><img src="{{ post.image }}" alt="" class="img-rounded img-responsive"></div>
-            {% endif %}
-            <p class="project-origin {{ post.origin | replace: ' ','' | downcase }}"><strong>Origin: {{ post.origin | upcase }}</strong></p>
-            <p class="rw-description">{{ post.content }}</p>
-          </div><!-- /rw-project-list-item -->
-          {% endfor %}
-        </div><!-- /.rw-project-list -->
-      </div>
-      <div id="decommissioned" class="row">
-        <h2>Decommissioned projects</h2>
-      </div>
-      <div class="row">
-        <div class="rw-project-list">
-          {% assign sortedPosts = site.decommissioned | sort: 'weight' | reverse %}
-          {% for post in sortedPosts %}
-          <div id="{{ post.id }}" class="rw-project-list-item">
-            <h3>{{ post.title }}</h3>
-            <div class="rw-img-cell"><img src="{{ post.image }}" alt="" class="img-rounded img-responsive"></div>
-            <p class="decommissioned-dates">
-            {% if post.started %}
-              Started testing: <strong>{{ post.started }}</strong><br>
-            {% endif %}
-            {% if post.ended %}
-              Decommissioned: <strong>{{ post.ended }}</strong>
-            {% endif %}
-            </p>
-            <p class="rw-description">{{ post.content }}</p>
-
-          </div><!-- /rw-project-list-item -->
-          {% endfor %}
-        </div>
-      </div><!-- /row -->
-    </div><!-- /container -->
-  </div><!-- /row -->
-</div><!-- /.rw-projects -->
+<section class="rw-projects">
+  <h2>Labs Projects</h2>
+  <div class="rw-project-list">
+    {% assign sortedPosts = site.projects | sort: 'weight' | reverse %}
+    {% for post in sortedPosts %}
+    <div id="{{ post.id }}" class="rw-project-list-item">
+      {% if post.link %}
+      <h3><a href="{{ post.link }}">{{ post.title }}</a></h3>
+      {% else %}
+      <h3>{{ post.title }}</h3>
+      {% endif %}
+      <p class="rw-status"><strong>Phase: {{ post.phase | upcase }}</strong></p>
+      <a href="{{ post.link }}"><img src="{{ post.image }}" alt="{{ post.title }}"></a>
+      <p class="project-origin {{ post.origin | replace: ' ','' | downcase }}"><strong>Origin: {{ post.origin | upcase }}</strong></p>
+      <p class="rw-description">{{ post.content }}</p>
+    </div><!-- /rw-project-list-item -->
+    {% endfor %}
+  </div><!-- /.rw-project-list -->
+</section>
