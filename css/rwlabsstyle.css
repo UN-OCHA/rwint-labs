@@ -86,6 +86,7 @@ a[href="#main"].accessibility:focus {
 }
 .intro .title-image {
   padding-bottom: 10px;
+  max-width: 400px;
 }
 .intro .title-text {
   font-size: 1.2em;
@@ -121,11 +122,11 @@ a[href="#main"].accessibility:focus {
 
 /* RW-Projects */
 .rw-projects {
-  color: #f4f4f0;
-  background-color: #666;
+  color: #055372;
+  background-color: #e6ecef;
 }
 .decommissioned-projects {
-  color: #333;
+  color: #2e3436;
 }
 .rw-project-list {
   overflow: auto;
@@ -149,10 +150,10 @@ a[href="#main"].accessibility:focus {
   padding-top: 40px;
 }
 .rw-projects h2:before {
-  content: url("../img/icon-rw-white-small.png");
+  content: url("../img/rw.svg");
   position: relative;
   padding-right: 10px;
-  top: 14px;
+  top: 10px;
 }
 .rw-projects h3,
 .decommissioned h3 {
@@ -164,18 +165,19 @@ a[href="#main"].accessibility:focus {
   padding-left: 10px;
 }
 .project-origin.rwideas {
-  background-color: #eb1405;
-  color: #ffffff;
+  background-color: #f65c51;
+  color: #e6ecef;
 }
 .project-origin.community {
   background-color: #055372;
+  color: #e6ecef;
 }
 .rw-projects .rw-project-list-item a {
-  color: #f4f4f0;
+  color: #055372;
 }
 .rw-project-list-item a:hover,
 .rw-project-list-item a:focus {
-  color: #f4f4f0;
+  color: #055372;
   opacity: 0.8;
   text-decoration: none;
 }
@@ -185,11 +187,11 @@ a[href="#main"].accessibility:focus {
   width: 100%;
 }
 .decommissioned-projects .rw-project-list-item a {
-  color: #333;
+  color: #2e3436;
 }
 .decommissioned-projects a:hover,
 .decommissioned-projects a:focus {
-  color: #333;
+  color: #2e3436;
 }
 .decommissioned-projects img {
   border: 1px solid #ddd;
