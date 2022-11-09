@@ -55,7 +55,6 @@
   function setToggler(id, textAccessibility, textDisplay) {
     var element = document.getElementById(id);
 
-console.log('element', element);
     // Skip if the element was not found.
     if (!element) {
       return;
@@ -89,7 +88,7 @@ console.log('element', element);
     // Add the button before the toggable element.
     element.parentNode.insertBefore(button, element);
   }
-console.log('classname', document.documentElement.className);
+
   if (document.documentElement.className === 'js') {
     // Collapse popups when clicking outside of the toggable target.
     document.addEventListener('click', handleOutsideClick);
